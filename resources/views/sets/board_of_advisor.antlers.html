@@ -1,0 +1,58 @@
+<!-- Start Advisor Team Section-->
+<div class="w-full mx-auto bg-purple  board-adviser-par  " id="board2-pad_botm">
+{{if type == "board_of_advisor"}}
+    <div class="team-title">{{team_main_title}}</div>
+    <div class="board-adviser1">
+        {{ profile_section }}
+            {{if name != ''}}
+                <div>
+                    <div class="sliders-slide">
+                        <div class="slider-img-section">
+                            {{profile}}
+                                <img class="members-image" src="{{url}}" alt="member img">
+                            {{/profile}}
+                        </div>
+                        <div class="slider-text-section">
+                            <p>{{name}}</p>
+                            <p>{{post}}</p>
+                            <p>{{profile_desc}}</p>
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+        {{ /profile_section }}
+    </div>
+    {{/if}}
+</div>
+<!-- End Advisor Team Section -->
+<script>
+    $(document).ready(function () {
+
+        $('.board-adviser1').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: true,
+            prevArrow: `<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid icon-color">
+                            chevron_left</span></button>`,
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
+            dots: false,
+            dotsClass: 'slick-dots',
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 785,
+                settings: {
+                    slidesToShow: 2
+
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 2
+                }
+            }]
+        });
+    });
+</script>

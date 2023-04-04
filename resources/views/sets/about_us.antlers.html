@@ -1,0 +1,66 @@
+<!-- Start About-us Section -->
+<div class="w-full">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 md:gap-2 lg:gap-4 parent-content content-pb">
+        <div>
+            {{ if about_us_title}}
+                <p class="my-heads py-4 md:py-8 lg:py-8">{{ about_us_title }}</p>
+            {{/if}}
+
+            {{ if about_us_desc }}
+            <div class="aboutus_text_feild">
+                {{ about_us_desc }}
+            </div>
+            {{/if}}
+            <button class="about-btn">Curious? Get us to call you back!</button>
+        </div>
+        {{ if about_video_desc }}
+        <div class="pt-4 ">
+            <!-- <iframe height="480" width="500"  
+                src="{{youtube_link}}">
+            </iframe> -->
+            <div class="vid-btm-sty-small">{{about_video_desc}}</div>
+            <div class="ab_vid_par">
+            <iframe width="100%" height="300px" src="{{youtube_link}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="vid-btm-sty-big">{{about_video_desc}}</div>
+            <!-- {{about_us_video}}
+            <div class="vid-btm-sty-small">{{about_video_desc}}</div>
+            <div class="ab_vid_par">
+                <video class="ab-vid" width="100%" height="300px">
+                    <source src="{{url}}" type="video/mp4">
+                </video>
+                <button class="play_button">
+                    <img src="/assets/play_button.png" alt="">
+                </button>
+                
+            </div>
+            {{/about_us_video}}
+            <div class="vid-btm-sty-big">{{about_video_desc}}</div> -->
+        </div>
+        {{/if}}
+        <button class="about-btn1">Curious? Get us to call you back!</button>
+    </div>
+</div>
+<!-- End About-us Section -->
+<script>
+    var playButton_ab = document.querySelector(".play_button");
+    var video_ab = document.querySelector(".ab-vid");
+    function play_pausAction() {
+        if (video_ab.paused == true) {
+            // Play the video
+            video_ab.play();
+
+            // Update the button text to 'Pause'
+            playButton_ab.innerHTML = "";
+        } else {
+            // Pause the video
+            video_ab.pause();
+
+            // Update the button text to 'Play'
+            playButton_ab.innerHTML = `<img src="/assets/play_button.png" alt="">`;
+        }
+    }
+    // Event listener for the play/pause button
+    video_ab.addEventListener("click", play_pausAction);
+    playButton_ab.addEventListener("click", play_pausAction)
+</script>

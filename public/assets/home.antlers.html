@@ -1,0 +1,456 @@
+<link rel="stylesheet" href="/css/custom.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.css"
+    integrity="sha512-rGqRjILjohR2l4/xWr7TvP42nLhZLBa0C5dCuvFXG6gIrbzElZe0+W7ItgNgJCch+3iVUk0WFMxCJR7jXn9Ylg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<!-- Banner-Slider Section -->
+
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,1,0" />
+
+
+
+<!-- *|Nav section |* -->
+
+
+
+<article class="navCont mx-auto h-20  bg-gray-100 flex  justify-between maindivcotainer">
+    <div class="logo px-10 text-center">Starter's Creek</div>
+    <div class="search " style="width:100%">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="option text-center">
+        <div><span class="material-symbols-outlined icon1">
+                <!-- *|notification icon|* -->
+                notifications
+            </span></div>
+        <div>
+
+
+            <span class="material-symbols-outlined icon2">
+                menu
+            </span>
+
+
+
+        </div>
+    </div>
+</article>
+<div class="menueid ">
+    <div><span class="material-symbols-outlined icon3">
+            close
+        </span></div>
+    <div><span class="material-symbols-rounded">
+            home
+        </span></div>
+    <div><span class="material-symbols-rounded">
+            event
+        </span></div>
+    <div><span class="material-symbols-rounded">
+        subscriptions
+    </span></div>
+    <div><span class="material-symbols-rounded">
+        account_circle
+    </span></div>
+</div>
+<article class="mx-auto">
+    <div id="default-carousel"  class="relative" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden  md:h-96">
+            <!-- Item 1 -->
+            {{ banner_img }}
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <span
+                    class="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First
+                    Slide</span>
+                <img src="{{ url }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="{{ alt }}">
+            </div>
+            {{ /banner_img }}
+
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
+        </div>
+        <!-- Slider controls -->
+        <!-- <button type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button> -->
+        <!-- <button type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button> -->
+    </div>
+</article>
+
+
+
+<!-- About Us Section -->
+<article class="mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 parent-content content-pb">
+        <div >
+            <p class="my-heads">{{text_field1}}?</p>
+            {{textarea_field}}
+<button>Coriopus? Get us to call you back</button>
+        </div>
+        <div >
+            {{ if video_field | is_embeddable }}
+            <!-- Youtube and Vimeo -->
+            <iframe width="100%" height="300px" src="{{ video_field | embed_url }}"></iframe>
+
+            {{ /if }}
+            <div class="vid-btm-sty">Lorem Ipsum has been the industry</div>
+        </div>
+    </div>
+</article>
+<!-- Offering Section -->
+<article class="mx-auto bg-purple">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 parent-content">
+        <div class="parrent">
+            <div class="child-div-1">
+                {{ hero_image }}
+                <img src="{{ url }}" alt="{{ alt }}" />
+                {{ /hero_image }}
+                            <div class="vid-btm-sty1">Lorem Ipsum has been the industry</div>
+
+            </div>
+            <div class="child-div-2">
+                {{ assets_field }}
+                <div>
+                    <img src="{{ url }}" alt="{{ alt }}" />
+                            <div class="vid-btm-sty1">Lorem Ipsum industry</div>
+
+                </div>
+                {{ /assets_field }}
+            </div>
+        </div>
+        <div class="text-content">
+            <p class="white-lable-head" >
+                {{ $main_title_offering }}
+            </p>
+            <p class="white24">{{ $bard_field }}</p>
+            {{ $content }}
+            {{ desc_img }}
+            <img src="{{ url }}" alt="{{ alt }}" class="image-hidden" />
+            {{ /desc_img }}
+        </div>
+    </div>
+</article>
+<!-- Our Customers Section-->
+<article class="mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 parent-content">
+        <div class="p-4">
+            <h2 class="font-bold main-title text-left" style="color: blueviolet;">{{title_sec3}}</h2>
+        </div>
+        <div class="p-4">
+            <section class="customer-logos slider">
+                {{ partners }}
+                <div class="slide"><img src="{{ url }}" alt="{{ alt }}"></div>
+                {{ /partners }}
+            </section>
+        </div>
+    </div>
+</article>
+<!-- Review Section -->
+<article class="mx-auto bg-purple">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 parent-content content-pb">
+        <div class="p-4">
+            {{ if video_field_sec4 | is_embeddable }}
+            <iframe width="100%" height="100%" src="{{ video_field_sec4 | embed_url }}" ...></iframe>
+            {{ /if }}
+            <div class="vid-btm-sty">Lorem Ipsum has been the industry</div>
+
+        </div>
+        <div class="p-4">
+            <p class="white-lable-head2">
+                {{ $title_sec4 }}
+            </p>
+            <p class="white242" >{{ $subtitle_sec4 }}</p>
+            {{ $desc_sec4 }}
+        </div>
+    </div>
+</article>
+<!-- Features For Students Section -->
+<article class="mx-auto">
+    <h2 class="font-bold main-title" style="color: blueviolet;">{{main_title}}</h2>
+    <div class="gap-12 features-sec">
+        {{featured_content}}
+        {{if featured_img!= ''}}
+        <div>
+            <div class="card">
+                <img src="{{ featured_img }}" alt="{{ alt }}" style="width:100%">
+                <div class="card-content">
+                    {{markdown_field}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{/featured_content}}
+    </div>
+</article>
+<!-- Features For School Section -->
+<article class="mx-auto bg-gray-100">
+    <div class="parent-content">
+        <h2 class="font-bold main-title" style="color: blueviolet;">{{title_school_fea}}</h2>
+        <div style="padding: 0px 150px 0px 150px;">
+            {{diagram}}
+            <img src="{{ url }}" alt="{{ alt }}" width="100%">
+            {{/diagram}}
+        </div>
+    </div>
+    <div class="bg-yellow-300 text-center">{{footer_text}}</div>
+
+</article>
+<!-- News Section -->
+<article class="mx-auto">
+    <div class="parent-content content-pb">
+        <h2 class="main-title" style="color: blueviolet;">{{title_new_sec}}</h2>
+        <section class="news-logos slider">
+            {{ new_images }}
+            <div class="slide"><img class="news-logo-img" src="{{ url }}" alt="{{ alt }}"></div>
+            {{ /new_images }}
+        </section>
+    </div>
+</article>
+<!-- Contact-us Form Section -->
+<article class="mx-auto bg-purple">
+
+    {{content_block}}
+    {{ if type =='image_and_text'}}
+    <h2 class="font-bold title sub-title">{{contactus_title}}</h2>
+    {{/if}}
+    {{/content_block}}
+
+    <div class="contact-us parent-content">
+        <div style="width: 25%;">
+            {{content_block}}
+            {{ if type =='image_and_text'}}
+            <img src="{{ side_image }}" alt="{{ alt }}" />
+            {{/if}}
+            {{/content_block}}
+        </div>
+        <div style="width: 75%;">
+            {{ form:contact_us}}
+            {{ if success }}
+            <h2 class="text-green-600 mb-0 pb-0 text-center">
+                {{ success }}
+                {{ else }}
+
+                {{ if errors }}
+                <div class="bg-red-300 text-white p-2">
+                    {{ errors }}
+                    {{ value }}<br>
+                    {{ /errors }}
+                </div>
+                {{ /if }}
+
+                {{ fields }}
+                <div style="display:flex; flex-direction: row; justify-content: left; align-items: center;width: 100%;">
+                    <label>{{ display }}</label>
+                    {{ field }}
+                    {{ if error }}
+                    <p class="text-red-600">{{ error }}</p>
+                    {{ /if }}
+                </div>
+                {{ /fields }}
+
+                <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+                <button type="submit" class="submit-button">Submit</button>
+                {{ /if }}
+                {{ /form:contact_us }}
+
+        </div>
+    </div>
+</article>
+<!-- About xQ Section -->
+<article class="mx-auto bg-amber-50">
+    <h2 class="font-bold main-title">{{title_about_xq}}</h2>
+    <div class="text-center" style="padding: 0px 150px 0px 150px;">{{about_desc}}</div>
+    <div class="grid grid-cols-4 md:grid-cols-4 gap-4 parent-content content-pb">
+        {{about_us_desc}}
+        {{if logo != ''}}
+        <div class="p-4">
+            {{ logo }}
+            <img src="{{ url }}">
+            {{ /logo }}
+        </div>
+        {{/if}}
+
+        {{if logo_desc != ''}}
+        <div class="p-4">
+            {{logo_desc}}
+        </div>
+        {{/if}}
+        {{/about_us_desc}}
+
+    </div>
+</article>
+<!-- Founding Team Section-->
+<article class="mx-auto bg-purple">
+    <h2 class="title">{{text_Advisor}}</h2>
+    <section class="advisior-img slider">
+        {{ advisors }}
+        {{if advisor_name != ''}}
+        <div class="slide">
+            {{advisor_profile}}
+            <img class="news-logo-img" src="{{ url }}" alt="{{ alt }}">
+            {{/advisor_profile}}
+
+            <span class="font-yellow">{{advisor_name}}</span><br />
+            <span class="title">{{advisor_post}}</span><br />
+            <span class="title">{{advisor_disc}}</span>
+        </div>
+        {{/if}}
+        {{ /advisors }}
+    </section>
+</article>
+<!-- Founder & Advisor Section-->
+<article class="mx-auto bg-purple">
+    <h2 class="title">{{founder_text}}</h2>
+    <section class="founder-imgs slider">
+        {{ founder }}
+        {{if founder_name != ''}}
+        <div class="slide">
+            {{founder_profile}}
+            <img class="news-logo-img" src="{{ url }}" alt="{{ alt }}">
+            {{/founder_profile}}
+
+            <span class="font-yellow">{{founder_name}}</span><br />
+            <span class="title">{{founder_post}}</span><br />
+            <span class="title">{{founder_desc}}</span>
+        </div>
+        {{/if}}
+        {{ /founder }}
+    </section>
+</article>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.js"
+    integrity="sha512-J7uKR69aZGGGVlt2wkk/bG6XKOsiRE35PE/vU+aau44g3f5bQqGoW7tKe4LKhVI57etFJOYwy/F/vCYTweELIw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script>
+    let openbtn = document.querySelector(".icon2")
+    openbtn.addEventListener("click", function () {
+        document.querySelector(".menueid").classList.toggle("openablemenue")
+    })
+    let closebtn = document.querySelector(".icon3")
+    closebtn.addEventListener("click", function () {
+        document.querySelector(".menueid").classList.toggle("openablemenue")
+    })
+
+
+    $(document).ready(function () {
+
+
+        $('.customer-logos').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+        $('.news-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+        $('.advisior-img').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+        $('.founder-imgs').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+
+</script>

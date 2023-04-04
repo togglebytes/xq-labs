@@ -1,0 +1,53 @@
+<!-- *|Nav section |* -->
+<div class="navCont mx-auto h-18  bg-gray-100 flex  justify-between maindivcotainer">
+    <div class="logo  text-center">{{navbar_logo}}<img src="{{url}}" alt="">{{/navbar_logo}}</div>
+    <div class="search" style="width:100%">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="option text-center">
+
+        <div><span class="material-symbols-outlined icon1search">
+                <!-- *|notification icon|* -->
+                search
+            </span>
+        </div>
+
+        <div><span class="material-symbols-outlined icon1">
+                <!-- *|notification icon|* -->
+                notifications
+            </span>
+        </div>
+        <div>
+            <span class="material-symbols-outlined icon2">
+                menu
+            </span>
+        </div>
+    </div>
+</div>
+<div class="menueid ">
+    <div><span class="material-symbols-outlined icon3">
+            close
+        </span></div>
+    <div><span class="material-symbols-rounded">
+            home
+        </span></div>
+    <div><span class="material-symbols-rounded">
+            event
+        </span></div>
+    <div><span class="material-symbols-rounded">
+            subscriptions
+        </span></div>
+    <div><span class="material-symbols-rounded">
+            account_circle
+        </span></div>
+</div>
+<script>
+    let openbtn = document.querySelector(".icon2")
+    openbtn.addEventListener("click", function () {
+        document.querySelector(".menueid").classList.toggle("openablemenue")
+    })
+    let closebtn = document.querySelector(".icon3")
+    closebtn.addEventListener("click", function () {
+        document.querySelector(".menueid").classList.toggle("openablemenue")
+    })
+</script>

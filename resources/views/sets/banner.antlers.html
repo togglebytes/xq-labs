@@ -1,0 +1,81 @@
+<!-- Start Banner Slider Section -->
+{{ if banner_img }}
+<div class="w-full banner_section_lg">
+    <section class="home_banner slider p-0 m-0">
+        {{ banner_img }}
+        <div class="slidebn " style="height: 100%; width: 100%;">
+            <img class="banerimage" style=" object-fit: contain;" width="100%" src="{{ url }}" alt="{{ alt }}">
+
+        </div>
+        {{ /banner_img }}
+    </section>
+</div>
+{{/if}}
+
+{{ if banner_img_mobile }}
+<div class="w-full banner_section_sm">
+    <section class="home_banner_sm slider p-0 m-0">
+        {{ banner_img_mobile }}
+        <div class="slidebn " style="height: 100%; width: 100%;">
+            <img class="banerimage" style=" object-fit: contain;" width="100%" src="{{ url }}" alt="{{ alt }}">
+
+        </div>
+        {{ /banner_img_mobile }}
+    </section>
+</div>
+{{/if}}
+
+<!-- End Banner Slider Section -->
+<script>
+    $(document).ready(function () {
+        $('.home_banner').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: false,
+            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa-solid fa-solid fa-circle-chevron-left"></i></button>',
+            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa-solid fa-circle-chevron-right"></i></button>',
+            dots: true,
+            dotsClass: 'slick-dots',
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 785,
+                settings: {
+                    slidesToShow: 1
+
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+        $('.home_banner_sm').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: false,
+            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa-solid fa-solid fa-circle-chevron-left"></i></button>',
+            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa-solid fa-circle-chevron-right"></i></button>',
+            dots: true,
+            dotsClass: 'slick-dots',
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 785,
+                settings: {
+                    slidesToShow: 1
+
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+   
+   });
+</script>

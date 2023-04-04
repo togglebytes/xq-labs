@@ -1,0 +1,32 @@
+<!-- Start Features For School Section -->
+<div class="w-full mx-auto bg-gray-100 lifeskilimage_sec">
+    <div class="for_fea_sch_pad">
+        <h2 class="my-heads">{{fea_school_main_title}}</h2>
+        <div class="lifeSkilldg">
+            {{fea_school_img}}
+            <img src="{{ url }}" alt="{{ alt }}">
+            {{/fea_school_img}}
+        </div>
+    </div>
+    <div class="bg-yellow py-2 text-center">{{fea_sch_img_desc}}</div>
+</div>
+<div class="w-full vid-help-school">
+    <h2 class="my-heads text-left py-6"> {{fea_school_main_title}}</h2>
+    <div class="grid grid-cols-2 gap-8 py-6">
+        {{mobile_view_features}}
+        {{if fea_image != ''}}
+        <div class="flex flex-col gap-2 " style="margin-top: -28px;">
+            <div class="right-tick"><span class="material-symbols-outlined">
+                    done
+                </span></div>
+            <div class="nep-img">
+                <img src="{{fea_image}}" alt="">
+            </div>
+            <div class="school_feature_subtitle">{{school_feature}}</div>
+            
+        </div>
+        {{/if}}
+        {{/mobile_view_features}}
+    </div>
+</div>
+<!-- End Features For School Section -->

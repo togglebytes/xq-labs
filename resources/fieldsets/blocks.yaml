@@ -1,0 +1,1127 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: accordion
+      sets:
+        banner:
+          display: 'Banner (Mobile + Web)'
+          fields:
+            -
+              import: banner
+            -
+              handle: banner_img_mobile
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 10
+                display: 'Banner For Mobile View'
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        navbar:
+          display: 'Navbar (Mobile + Web)'
+          fields:
+            -
+              handle: navbar_logo
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: Logo
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        how_works_it:
+          display: 'How Works It (Web)'
+          fields:
+            -
+              handle: how_work_main_title
+              field:
+                input_type: text
+                antlers: false
+                display: 'Main Title'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: how_work_sub_title
+              field:
+                input_type: text
+                antlers: false
+                display: 'Sub Title'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: how_work_description
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: Description
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: how_work_imgs
+              field:
+                collapse: false
+                always_show_set_button: false
+                previews: true
+                sets:
+                  image_and_desc:
+                    display: 'Image & Desc'
+                    fields:
+                      -
+                        handle: offering_image
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          display: Image
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                      -
+                        handle: img_desc
+                        field:
+                          input_type: text
+                          antlers: false
+                          display: 'Text Field'
+                          type: text
+                          icon: text
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                remove_empty_nodes: false
+                display: Images
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: how_work_desc_image
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: 'Desc Image'
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        about_us:
+          display: 'About us (Mobile + Web)'
+          fields:
+            -
+              handle: about_us_title
+              field:
+                placeholder: 'Enter Title'
+                input_type: text
+                antlers: false
+                display: 'Text Field'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: about_us_video
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 1
+                display: 'Video Field'
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: about_video_desc
+              field:
+                input_type: text
+                antlers: false
+                display: 'Video Desc'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: about_us_desc
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: Description
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: youtube_link
+              field:
+                display: 'Video Field'
+                type: video
+                icon: video
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        customers:
+          display: 'Customers (Mobile + Web)'
+          fields:
+            -
+              handle: customer_sec_title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: customers_img
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 10
+                display: Images
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        review_section:
+          display: 'Review Section (Mobile + Web)'
+          fields:
+            -
+              handle: review_title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: review_sub_title
+              field:
+                input_type: text
+                antlers: false
+                display: Sub-Title
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: review_desc
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: Description
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: review_video
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: Video
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+                max_files: 1
+            -
+              handle: review_video_desc
+              field:
+                input_type: text
+                antlers: false
+                display: 'Video Desc'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: reviews
+              field:
+                collapse: false
+                always_show_set_button: false
+                previews: true
+                sets:
+                  text_and_desc:
+                    display: 'Text & Desc'
+                    fields:
+                      -
+                        import: testimonial
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                remove_empty_nodes: false
+                display: Reviews
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        features_students:
+          display: 'Features Students (Mobile + Web)'
+          fields:
+            -
+              handle: fea_stu_main_title
+              field:
+                input_type: text
+                antlers: false
+                display: 'Main Title'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: stu_features_content
+              field:
+                collapse: false
+                always_show_set_button: false
+                previews: true
+                sets:
+                  image_and_text:
+                    display: 'Image & Text'
+                    fields:
+                      -
+                        handle: fea_img_desc
+                        field:
+                          restrict: false
+                          automatic_line_breaks: true
+                          automatic_links: false
+                          escape_markup: false
+                          smartypants: false
+                          antlers: false
+                          display: Description
+                          type: markdown
+                          icon: markdown
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                      -
+                        handle: stu_fea_image
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          display: Image
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                remove_empty_nodes: false
+                display: 'Features Content'
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        news_section:
+          display: 'News Section (Mobile + Web)'
+          fields:
+            -
+              handle: news_sec_title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: news_brand_logo
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: Images
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              import: imagewithlink
+        features_school:
+          display: 'Features School (Mobile + Web)'
+          fields:
+            -
+              handle: fea_school_main_title
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Main Title'
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: fea_school_img
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: fea_sch_img_desc
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Image Desc'
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: mobile_view_features
+              field:
+                collapse: false
+                always_show_set_button: false
+                previews: true
+                sets:
+                  image_and_feature:
+                    display: 'Image & Feature'
+                    fields:
+                      -
+                        handle: school_feature
+                        field:
+                          restrict: false
+                          automatic_line_breaks: true
+                          automatic_links: false
+                          escape_markup: false
+                          smartypants: false
+                          antlers: false
+                          display: Feature
+                          type: markdown
+                          icon: markdown
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                      -
+                        handle: fea_image
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          max_files: 1
+                          display: Image
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                  - h1
+                  - h4
+                  - h5
+                  - h6
+                  - underline
+                  - small
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                remove_empty_nodes: false
+                display: 'Mobile''s View Features'
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        contact_us:
+          display: 'Contact Us (Mobile + Web)'
+          fields:
+            -
+              handle: contact_us_main_title
+              field:
+                input_type: text
+                antlers: false
+                display: 'Main Title'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: contact_us_img
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: form
+              field:
+                max_items: 1
+                display: 'Form Field'
+                type: form
+                icon: form
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        founder_team:
+          display: 'Founder Team (Mobile + Web)'
+          fields:
+            -
+              import: team_profile
+        board_of_advisor:
+          display: 'Board Of  Advisor (Mobile + Web)'
+          fields:
+            -
+              import: team_profile
+        about_xq:
+          display: 'About Xq (Mobile + Web)'
+          fields:
+            -
+              handle: about_xq_main_title
+              field:
+                input_type: text
+                antlers: false
+                display: 'Main Title'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: about_xq_desc
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: Description
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: founder_desc
+              field:
+                collapse: false
+                always_show_set_button: false
+                previews: true
+                sets:
+                  image_and_text:
+                    display: 'Image & Text'
+                    fields:
+                      -
+                        handle: logo
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          display: Logo
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                      -
+                        handle: logo_text
+                        field:
+                          restrict: false
+                          automatic_line_breaks: true
+                          automatic_links: false
+                          escape_markup: false
+                          smartypants: false
+                          antlers: false
+                          display: 'Logo Text'
+                          type: markdown
+                          icon: markdown
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                  - h1
+                  - h4
+                  - h5
+                  - h6
+                  - underline
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                remove_empty_nodes: false
+                display: 'Founder Desc'
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        footer_section:
+          display: 'Footer Section (Mobile + Web)'
+          fields:
+            -
+              handle: company_email
+              field:
+                input_type: text
+                antlers: false
+                display: 'Company Email'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: contact_no
+              field:
+                input_type: text
+                antlers: false
+                display: 'Contact No'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: company_address
+              field:
+                antlers: false
+                display: 'Company Address'
+                type: textarea
+                icon: textarea
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: company_logo
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: 'Company Logo'
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: social_media
+              field:
+                collapse: false
+                always_show_set_button: false
+                previews: true
+                sets:
+                  link_and_logo:
+                    display: 'Link & Logo'
+                    fields:
+                      -
+                        handle: link
+                        field:
+                          input_type: text
+                          antlers: false
+                          display: Link
+                          type: text
+                          icon: text
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                      -
+                        handle: social_media_logo
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          max_files: 1
+                          display: Logo
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                remove_empty_nodes: false
+                display: 'Social Media'
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        video_integration:
+          display: 'Project''s Video (Mobile)'
+          fields:
+            -
+              handle: vid_int_title
+              field:
+                input_type: text
+                antlers: false
+                display: 'Main Title'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: vid_int_desc
+              field:
+                antlers: false
+                display: Description
+                type: textarea
+                icon: textarea
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: vid_int_slider_heading
+              field:
+                input_type: text
+                antlers: false
+                display: 'Slider Heading'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: vid_int_slider_videos
+              field:
+                collapse: false
+                always_show_set_button: false
+                previews: true
+                sets:
+                  video:
+                    display: Video
+                    fields:
+                      -
+                        handle: vid_int_video
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          max_files: 1
+                          display: Video
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                remove_empty_nodes: false
+                display: 'Slider Videos'
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        xq_serve:
+          display: 'xQ Serve (Mobile + Web)'
+          fields:
+            -
+              handle: services
+              field:
+                collapse: false
+                always_show_set_button: false
+                previews: true
+                sets:
+                  icon_and_count:
+                    display: 'Icon & Count'
+                    fields:
+                      -
+                        handle: serve_title
+                        field:
+                          input_type: text
+                          antlers: false
+                          display: Title
+                          type: text
+                          icon: text
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                      -
+                        handle: service_icon
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          display: Icon
+                          type: assets
+                          icon: assets
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                      -
+                        handle: no_count
+                        field:
+                          display: Count
+                          type: integer
+                          icon: integer
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          always_save: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                remove_empty_nodes: false
+                display: Services
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: side_desc
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Side Description'
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: ebook
+              field:
+                max_items: 1
+                display: Ebook
+                type: form
+                icon: form
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+      display: Blocks
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      previews: true

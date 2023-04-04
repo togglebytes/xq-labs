@@ -1,0 +1,20 @@
+<!-- Start About xQ Section -->
+<div class="w-full mx-auto bg-white">
+    <div class="parent-content">
+        <h2 class="my-heads text-left md:text-center p-0">{{about_xq_main_title}}</h2>
+        <div class=" about-xq-desc">{{about_xq_desc}}</div>
+        <div class="py-8 about-xq-grid  ">
+            {{founder_desc}}
+            {{if logo != ''}}
+            <div class="about-xq-img">
+                {{ logo }}
+                <img src="{{ url }}" style="width: 45px; height: 45px;">
+                {{ /logo }}
+                <div class="about-xq-text">{{logo_text}}</div>
+            </div>
+            {{/if}}
+            {{/founder_desc}}
+        </div>
+    </div>
+</div>
+<!-- End About xQ Section-->

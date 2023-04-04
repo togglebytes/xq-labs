@@ -1,0 +1,48 @@
+<!-- Start Our Customers Section small -->
+<div class="w-full mx-auto customers-section-small px-4 pt-8 pb-12">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 " >
+        <div class="">
+            <h2 class="my-heads text-left">{{customer_sec_title}}</h2>
+        </div>
+        <div class="" >
+            <section class="customer-logos-sm slider" >
+                {{ customers_img }}
+                <div class="slide"><img src="{{ url }}" alt="{{ alt }}"></div>
+                {{ /customers_img }}
+            </section>
+        </div>
+    </div>
+</div>
+<!-- End Our Customers small Section -->
+
+<script>
+
+    $(document).ready(function () {
+
+
+        $('.customer-logos-sm').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: true,
+            prevArrow: `<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid icon-color">
+                            chevron_left</span></button>`,
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2
+                }
+            }]
+        });
+    });
+</script>

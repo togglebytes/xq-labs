@@ -1,0 +1,119 @@
+<!-- Start Contact-Us Section -->
+<div class="mx-auto top-cont-img">
+    {{contact_us_img}}
+    {{ if contact_us_img != ''}}
+    <img class="image-contactus-small" src="{{url}}" alt="{{ alt }}" />
+    {{/if}}
+    {{/contact_us_img}}
+</div>
+<div class="w-full mx-auto bg-purple z-10">
+    <p class="contactus-subtitle">{{contact_us_main_title}}</p>
+    <div class="contact-us">
+        <div class="contact-us-div1">
+            {{contact_us_img}}
+            {{ if contact_us_img != ''}}
+            <img class="image-contactus" src="{{ url }}" alt="{{ alt }}" />
+            {{/if}}
+            {{/contact_us_img}}
+        </div>
+        <div class="contact-us-div2">
+            {{ form:contact_form id="contact_us"}}
+            {{ if success }}
+            <h2 class="text-green-600 mb-0 pb-0 text-center">
+                {{ success }}
+                {{ else }}
+
+                {{ fields }}
+                <div class="form-field">
+                    <label>{{ display }}</label>
+                    <div class="err_sup_div">
+                        {{ field }}
+
+                        <p class="text-red-600" id="{{handle}}_error">{{ error }}</p>
+                    </div>
+                </div>
+                {{ /fields }}
+                <div class="submit-btn-supp">
+                    <input type="text" class="hidden " name="{{ honeypot ?? 'honeypot' }}">
+                    <button type="submit" class="submit-button">Submit</button>
+                </div>
+
+                {{ /if }}
+                {{ /form:contact_form }}
+        </div>
+    </div>
+</div>
+<div id="cont-popup" style="display: none;">
+    <span onclick="hideContactUsPopup()" class="pop-up-close-btn ">&#10005;</span>
+    <div class="cont-sup">
+
+        <!-- <div id="contSucsesDiv"> -->
+        <img class="tnks-img" src="/assets/contact-us-pop-up.png" alt="">
+
+        <p class="contact-popup-head text-center">Thank You!</p>
+
+        <p class="text-center px-12 lg:px-24 thanks-black">
+            We’ve received your request.
+            We’ll be in touch soon!</p>
+
+
+
+
+    </div>
+
+</div>
+<script>
+    let fields = new Array();
+
+    let x = $("#contact_us").serializeArray();
+    $.each(x, function (i, field) {
+        fields.push(field.name)
+    });
+
+    function showContactUsPopup() {
+        cont_popup.style.display = "block";
+        cont_popup.classList.add("for-get-pop-up")
+        $('#contact_us').trigger("reset");
+        console.log(fields)
+        fields.forEach(function (name) {
+            $('#' + name + '_error').html('');
+        })
+        // cont_popup.style.top = `${document.body.clientHeight} - 400px`
+    }
+    function hideContactUsPopup() {
+        cont_popup.style.display = "none";
+    }
+
+    $("#contact_us").submit(function (event) {
+        event.preventDefault()
+        var form_data = $(this).serialize();
+
+        $.ajax({
+            url: $("#contact_us").attr('action'),
+            type: 'POST',
+            data: form_data,
+        }).done(function (response) {
+            $('#failed').css('display', 'none');
+            showContactUsPopup()
+            $('#contact_us').trigger("reset");
+        }).fail(function (data) {
+
+            //var errors = [data.responseJSON.errors]
+            var error = [data.responseJSON.error]
+            $.each(error, function (key, value) {
+                $.each(value, function (index, value1) {
+                    console.log(index)
+                    console.log(value1)
+                    if ($.inArray(index, fields) >= 0) {
+                        $('#' + index + '_error').html(value1);
+                    } else {
+                        console.log(11)
+                        $('#' + index + '_error').html('');
+                    }
+                });
+            });
+            hideContactUsPopup()
+        });
+    });
+</script>
+<!-- End Contact-Us Section-->

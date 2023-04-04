@@ -1,0 +1,36 @@
+title: Testimonial
+fields:
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Description
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: name
+    field:
+      input_type: text
+      antlers: false
+      display: Name
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: position
+    field:
+      antlers: false
+      display: Position
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false

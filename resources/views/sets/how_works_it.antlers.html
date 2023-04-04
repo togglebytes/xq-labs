@@ -1,0 +1,46 @@
+<!-- Start How xQ Labs Work Section -->
+<div class="w-full mx-auto bg-purple display-none">
+    <div class=" relative grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 md:gap-2 lg:gap-12 parent-content">
+        <div class="parrent">
+            <div class="child-div-1">
+                {{if how_work_imgs}}
+                {{ how_work_imgs }}
+                {{ if first }}
+                {{offering_image}}
+                <img src="{{ url }}" alt="{{ alt }}" />
+                {{ /offering_image }}
+                <div class="vid-btm-sty1">{{img_desc}}</div>
+                {{/if}}
+                {{/how_work_imgs}}
+                {{/if}}
+            </div>
+            <div class="child-div-2">
+                {{if how_work_imgs}}
+                {{how_work_imgs}}
+                {{ if index != 0 && index != 3}}
+                <div>
+                    {{offering_image}}
+                    <img src="{{ url }}" alt="{{ alt }}" />
+                    {{ /offering_image }}
+                    <div class="vid-btm-sty1">{{img_desc}}</div>
+                </div>
+                {{/if}}
+                {{/how_work_imgs}}
+                {{/if}}
+            </div>
+        </div>
+        <div class="text-content">
+            <p class="how1">
+                {{ how_work_main_title}}
+            <p class="how2">{{ how_work_sub_title }}</p>
+
+            <div class="how-to-text-content">{{ how_work_description }}</div>
+        </div>
+        {{if how_work_desc_image}}
+        {{ how_work_desc_image }}
+        <img src="{{ url }}" alt="{{ alt }}" class="image-hidden" />
+        {{ /how_work_desc_image }}
+        {{/if}}
+    </div>
+</div>
+<!-- End How xQ Labs Work Section -->

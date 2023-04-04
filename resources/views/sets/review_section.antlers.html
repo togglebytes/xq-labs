@@ -1,0 +1,204 @@
+<!-- Start Reviews Section -->
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="w-full mx-auto bg-purple revfor-big">
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 parent-content content-pb">
+        <div class="p-4 ">
+            {{review_video }}
+            <div class="ab_vid_par">
+                <video class="rev-vid1" width="100%" height="300px">
+                    <source src="{{ url }}" type="video/mp4">
+                </video>
+                <button class="play_button_rev1">
+                    <img src="/assets/play_button.png" alt="">
+                </button>
+            </div>
+            {{/review_video}}
+            <div class="vid-btm-flmkr">{{review_video_desc}}</div>
+        </div>
+        <div class="p-4">
+            <p class="white-lable-head2">
+                {{ review_title }}
+            </p>
+            <p class="white242">{{ review_sub_title }}</p>
+            <div class="filmaker_description">{{ review_desc }}</div>
+        </div>
+    </div>
+    <div class="whtfloatsec">
+        <div class="reviews-sliderst slider">
+            {{reviews}}
+            {{if description != ''}}
+            <div>
+                <p>{{description}}</p>
+                <p>{{name}}</p>
+                <p>{{position}}</p>
+            </div>
+            {{/if}}
+            {{/reviews}}
+        </div>
+
+        <div class="forqutes"><span class="material-icons">
+                format_quote
+            </span></div>
+    </div>
+</div>
+
+<!-- Review Section small -->
+
+<div class="w-full mx-auto bg-purple revfor-small">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 revpad">
+        <div class="p-4 text-g">
+            <p class="white-lable-head2">
+                {{ review_title }}
+            </p>
+            <p class="white242">{{ review_sub_title }}</p>
+            <div class="filmaker_description">{{ review_desc }}</div>
+        </div>
+        <div class="p-4">
+            {{if review_video }}
+            <div class="ab_vid_par">
+                <video class="rev-vid" width="100%" height="300px">
+                    <source src="{{review_video}}" type="video/mp4">
+                </video>
+                <button class="play_button_rev">
+                    <img src="/assets/play_button.png" alt="">
+                </button>
+            </div>
+            {{/if}}
+            <div class="vid-btm-flmkr">{{review_video_desc}}</div>
+        </div>
+    </div>
+    <div class="whtfloatsec-s">
+        <!-- <p>Video-creation engages a child’s
+            intelligence in multiple ways. And helps learning academic concepts in a much
+            more immersive and holistic way.</p>
+        <p>Siddhartha</p>
+        <p>Chief Education Officer, DPS Nashik</p>
+        <div class="forar"> <span
+                class="material-symbols-outlined rounded-full p-0 border-slate-300 border-solid   border-2">
+                chevron_right
+            </span></div> -->
+        <div class="reviews-slider-sm slider">
+            {{reviews}}
+            {{if description != ''}}
+            <div>
+                <p>{{description}}</p>
+                <p>{{name}}</p>
+                <p>{{position}}</p>
+            </div>
+            {{/if}}
+            {{/reviews}}
+        </div>
+
+        <div class="forqutes"><span class="material-icons">
+                format_quote
+            </span></div>
+
+    </div>
+</div>
+<!-- End Reviews Section -->
+
+<script>
+    $(document).ready(function () {
+        $('.reviews-sliderst').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: true,
+            prevArrow: `<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_left</span></button>`,
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
+            dots: false,
+            //dotsClass: 'slick-dots',
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 785,
+                settings: {
+                    slidesToShow: 1
+
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+
+        $('.reviews-slider-sm').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: true,
+            prevArrow: '<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">chevron_left</span></button>',
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
+            dots: false,
+            //dotsClass: 'slick-dots',
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 785,
+                settings: {
+                    slidesToShow: 1
+
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+    });
+
+    function play_pausAction_rev() {
+        if (video_rev.paused == true) {
+            // Play the video_rev
+            video_rev.play();
+            // Update the button text to 'Pause'
+            playButton_rev.innerHTML = "";
+        } else {
+            // Pause the video_rev
+            video_rev.pause();
+            // Update the button text to 'Play'
+            playButton_rev.innerHTML = `<img src="/assets/play_button.png" alt="">`;
+        }
+    }
+    // Event listener for the play/pause button
+    var playButton_rev = document.querySelector(".play_button_rev");
+    var video_rev = document.querySelector(".rev-vid");
+    video_rev.addEventListener("click", play_pausAction_rev);
+    playButton_rev.addEventListener("click", play_pausAction_rev)
+
+
+
+
+    var playButton_rev1 = document.querySelector(".play_button_rev1");
+    var video_rev1 = document.querySelector(".rev-vid1");
+    video_rev1.addEventListener("click", play_pausAction_rev1);
+    playButton_rev1.addEventListener("click", play_pausAction_rev1)
+
+    function play_pausAction_rev1() {
+        var playButton_rev1 = document.querySelector(".play_button_rev1");
+        // var video_rev1 = document.getElementById(vid);
+        // console.log('toggle button')
+        if (video_rev1.paused == true) {
+            // Play the video_rev
+            video_rev1.play();
+            // Update the button text to 'Pause'
+            playButton_rev1.innerHTML = "";
+        } else {
+            // Pause the video_rev
+            video_rev1.pause();
+            // Update the button text to 'Play'
+            playButton_rev1.innerHTML = `<img src="/assets/play_button.png" alt="">`;
+        }
+    }
+
+
+
+</script>

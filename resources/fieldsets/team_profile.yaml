@@ -1,0 +1,105 @@
+title: 'Team  Profile'
+fields:
+  -
+    handle: team_main_title
+    field:
+      antlers: false
+      display: 'Main Title'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: profile_section
+    field:
+      collapse: false
+      always_show_set_button: false
+      previews: true
+      sets:
+        profile:
+          display: Profile
+          fields:
+            -
+              handle: name
+              field:
+                input_type: text
+                antlers: false
+                display: Name
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: post
+              field:
+                input_type: text
+                antlers: false
+                display: Post
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: profile
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: Profile
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: profile_desc
+              field:
+                input_type: text
+                antlers: false
+                display: 'Profile Desc'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      antlers: false
+      remove_empty_nodes: false
+      display: 'Profile Section'
+      type: bard
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false

@@ -1,0 +1,41 @@
+<!-- Start Features For Students Section -->
+
+<div class="w-full mx-auto students-Section-big">
+    <p class="my-heads text-center pt-4">{{fea_stu_main_title}}</p>
+    <div class=" features-sec">
+        {{stu_features_content}}
+        {{if stu_fea_image!= ''}}
+        <div>
+            <div class="card">
+                {{ stu_fea_image }}
+                <img src="{{ url }}" alt="{{ alt }}" style="width:100%">
+                {{ /stu_fea_image }}
+                <div class="card-content">
+                    {{fea_img_desc}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{/stu_features_content}}
+    </div>
+</div>
+<div class="w-full mx-auto students-Section-small">
+    <p class="my-heads text-left vid-help-title-sup">{{fea_stu_main_title}}</p>
+    <div class="grid grid-cols-1 vid-help-supp">
+        {{stu_features_content}}
+        {{if stu_fea_image!= ''}}
+        <div class="vid-help-small">
+            <div class="vid-help-small-imgdiv">
+                {{ stu_fea_image }}
+                <img src="{{ url }}" alt="{{ alt }}" style="width:100%">
+                {{ /stu_fea_image }}
+            </div>
+            <div class="help-md-field">
+                {{fea_img_desc}}
+            </div>
+        </div>
+        {{/if}}
+        {{/stu_features_content}}
+    </div>
+</div>
+<!-- End Features For Students Section -->

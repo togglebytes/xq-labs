@@ -1,0 +1,88 @@
+<div class=" w-full integrating-section">
+    <p class="my-heads text-left">
+        {{vid_int_title}}
+    </p>
+    <p class="vid_int_description">{{vid_int_desc}}
+    </p>
+    <p class="int-vid-slide-caption text-left py-6">{{vid_int_slider_heading}}</p>
+    <!-- Integrating video-making slider -->
+    <div class="vid-int-slider">
+        {{vid_int_slider_videos}}
+        {{if vid_int_video}}
+
+        <div style="height: 220px; margin-left: 0px ; margin-right: 0px;">
+            <div class="ab_vid_par">
+                <video class="vidint-vid" id="vidint-vid{{index}}" width="100%" height="220px"
+                    onclick='play_pausAction_vi("{{index}}")''>
+                    <source src="{{vid_int_video}}" type="video/mp4">
+                </video>
+                <button class="play_button_vidint" id="play_button_vidint{{index}}" onclick='
+                    play_pausAction_vi("{{index}}")''>
+                    <img src="/assets/play_button.png" alt="">
+                    </button>
+            </div>
+        </div>
+        {{/if}}
+        {{/vid_int_slider_videos}}
+    </div>
+</div>
+<script>
+
+    //var playButton_vi = document.querySelector(".play_button_vidint");
+    //var video_vi = document.querySelector(".vidint-vid");
+
+    function play_pausAction_vi(id) {
+
+        var video_vi = document.querySelector("#vidint-vid" + id);
+        var playButton_vi = document.querySelector("#play_button_vidint" + id);
+
+        if (video_vi.paused == true) {
+            // Play the video
+            //video_vi.play();
+            video_vi.play();
+            // Update the button text to 'Pause'
+            playButton_vi.innerHTML = "";
+        } else {
+            // Pause the video
+            video_vi.pause();
+            // Update the button text to 'Play'
+            playButton_vi.innerHTML = `<img src="/assets/play_button.png" alt="">`;
+        }
+    }
+    // Event listener for the play/pause button
+    //video_vi.addEventListener("click", play_pausAction_vi);
+    //playButton_vi.addEventListener("click", play_pausAction_vi)
+
+    $(document).ready(function () {
+
+
+
+
+        $('.vid-int-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2500,
+            arrows: true,
+            prevArrow: `<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid icon-color">
+                            chevron_left</span></button>`,
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color">
+                            chevron_right</span></button>`,
+            dots: false,
+            dotsClass: 'slick-dots',
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 785,
+                settings: {
+                    slidesToShow: 1
+
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+    })
+</script>
