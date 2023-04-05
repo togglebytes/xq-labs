@@ -910,12 +910,12 @@ html {
     margin-top: -112px;
     padding-top: 150px;
     padding-bottom: 80px;
-    color:#793EF0;
+    color: #793ef0;
     font-weight: bold;
 }
 
 .for-follow {
-    color: #793EF0;
+    color: #793ef0;
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -933,7 +933,7 @@ html {
 }
 
 .footer-title {
-    color: #793EF0;
+    color: #793ef0;
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -1538,13 +1538,12 @@ html {
     font-family: "Cera Pro";
     padding-right: 30px;
 }
-.contact-popup-head{
+.contact-popup-head {
     font-size: 5rem;
     line-height: 57.6px;
     color: blueviolet;
     font-weight: bold;
     font-family: "Cera Pro";
-   
 }
 .my-heads-popup + p {
     font-size: 48px;
@@ -1560,15 +1559,15 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:2rem
+    gap: 2rem;
 }
 .thanks-black {
-    font-size: 1.5rem ;
-    color: rgb(0, 0, 0) ;
-    line-height: 32.6px ;
-    font-weight: 400 ;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    line-height: 32.6px;
+    font-weight: 400;
 }
-.tnks-img{
+.tnks-img {
     width: 25%;
 }
 #successDiv .letterbox-img {
@@ -1798,7 +1797,7 @@ html {
         width: 100%;
         gap: 20px;
     }
-    
+
     .whtfloatsec {
         display: flex;
         flex-direction: column;
@@ -1881,11 +1880,11 @@ html {
         font-family: "Cera Pro";
     }
     .thanks-black {
-        font-size: .9rem;
-        color: rgb(0, 0, 0) ;
+        font-size: 0.9rem;
+        color: rgb(0, 0, 0);
         line-height: 20.6px;
         text-align: center;
-        font-weight: 400 ;
+        font-weight: 400;
     }
     .about-xq-img img {
         height: 45px;
@@ -1942,8 +1941,7 @@ html {
         margin: auto;
         background-color: #ffffff;
         padding: 178px 30px 100px 30px;
-        color:#793EF0;
-        
+        color: #793ef0;
     }
 
     .footer-section-small {
@@ -2314,7 +2312,7 @@ html {
         font-size: 13px;
         padding-top: 128px;
         margin: 0;
-        color:#793EF0;
+        color: #793ef0;
         font-weight: bold;
     }
 
@@ -2732,7 +2730,7 @@ html {
     }
 
     .footer-title {
-        color: #793EF0;
+        color: #793ef0;
         font-size: 13px;
         font-weight: 700;
         margin-bottom: 10px;
@@ -2743,7 +2741,45 @@ html {
         font-size: 0.7rem;
     }
 }
-.footer-small-text{
-    color:#793EF0;
+.footer-small-text {
+    color: #793ef0;
     font-weight: bold;
 }
+/* ---------- */
+/* 
+.fieldInput {
+    display: block;
+    margin: 70px auto;
+    width: 300px;
+    height: 35px;
+    position: relative;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.09);
+    border-radius: 35px;
+    overflow: hidden;
+}
+.fieldInput .form-input {
+    width: 200px;
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    font-size: 9px;
+    color: #6a7c92;
+}
+.fieldInput .form-input :focus {
+    outline: none;
+}
+
+.fieldInput .form-submit {
+    font-size: 12px;
+    color: #6a7c92;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 35px;
+    border-radius: 17px;
+    border: none;
+    background: red;
+    box-shadow: 5px -2px 81px 1px rgba(0, 0, 0, 0.09);
+    cursor: pointer;
+} */
