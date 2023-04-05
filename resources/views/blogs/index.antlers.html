@@ -20,6 +20,7 @@
         outline: 0 none !important;
 
     }
+
     .submitBtnFeild,
     .inputFeild {
         height: 40px;
@@ -109,10 +110,73 @@
 
     .latest-pop-par {}
 
-    .latest-pop-par-tab p {
+    .latest-pop-par .lates-title {
         font-weight: 500;
-        /* font-size: 18px; */
+        font-size: 20px;
     }
+
+    .latest-posts-box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .latest-posts-iteam {
+        border-radius: 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .latest-posts-iteam>div:first-child {
+        padding: 15px;
+
+
+    }
+
+    .latest-posts-iteam>div:nth-child(2) {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .latest-posts-iteam img {
+        /* height: 100%;
+        width: 100%; */
+        object-fit: cover;
+        max-height: 160px;
+        border-radius: 15px;
+    }
+
+    .blog-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+
+    }
+
+    .blog-date {
+
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 12px;
+        letter-spacing: 2px;
+
+        color: #6A6B7D;
+    }
+
+    .read-button {
+        color: white;
+        background: #793EF0;
+        border-radius: 10px;
+        padding: 5px 15px;
+        width: max-content;
+
+    }
+
     @media screen and (max-width: 640px) {
         .blogbanner .subscribe-box-par {
             background-color: #793EF0;
@@ -136,17 +200,31 @@
             right: 8px;
         }
 
+        .latest-posts-iteam {
+
+flex-direction: row;
+
+
+        }
+        .latest-posts-iteam img {
+            height: 100%;
+        }
+
     }
 </style>
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-<div class="container mx-auto  px-4">
+<div class="container mx-auto  ">
     <div class="grid grid-cols-1  gap-4 mb-4">
         <div class="relative blogbanner" style="object-fit: contain; height:100% ; width:100%;">
-            <span class="material-symbols-outlined " id="arrow_back">
-                arrow_back
-            </span>
+            <a href="/">
+                <span class="material-symbols-outlined " id="arrow_back">
+                    arrow_back
+                </span>
+            </a>
+
+
 
             <img height="100%" width="100%"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4GBoV1sdU51HerXSVJkjy0ARWyhAfgssmpg&usqp=CAU"
@@ -161,8 +239,8 @@
         </div>
 
     </div>
-    <div class="grid grid-cols-10 gap-4 mt-24 md:mt-1 ">
-        <div class="flex flex-col gap-4 md:col-span-7 col-span-10">
+    <div class="grid grid-cols-10 gap-4 mt-16 md:mt-1 px-2 md:px-4">
+        <div class="flex flex-col gap-2 md:col-span-7 col-span-10">
 
             <div class="academics-section  ">
                 <div>
@@ -191,7 +269,7 @@
             </div>
             <div class="art-int-section ">
                 <div class="m-4">
-                    <p class="my-4 nest-cat-head">
+                    <p class=" mb-4  nest-cat-head">
                         Art-Integrated learning
                     </p>
                     <div class="bg-gray-800 basis-1/2 rounded-cstm">
@@ -214,8 +292,95 @@
             </div>
         </div>
         <div class="md:col-span-3 col-span-10">
-            <div class="latest-pop-par">
-                <div class="flex flex-row justify-around latest-pop-par-tab m-4">
+            <div class="latest-pop-par m-4">
+
+                <p class="lates-title">Latest Posts</p>
+
+                <div class="latest-posts-box">
+
+                    <div class="latest-posts-iteam">
+                        <div>
+                            <img height="100%" width="100%"
+                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                                alt="blog thumb">
+
+
+                        </div>
+
+                        <div>
+                            <p class="blog-title">Empower kids through video creation</p>
+                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                            <a href="#" class="read-button">Read Article</a>
+
+                        </div>
+                    </div>
+                    <div class="latest-posts-iteam">
+                        <div>
+                            <img height="100%" width="100%"
+                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                                alt="blog thumb">
+
+
+                        </div>
+
+                        <div>
+                            <p class="blog-title">How to use video technique in school</p>
+                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                            <a href="#" class="read-button">Read Article</a>
+
+                        </div>
+                    </div>
+                    <div class="latest-posts-iteam">
+                        <div>
+                            <img height="100%" width="100%"
+                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                                alt="blog thumb">
+
+
+                        </div>
+
+                        <div>
+                            <p class="blog-title">Communication in kids</p>
+                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                            <a href="#" class="read-button">Read Article</a>
+
+                        </div>
+                    </div>
+                    <div class="latest-posts-iteam">
+                        <div>
+                            <img height="100%" width="100%"
+                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                                alt="blog thumb">
+
+
+                        </div>
+
+                        <div>
+                            <p class="blog-title">Lorem ipsum dolor sit amet consectetur a</p>
+                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                            <a href="#" class="read-button">Read Article</a>
+
+                        </div>
+                    </div>
+                    <div class="latest-posts-iteam">
+                        <div>
+                            <img height="100%" width="100%"
+                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                                alt="blog thumb">
+
+
+                        </div>
+
+                        <div>
+                            <p class="blog-title"> amet consectetur Lorem ipsum dolor sit a</p>
+                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                            <a href="#" class="read-button">Read Article</a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="flex flex-row justify-around latest-pop-par-tab m-4">
                     <button class="latest-post-button">
                         <p>Latest</p>
                     </button>
@@ -229,30 +394,31 @@
                 <div class="popular-post-tab">
                     popular-post-tab
                 </div>
+            </div> -->
             </div>
-        </div>
 
+        </div>
     </div>
 </div>
 <script>
-    let latest_post_tab = document.querySelector(".latest-post-tab")
-    let popular_post_tab = document.querySelector(".popular-post-tab")
-    latest_post_tab.style.display = "block"
-    popular_post_tab.style.display = "none"
-    let latest_post_button = document.querySelector(".latest-post-button")
-    latest_post_button.addEventListener("click", () => {
-        latest_post_tab.style.display = "block"
-        popular_post_tab.style.display = "none"
-        console.log("latest_post_button clicked")
-    })
-    let popular_post_button = document.querySelector(".popular-post-button")
+    // let latest_post_tab = document.querySelector(".latest-post-tab")
+    // let popular_post_tab = document.querySelector(".popular-post-tab")
+    // latest_post_tab.style.display = "block"
+    // popular_post_tab.style.display = "none"
+    // let latest_post_button = document.querySelector(".latest-post-button")
+    // latest_post_button.addEventListener("click", () => {
+    //     latest_post_tab.style.display = "block"
+    //     popular_post_tab.style.display = "none"
+    //     console.log("latest_post_button clicked")
+    // })
+    // let popular_post_button = document.querySelector(".popular-post-button")
 
-    popular_post_button.addEventListener("click", () => {
-        latest_post_tab.style.display = "none"
-        popular_post_tab.style.display = "block"
-        console.log("popular-post-tab clicked")
+    // popular_post_button.addEventListener("click", () => {
+    //     latest_post_tab.style.display = "none"
+    //     popular_post_tab.style.display = "block"
+    //     console.log("popular-post-tab clicked")
 
 
-    })
+    // })
 
 </script>
