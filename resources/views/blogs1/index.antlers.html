@@ -2,23 +2,60 @@
 <div class="w-full banner_section_lg">
     <section class="home_banner slider p-0 m-0">
         {{ collection:pages }}
-
             {{if title == 'Blog'}}
                 {{ blocks }}
                     {{banner_img}}
-                    <div class="slidebn " style="height: 100%; width: 100%;">
+                    <div class="slidebn" style="height: 100%; width: 100%;">
                         <img class="banerimage" style=" object-fit: contain;" width="100%" src="{{ url }}" alt="{{ alt }}">
                     </div>
                     {{/banner_img}}
                 {{ /blocks }}
             {{/if}}
-
         {{ /collection:pages }}
     </section>
 </div>
 <!-- End Banner Section-->
+{{ taxonomy from="categories" main_category:is="academics"}}
+<div class="container py-16 md:py-20">
+    <div class="max-w-3xl mb-12">
+        Academics 
+    </div>
+    <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+        {{if title !=''}}
+        <div class="mb-4 overflow-hidden rounded-lg xl:h-96 h-80">
+            {{
+                partial:components/picture
+                :image="image"
+                cover="true"
+                sizes="(min-width: 200px) 35vw, 90vw" has_link="true" link="{url}"
+            }}
+        </div>
+        {{/if}}
+    </div>
+</div>
+{{ /taxonomy }}
+{{ taxonomy from="categories" main_category:is="art-Integrated-learning"}}
+<div class="container py-16 md:py-20">
+    <div class="max-w-3xl mb-12">
+        Art-Integrated Learning
+    </div>
+    <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+        {{if title !=''}}
+        <div class="mb-4 overflow-hidden rounded-lg xl:h-96 h-80">
+            {{
+                partial:components/picture
+                :image="image"
+                cover="true"
+                sizes="(min-width: 200px) 35vw, 90vw" has_link="true" link="{url}"
+            }}
+        </div>
+        {{/if}}
+    </div>
+</div>
+{{ /taxonomy }}
 <!--Start Content Section-->
-    <div class="container py-16 md:py-20">
+
+    <!-- <div class="container py-16 md:py-20">
         <div class="max-w-3xl mb-12">
             Academics 
         </div>
@@ -39,7 +76,7 @@
             </div>
             {{ /taxonomy }}
         
-        <!-- {{ collection from="posts" limit="6" paginate="true" as="posts" has_academics:is="true"}}
+        {{ collection from="posts" limit="6" paginate="true" as="posts" has_academics:is="true"}}
             <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
 
                 {{ posts }}
@@ -57,12 +94,12 @@
                     </div>
                 {{ /if }}
             {{ /paginate }}
-        {{ /collection }} -->
-    </div>
+        {{ /collection }}
+    </div> -->
 <!--End content Section-->
 
 <!--Start Content Section-->
-<div class="container py-16 md:py-20">
+<!-- <div class="container py-16 md:py-20">
     <div class="max-w-3xl mb-12">
         Art-Integrated Learning
     </div>
@@ -84,7 +121,7 @@
             {{ /if }}
         {{ /paginate }}
     {{ /collection }}
-</div>
+</div> -->
 <!--End content Section-->
 <!-- <div class="container py-16 md:py-20">
     <div class="max-w-3xl mb-12">

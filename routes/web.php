@@ -18,9 +18,8 @@ use Illuminate\Support\Facades\Route;
 // ]);
 
 Route::statamic('posts', 'posts.index', ['title' => 'Posts']);
-// Route::statamic('blogs', 'posts.index', ['title' => 'Posts']);
-// Route::statamic('blogs', 'posts1.index', ['title' => 'Posts']);
 Route::statamic('blogs', 'blogs.index', ['title' => 'Blogs']);
+Route::statamic('blogs1', 'blogs1.index', ['title' => 'Blogs']);
 
 Route::statamic('site.webmanifest', 'partials._manifest', [
     'layout' => null,
