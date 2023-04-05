@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1680686123
+updated_at: 1680688002
 blocks:
   -
     id: le2tryml
@@ -45,9 +45,13 @@ blocks:
     id: le2h0bwn
     how_work_main_title: How
     how_work_description: |-
-      The xQ Video Lab is an **ultra-flexible** and **cost-effective** offering, thoughtfully-designed by our team of seasoned academicians and creative professionals.
+      The xQ Video Lab is an end-to-end ecosystem which effortlessly blends in with the school's timetable and core curriculum.
 
-      As part of the offering, the xQ Video Lab comes with a **physical set up** within the school premise, a **self-learning platform**, and a **text book** with 50 art-integrated video projects.
+      **Book Model for Schools**
+      With the book model, each student gets an Art-Integration Book containing 50 art-integrated academic projects and a video-creation curriculum.
+
+      **Lab Model for Schools**
+      The Lab Model combines the Book model with a physical lab space where students get the benefit of hands-on, in-class learning for video-creation lessons with a dedicated faculty
     how_work_imgs:
       -
         type: set
