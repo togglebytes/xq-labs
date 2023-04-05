@@ -224,12 +224,43 @@
         <div class="md:col-span-3 col-span-10">
             <div class="latest-pop-par">
                 <div class="flex flex-row justify-around latest-pop-par-tab m-4">
-                    <p>Latest</p>
-                    <p>Popular Posts</p>
+                    <button class="latest-post-button">
+                        <p>Latest</p>
+                    </button>
+                    <button class="popular-post-button">
+                        <p>Popular Posts</p>
+                    </button>
                 </div>
-                <div></div>
+                <div class="latest-post-tab">
+                    latest-post-tab
+                </div>
+                <div class="popular-post-tab">
+                    popular-post-tab
+                </div>
             </div>
         </div>
 
     </div>
 </div>
+<script>
+    let latest_post_tab = document.querySelector(".latest-post-tab")
+    let popular_post_tab = document.querySelector(".popular-post-tab")
+    latest_post_tab.style.display = "block"
+    popular_post_tab.style.display = "none"
+    let latest_post_button = document.querySelector(".latest-post-button")
+    latest_post_button.addEventListener("click", () => {
+        latest_post_tab.style.display = "block"
+        popular_post_tab.style.display = "none"
+        console.log("latest_post_button clicked")
+    })
+    let popular_post_button = document.querySelector(".popular-post-button")
+
+    popular_post_button.addEventListener("click", () => {
+        latest_post_tab.style.display = "none"
+        popular_post_tab.style.display = "block"
+        console.log("popular-post-tab clicked")
+
+
+    })
+
+</script>
