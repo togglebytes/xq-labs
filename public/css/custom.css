@@ -137,12 +137,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 46px;
+    /* height: 46px; */
     background: #feed00;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 22px;
-
+padding: 10px 25px;
     text-align: center;
 }
 
@@ -728,14 +728,14 @@ html {
     font-family: "Cera Pro";
 }
 
-.vid-btm-sty-small {
+.vid-btm-yello-strip-new-small {
     display: none;
     font-family: "Cera Pro";
 }
 
 .vid-btm-sty1 {
     box-sizing: border-box;
-    height: 25px;
+    height: 40px;
     background-color: #ffed00;
     font-size: 14px;
     text-align: center;
@@ -816,7 +816,7 @@ html {
     font-size: 48px;
     line-height: 58px;
     font-family: "Cera Pro";
-    margin-bottom: 32px;
+    margin-bottom: 15px;
 }
 
 .how-to-text-content p {
@@ -1586,11 +1586,24 @@ html {
     height: 30px;
     width: 30px;
 }
+
+.vid-btm-yello-strip-new{
+    background-color: #ffff00;
+    text-align: center;
+    padding: 10px 25px;
+    font-size: 14px;
+}
+
+
+
+
 @media screen and (max-width: 1600px) {
     .vid-btm-sty1 {
-        font-size: 11px;
+        font-size: 14px;
     }
-
+.padding-for-school-fea{
+    padding: 20px;
+}
     .contactus-subtitle {
         font-size: 35px;
     }
@@ -1598,6 +1611,8 @@ html {
     .my-heads {
         font-size: 38px;
         line-height: 47.6px;
+        text-align: left;
+
     }
     .my-heads-bk {
         font-size: 38px;
@@ -1848,6 +1863,30 @@ html {
 }
 
 @media screen and (max-width: 640px) {
+
+    .how-to-text-content p, .how-to-text-content p+p{
+
+font-size: 12px;
+    }
+
+
+    p.how1 {
+        font-size: 24px;
+    }
+
+    p.how2 {
+        font-size: 24px;
+    }
+
+    .vid-btm-yello-strip-new{
+        font-size: 10px;
+    }
+
+.parrent-content {
+flex-direction: column-reverse;
+
+}
+
     .pop-up-close-btn {
         position: absolute;
         float: right;
@@ -2044,7 +2083,7 @@ html {
     }
 
     .vid-btm-sty1 {
-        height: 40px;
+        height: 54px;
         font-size: 12px;
     }
 
@@ -2063,21 +2102,18 @@ html {
         padding: 0 10px;
     }
 
-    .vid-btm-sty-big {
+    .vid-btm-yello-strip-new {
         display: none;
     }
 
-    .vid-btm-sty-small {
-        height: 25px;
-        width: 100%;
-        background-color: #fff573;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 14px;
+    .vid-btm-yello-strip-new-small {
+    display: block;
+        background-color: #ffff00;
         text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 5px 25px;
+
+fontsize: 12px;
+
     }
     .news-logos .slick-slide {
         margin: 0 6px;
@@ -2444,7 +2480,7 @@ html {
     }
 
     .lifeskilimage_sec {
-        display: none;
+        /* display: none; */
     }
 
     .customers-section-small {
@@ -2479,10 +2515,10 @@ html {
         object-fit: cover;
     }
     .vid-btm-flmkr {
-        height: 25px;
+        /* height: 25px; */
         font-style: normal;
         font-weight: 400;
-        font-size: 10px;
+        font-size: 12px;
         line-height: 12px;
         text-align: center;
     }
@@ -2516,7 +2552,7 @@ html {
     }
 
     .parent-content {
-        padding: 20px;
+        padding: 20px 35px;
     }
 
     .features-sec {

@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1680256260
+updated_at: 1680686123
 blocks:
   -
     id: le2tryml
@@ -32,7 +32,7 @@ blocks:
   -
     id: le2d95d5
     about_us_title: 'What is the xQ Video Lab?'
-    about_us_video: main-app-(1).mp4
+    about_us_video: final-app-promo-with-new-logo_x264.mp4
     about_video_desc: 'Catch our founder explain the idea of an xQ Video Lab'
     about_us_desc: |-
       The xQ Video Lab is a first-of-its-kind initiative, designed to partner schools in helping students to learn the art and science of video-making in a structured manner.
@@ -556,7 +556,7 @@ blocks:
           values:
             type: link_and_logo
             link: 'https://www.youtube.com/'
-            social_media_logo: icon-youtube.svg
+            social_media_logo: facebook-logo-2019.svg
       -
         type: paragraph
     type: footer_section
