@@ -16,3 +16,8 @@ preferences:
         - datestamp
         - full_name
         - email
+  taxonomies:
+    categories:
+      columns:
+        - title
+        - slug

@@ -123,7 +123,6 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
           validate:
             - required
@@ -144,6 +143,18 @@ sections:
           icon: users
           listable: hidden
       -
+        handle: has_academics
+        field:
+          default: false
+          display: 'Has Academics?'
+          type: toggle
+          icon: toggle
+          instructions: 'Displayed above categories.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
         handle: category
         field:
           max_items: 1
@@ -155,6 +166,11 @@ sections:
           type: terms
           icon: taxonomy
           listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          if:
+            has_academics: 'equals true'
       -
         handle: tags
         field:
