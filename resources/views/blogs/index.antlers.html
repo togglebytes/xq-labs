@@ -321,6 +321,18 @@
                 <div>
                     <p class="m-4 nest-cat-head">Academics</p>
                     <div class="flex flex-row gap-4 m-4">
+                        {{ taxonomy from="categories" main_category:is="academics"}}
+                            {{if title !=''}}
+                            <div class="relative bg-gray-800 basis-1/2 rounded-cstm">
+
+                                <img class="rounded-cstm" height="100%" width="100%"
+                                    src="{{url}}" alt="">
+                                <div class="floating-grade-title">
+                                    <p>Grade 3-5 </p>
+                                </div>
+                            </div>
+                            {{/if}}
+                        {{ /taxonomy }}
                         <div class="relative bg-gray-800 basis-1/2 rounded-cstm">
 
                             <img class="rounded-cstm" height="100%" width="100%"
