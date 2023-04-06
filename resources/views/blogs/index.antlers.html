@@ -67,6 +67,7 @@
         margin-left: auto;
         margin-right: auto;
         bottom: 17%;
+        cursor: pointer;
     }
 
     .floating-grade-title p {
@@ -85,11 +86,11 @@
         box-sizing: border-box;
         max-width: max-content;
         position: absolute;
-        left: 0;
-        right: 7%;
+        left: 55%;
+
         margin-left: auto;
         margin-right: auto;
-        bottom: 14%;
+        bottom: 25%;
     }
 
     .floating-art-int-title p {
@@ -99,16 +100,16 @@
         padding: 20px;
         box-sizing: border-box;
         color: white;
-        font-size: 22px;
+        font-size: 30px;
         font-weight: 500;
     }
 
     .floating-art-int-title span {
 
-        font-size: 17px;
+        font-size: 25px;
     }
 
-    .latest-pop-par {}
+
 
     .latest-pop-par .lates-title {
         font-weight: 500;
@@ -130,7 +131,7 @@
     }
 
     .latest-posts-iteam>div:first-child {
-        padding: 15px;
+        padding: 15px 15px 0 15px;
 
 
     }
@@ -169,6 +170,7 @@
     }
 
     .read-button {
+        font-weight: 500;
         color: white;
         background: #793EF0;
         border-radius: 10px;
@@ -177,7 +179,39 @@
 
     }
 
+    .see-more-blogs {
+        color: white;
+        background: #F553B7;
+        border-radius: 10px;
+        padding: 10px 20px;
+        width: max-content;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+
     @media screen and (max-width: 640px) {
+
+        .floating-art-int-title {
+            left: 44%;
+            margin-left: auto;
+            margin-right: auto;
+            bottom: 18%;
+
+        }
+
+        .floating-art-int-title p {
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .floating-art-int-title span {
+            font-size: 17px;
+        }
+
         .blogbanner .subscribe-box-par {
             background-color: #793EF0;
             position: absolute;
@@ -200,14 +234,58 @@
             right: 8px;
         }
 
-        .latest-posts-iteam {
 
-flex-direction: row;
-
-
-        }
         .latest-posts-iteam img {
             height: 100%;
+        }
+
+        .latest-posts-iteam {
+            /* flex-direction: column; */
+            flex-direction: row;
+            gap: 2px;
+        }
+
+        .latest-posts-iteam>div:first-child {
+            padding: 5px;
+
+            max-width: 35%;
+        }
+
+        .latest-posts-iteam>div:nth-child(2) {
+            /* padding: 10px; */
+            padding: 7px;
+            display: flex;
+            flex-direction: co;
+            gap: 5px;
+        }
+
+
+        .blog-title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 19px;
+
+        }
+
+        .blog-date {
+
+            font-weight: 700;
+            font-size: 7px;
+            line-height: 12px;
+            letter-spacing: 1.5px;
+
+        }
+
+        .read-button {
+            font-weight: 700;
+            font-size: 10px;
+            color: white;
+            background: #793EF0;
+            border-radius: 10px;
+            padding: 5px 15px;
+            width: max-content;
+
         }
 
     }
@@ -223,9 +301,6 @@ flex-direction: row;
                     arrow_back
                 </span>
             </a>
-
-
-
             <img height="100%" width="100%"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4GBoV1sdU51HerXSVJkjy0ARWyhAfgssmpg&usqp=CAU"
                 alt="baner image">
@@ -239,7 +314,7 @@ flex-direction: row;
         </div>
 
     </div>
-    <div class="grid grid-cols-10 gap-4 mt-16 md:mt-1 px-2 md:px-4">
+    <div class="grid grid-cols-10 gap-4 mt-16 md:mt-1 px-0 md:px-4">
         <div class="flex flex-col gap-2 md:col-span-7 col-span-10">
 
             <div class="academics-section  ">
@@ -272,7 +347,7 @@ flex-direction: row;
                     <p class=" mb-4  nest-cat-head">
                         Art-Integrated learning
                     </p>
-                    <div class="bg-gray-800 basis-1/2 rounded-cstm">
+                    <div class="relative  bg-gray-800 basis-1/2 rounded-cstm">
                         <img class="rounded-cstm" height="100%" width="100%"
                             src="https://static.kcet.kcet.production.k2.m1.brightspot.cloud/dims4/default/d7d280d/2147483647/strip/true/crop/6016x4016+0+0/resize/848x566!/quality/90/?url=http%3A%2F%2Fkcet-brightspot.s3.amazonaws.com%2F48%2Ff9%2F697572234266ae0142daefa9166c%2Fistock-1154573247.jpeg"
                             alt="rtint learning">
@@ -294,7 +369,7 @@ flex-direction: row;
         <div class="md:col-span-3 col-span-10">
             <div class="latest-pop-par m-4">
 
-                <p class="lates-title">Latest Posts</p>
+                <p class="lates-title mb-4">Latest Posts</p>
 
                 <div class="latest-posts-box">
 
@@ -317,7 +392,7 @@ flex-direction: row;
                     <div class="latest-posts-iteam">
                         <div>
                             <img height="100%" width="100%"
-                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkwX5jkLLIhX_Zm9FcjHYpMOeOJnIn8Qzhdg&usqp=CAU"
                                 alt="blog thumb">
 
 
@@ -333,7 +408,7 @@ flex-direction: row;
                     <div class="latest-posts-iteam">
                         <div>
                             <img height="100%" width="100%"
-                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOYFShfvIowLElC3i_-3esIH0MO8hTGlF9vExpITCZ_G8AWQJGGekM9aIpI0sKPEXK38&usqp=CAU"
                                 alt="blog thumb">
 
 
@@ -349,7 +424,7 @@ flex-direction: row;
                     <div class="latest-posts-iteam">
                         <div>
                             <img height="100%" width="100%"
-                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7yzc4XmIEOTisHuh6STkDxv6QrCGEBUwGG259vHolzOjG3AWw9LsGB1rTkgdnWOAKyw&usqp=CAU"
                                 alt="blog thumb">
 
 
@@ -378,6 +453,11 @@ flex-direction: row;
 
                         </div>
                     </div>
+
+                    <a href="#" class="see-more-blogs"> Read More <span class="material-symbols-outlined">
+                            keyboard_tab
+                        </span></a>
+
 
                 </div>
                 <!-- <div class="flex flex-row justify-around latest-pop-par-tab m-4">
