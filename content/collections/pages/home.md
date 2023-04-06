@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1680688002
+updated_at: 1680698072
 blocks:
   -
     id: le2tryml
@@ -32,7 +32,7 @@ blocks:
   -
     id: le2d95d5
     about_us_title: 'What is the xQ Video Lab?'
-    about_us_video: final-app-promo-with-new-logo_x264.mp4
+    about_us_video: top-academicians-speak-on-the-benefits-of-video-creation-in-academic-learning_x264-1680697235.mp4
     about_video_desc: 'Catch our founder explain the idea of an xQ Video Lab'
     about_us_desc: |-
       The xQ Video Lab is a first-of-its-kind initiative, designed to partner schools in helping students to learn the art and science of video-making in a structured manner.
@@ -272,7 +272,7 @@ blocks:
           values:
             type: logo_and_link
             logo: download-(2).jpg
-            logo_link: 'https://xqvideolab.com/blog/'
+            logo_link: 'https://xqvideolab.com/about-xq-video-lab/'
       -
         type: set
         attrs:
@@ -280,7 +280,7 @@ blocks:
           values:
             type: logo_and_link
             logo: download-(4).png
-            logo_link: 'https://xqvideolab.com/blog/'
+            logo_link: 'https://xqvideolab.com/about-xq-video-lab/'
       -
         type: set
         attrs:
@@ -293,6 +293,14 @@ blocks:
           id: lfwcwkew
           values:
             type: logo_and_link
+      -
+        type: set
+        attrs:
+          id: lg3nv2fl
+          values:
+            type: logo_and_link
+            logo: component_36.png
+            logo_link: 'https://xqvideolab.com/blog/'
       -
         type: paragraph
   -

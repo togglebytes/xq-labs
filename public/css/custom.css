@@ -142,7 +142,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-padding: 10px 25px;
+    padding: 10px 25px;
     text-align: center;
 }
 
@@ -659,6 +659,7 @@ html {
     color: blueviolet;
     font-weight: bold;
     font-family: "Cera Pro";
+    text-align: center;
 }
 .my-heads-bk {
     font-size: 48px;
@@ -1587,23 +1588,42 @@ html {
     width: 30px;
 }
 
-.vid-btm-yello-strip-new{
+.vid-btm-yello-strip-new {
     background-color: #ffff00;
     text-align: center;
     padding: 10px 25px;
     font-size: 14px;
 }
+.floating-buttons-homeblobs-par {
+    position: absolute;
+    top: 22px;
+    left: 19px;
+    gap: 11px;
+}
+.floating-buttons-homeblobs-par a {
+    background-color: #feed00;
+    color: #793ef0;
+    padding: 10px;
+    /* font-size: 14px; */
+    border-radius: 50%;
+}
+.floating-buttons-homeblobs-par p {
+    font-size: 13px;
+}
 
-
-
-
+.floating-buttons-homeblobs-par i {
+    font-size: 16px;
+}
+.floating-buttons-homeblobs-par {
+    font-weight: bold;
+}
 @media screen and (max-width: 1600px) {
     .vid-btm-sty1 {
         font-size: 14px;
     }
-.padding-for-school-fea{
-    padding: 20px;
-}
+    .padding-for-school-fea {
+        padding: 20px;
+    }
     .contactus-subtitle {
         font-size: 35px;
     }
@@ -1611,8 +1631,7 @@ html {
     .my-heads {
         font-size: 38px;
         line-height: 47.6px;
-        text-align: left;
-
+        /* text-align: left; */
     }
     .my-heads-bk {
         font-size: 38px;
@@ -1864,11 +1883,24 @@ html {
 
 @media screen and (max-width: 640px) {
 
-    .how-to-text-content p, .how-to-text-content p+p{
-
-font-size: 12px;
+    .floating-buttons-homeblobs-par {
+        gap: 5px;
+        position: absolute;
+        top: 12px;
+        left: 10px;
+    }
+    .floating-buttons-homeblobs-par p {
+        font-size: 7px;
+    }
+    
+    .floating-buttons-homeblobs-par i {
+        font-size: 10px;
     }
 
+    .how-to-text-content p,
+    .how-to-text-content p + p {
+        font-size: 12px;
+    }
 
     p.how1 {
         font-size: 24px;
@@ -1878,14 +1910,13 @@ font-size: 12px;
         font-size: 24px;
     }
 
-    .vid-btm-yello-strip-new{
+    .vid-btm-yello-strip-new {
         font-size: 10px;
     }
 
-.parrent-content {
-flex-direction: column-reverse;
-
-}
+    .parrent-content {
+        flex-direction: column-reverse;
+    }
 
     .pop-up-close-btn {
         position: absolute;
@@ -2057,6 +2088,7 @@ flex-direction: column-reverse;
 
     .revfor-small {
         display: block;
+        margin-top: 25px;
     }
 
     .revfor-big {
@@ -2107,13 +2139,12 @@ flex-direction: column-reverse;
     }
 
     .vid-btm-yello-strip-new-small {
-    display: block;
+        display: block;
         background-color: #ffff00;
         text-align: center;
         padding: 5px 25px;
 
-fontsize: 12px;
-
+        fontsize: 12px;
     }
     .news-logos .slick-slide {
         margin: 0 6px;
@@ -2590,6 +2621,7 @@ fontsize: 12px;
         font-weight: 700 !important;
         font-size: 24px !important;
         line-height: 29px !important;
+        text-align: center;
     }
     .my-heads-bk {
         font-style: normal;
