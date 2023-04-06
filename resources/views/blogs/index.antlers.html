@@ -301,9 +301,15 @@
                     arrow_back
                 </span>
             </a>
-            <img height="100%" width="100%"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4GBoV1sdU51HerXSVJkjy0ARWyhAfgssmpg&usqp=CAU"
-                alt="baner image">
+            {{ collection:pages }}
+                {{if title == 'Blog'}}
+                    {{ blocks }}
+                        {{banner_img}}
+                        <img height="100%" width="100%" src="{{ url }}" alt="baner image">
+                    {{/banner_img}}
+                    {{ /blocks }}
+                {{/if}}
+            {{ /collection:pages }}
             <div style="width: fit-content;" class="w-auto  p-2">
 
                 <div class=" subscribe-box-par">
@@ -323,34 +329,21 @@
                     <div class="flex flex-row gap-4 m-4">
                         {{ taxonomy from="categories" main_category:is="academics"}}
                             {{if title !=''}}
-                            <div class="relative bg-gray-800 basis-1/2 rounded-cstm">
+                            <!-- <div class="relative bg-gray-800 basis-1/2 rounded-cstm">
 
                                 <img class="rounded-cstm" height="100%" width="100%"
                                     src="{{url}}" alt="">
                                 <div class="floating-grade-title">
                                     <p>Grade 3-5 </p>
                                 </div>
-                            </div>
+                            </div> -->
+                            {{ partial:components.academic_blogs
+                                has_link="true"
+                                link="{url}"
+                                description="{date}"
+                            }}
                             {{/if}}
                         {{ /taxonomy }}
-                        <div class="relative bg-gray-800 basis-1/2 rounded-cstm">
-
-                            <img class="rounded-cstm" height="100%" width="100%"
-                                src="https://nationaltoday.com/wp-content/uploads/2022/06/7-Children-Day.jpg" alt="">
-                            <div class="floating-grade-title">
-                                <p>Grade 3-5 </p>
-                            </div>
-                        </div>
-                        <div class="relative bg-gray-800 basis-1/2 rounded-cstm">
-                            <img class="rounded-cstm" height="100%" width="100%"
-                                src="https://pbs.twimg.com/media/Fh3w4u1XkAMFI2u?format=jpg&name=small" alt="">
-                            <div class="floating-grade-title">
-                                <p>Grade 6-9 </p>
-                            </div>
-
-                        </div>
-
-
                     </div>
                 </div>
             </div>
@@ -359,23 +352,17 @@
                     <p class=" mb-4  nest-cat-head">
                         Art-Integrated learning
                     </p>
-                    <div class="relative  bg-gray-800 basis-1/2 rounded-cstm">
-                        <img class="rounded-cstm" height="100%" width="100%"
-                            src="https://static.kcet.kcet.production.k2.m1.brightspot.cloud/dims4/default/d7d280d/2147483647/strip/true/crop/6016x4016+0+0/resize/848x566!/quality/90/?url=http%3A%2F%2Fkcet-brightspot.s3.amazonaws.com%2F48%2Ff9%2F697572234266ae0142daefa9166c%2Fistock-1154573247.jpeg"
-                            alt="rtint learning">
-                        <div class="floating-art-int-title">
-                            <p>Art Integration <br>
-                                <span>through</span>
-                                <br>
-                                Video Creation
-                            </p>
-                        </div>
-
-
-                    </div>
+                    {{ taxonomy from="categories" main_category:is="art-Integrated-learning"}}
+                        {{if title !=''}}
+                        {{ partial:components.art_integration_blogs
+                            has_link="true"
+                            link="{url}"
+                            description="{date}"
+                        }}
+                        
+                        {{/if}}
+                    {{ /taxonomy }}
                 </div>
-
-
             </div>
         </div>
         <div class="md:col-span-3 col-span-10">
@@ -384,88 +371,17 @@
                 <p class="lates-title mb-4">Latest Posts</p>
 
                 <div class="latest-posts-box">
-
-                    <div class="latest-posts-iteam">
-                        <div>
-                            <img height="100%" width="100%"
-                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
-                                alt="blog thumb">
-
-
-                        </div>
-
-                        <div>
-                            <p class="blog-title">Empower kids through video creation</p>
-                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
-                            <a href="#" class="read-button">Read Article</a>
-
-                        </div>
-                    </div>
-                    <div class="latest-posts-iteam">
-                        <div>
-                            <img height="100%" width="100%"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkwX5jkLLIhX_Zm9FcjHYpMOeOJnIn8Qzhdg&usqp=CAU"
-                                alt="blog thumb">
-
-
-                        </div>
-
-                        <div>
-                            <p class="blog-title">How to use video technique in school</p>
-                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
-                            <a href="#" class="read-button">Read Article</a>
-
-                        </div>
-                    </div>
-                    <div class="latest-posts-iteam">
-                        <div>
-                            <img height="100%" width="100%"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOYFShfvIowLElC3i_-3esIH0MO8hTGlF9vExpITCZ_G8AWQJGGekM9aIpI0sKPEXK38&usqp=CAU"
-                                alt="blog thumb">
-
-
-                        </div>
-
-                        <div>
-                            <p class="blog-title">Communication in kids</p>
-                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
-                            <a href="#" class="read-button">Read Article</a>
-
-                        </div>
-                    </div>
-                    <div class="latest-posts-iteam">
-                        <div>
-                            <img height="100%" width="100%"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7yzc4XmIEOTisHuh6STkDxv6QrCGEBUwGG259vHolzOjG3AWw9LsGB1rTkgdnWOAKyw&usqp=CAU"
-                                alt="blog thumb">
-
-
-                        </div>
-
-                        <div>
-                            <p class="blog-title">Lorem ipsum dolor sit amet consectetur a</p>
-                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
-                            <a href="#" class="read-button">Read Article</a>
-
-                        </div>
-                    </div>
-                    <div class="latest-posts-iteam">
-                        <div>
-                            <img height="100%" width="100%"
-                                src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
-                                alt="blog thumb">
-
-
-                        </div>
-
-                        <div>
-                            <p class="blog-title"> amet consectetur Lorem ipsum dolor sit a</p>
-                            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
-                            <a href="#" class="read-button">Read Article</a>
-
-                        </div>
-                    </div>
-
+                    {{ collection from="posts" limit="5" as="posts"}}
+                        
+                        {{ posts }}
+                            {{ partial:components.latest_blogs
+                                has_link="true"
+                                link="{url}"
+                                description="{date}"
+                            }}
+                        {{ /posts }}
+                    {{ /collection }}
+                    
                     <a href="#" class="see-more-blogs"> Read More <span class="material-symbols-outlined">
                             keyboard_tab
                         </span></a>
