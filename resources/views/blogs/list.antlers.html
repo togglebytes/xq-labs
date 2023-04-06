@@ -1,0 +1,347 @@
+<style>
+    .bloglist .latest-posts-iteam {
+        border-radius: 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .bloglist .latest-posts-iteam>div:first-child {
+        padding: 15px 15px 0 15px;
+
+
+    }
+
+    .bloglist .latest-posts-iteam>div:nth-child(2) {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bloglist .latest-posts-iteam img {
+        /* height: 100%;
+        width: 100%; */
+        object-fit: cover;
+        height: 200px;
+        border-radius: 15px;
+    }
+
+    .bloglist .blog-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+
+    }
+
+    .bloglist .blog-date {
+
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 12px;
+        letter-spacing: 2px;
+
+        color: #6A6B7D;
+    }
+
+    .bloglist .read-button {
+        font-weight: 500;
+        color: white;
+        background: #793EF0;
+        border-radius: 10px;
+        padding: 5px 15px;
+        width: max-content;
+
+    }
+
+    .bloglist .list-banner-image {
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bloglist .list-banner-image .categery-name {
+        font-weight: 700;
+        font-size: 50px !important;
+        color: white;
+
+    }
+
+    .bloglist .cat-name1 {
+        /* position: absolute; */
+        font-weight: 700;
+        font-size: 40px !important;
+        /* bottom: -28%; */
+        /* left: 4rem; */
+    }
+
+    @media screen and (max-width: 640px) {
+        .bloglist .cat-name1 {
+            font-size: 30px !important;
+            font-weight: 700;
+            /* color: blue; */
+        }
+
+
+        .bloglist .list-banner-image {
+
+            height: 40vh;
+        }
+
+        .bloglist .latest-posts-iteam img {
+            height: 150px;
+        }
+
+
+
+        .bloglist .blog-title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 19px;
+
+        }
+
+        .bloglist .blog-date {
+
+            font-weight: 700;
+            font-size: 7px;
+            line-height: 12px;
+            letter-spacing: 1.5px;
+
+        }
+
+        .bloglist .read-button {
+            font-weight: 700;
+            font-size: 10px;
+            color: white;
+            background: #793EF0;
+            border-radius: 10px;
+            padding: 5px 15px;
+            width: max-content;
+
+        }
+
+    }
+</style>
+
+<div class="container mx-auto bloglist ">
+    <div class="grid gap-2 ">
+        <div class="list-banner-image "
+            style=" background-image: url('https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/11/14/Pictures/_ded48fd4-25fd-11eb-8924-93a7f7a2e27c.jpg');">
+            <p class="categery-name">Category Name</p>
+            <!-- <img height="100%" width="100%" src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/11/14/Pictures/_ded48fd4-25fd-11eb-8924-93a7f7a2e27c.jpg" alt=""> -->
+
+        </div>
+        <div class="lg:px-14 md:px-10 px-2  mb-3">
+            <p class=" cat-name1 ">Category Name</p>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  lg:px-14 md:px-10 px-2">
+        <div class="">
+            <div class="latest-posts-iteam ">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkwX5jkLLIhX_Zm9FcjHYpMOeOJnIn8Qzhdg&usqp=CAU"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title">How to use video technique in school</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title">Empower kids through video creation</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://www.lecturabooks.com/wp-content/uploads/2018/10/Classroom_Children_Reading_Book_With_Teacher-1024x681.jpg"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title">Communication in kids</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7yzc4XmIEOTisHuh6STkDxv6QrCGEBUwGG259vHolzOjG3AWw9LsGB1rTkgdnWOAKyw&usqp=CAU"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title">Lorem ipsum dolor sit amet consectetur a</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title"> amet consectetur Lorem ipsum dolor sit a</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam ">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkwX5jkLLIhX_Zm9FcjHYpMOeOJnIn8Qzhdg&usqp=CAU"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title">How to use video technique in school</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam ">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkwX5jkLLIhX_Zm9FcjHYpMOeOJnIn8Qzhdg&usqp=CAU"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title">How to use video technique in school</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7yzc4XmIEOTisHuh6STkDxv6QrCGEBUwGG259vHolzOjG3AWw9LsGB1rTkgdnWOAKyw&usqp=CAU"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title">Lorem ipsum dolor sit amet consectetur a</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://assets.thehansindia.com/h-upload/2022/11/12/1320210-happy-children-feature-1050x733.webp"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title"> amet consectetur Lorem ipsum dolor sit a</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam ">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkwX5jkLLIhX_Zm9FcjHYpMOeOJnIn8Qzhdg&usqp=CAU"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title">How to use video technique in school</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="latest-posts-iteam ">
+                <div>
+                    <img height="100%" width="100%"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7sKL9fGZU03PBrbSkY5fGg_PdY_Tid0D_AQ&usqp=CAU"
+                        alt="blog thumb">
+
+
+                </div>
+
+                <div>
+                    <p class="blog-title">How to use video technique in school</p>
+                    <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+                    <a href="#" class="read-button">Read Article</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1596,24 +1596,22 @@ html {
 }
 .floating-buttons-homeblobs-par {
     position: absolute;
-    top: 22px;
-    left: 19px;
-    gap: 11px;
+    top: .2%;
+    right: 1%;
+    gap: 0px;
 }
 .floating-buttons-homeblobs-par a {
-    background-color: #feed00;
-    color: #793ef0;
-    padding: 10px;
+    /* background-color: #feed00; */
+    /* color: #793ef0; */
+    padding: 5px;
     /* font-size: 14px; */
-    border-radius: 50%;
-}
-.floating-buttons-homeblobs-par p {
-    font-size: 13px;
+    /* border-radius: 50%; */
 }
 
-.floating-buttons-homeblobs-par i {
-    font-size: 16px;
+.floating-buttons-homeblobs-par img {
+  width: 100px;
 }
+
 .floating-buttons-homeblobs-par {
     font-weight: bold;
 }
@@ -1884,17 +1882,21 @@ html {
 @media screen and (max-width: 640px) {
 
     .floating-buttons-homeblobs-par {
-        gap: 5px;
         position: absolute;
-        top: 12px;
-        left: 10px;
+        top: .1%;
+        right: 1%;
+        gap: 0px;
     }
-    .floating-buttons-homeblobs-par p {
-        font-size: 7px;
+    .floating-buttons-homeblobs-par a {
+        /* background-color: #feed00; */
+        /* color: #793ef0; */
+        padding: 5px;
+        /* font-size: 14px; */
+        /* border-radius: 50%; */
     }
     
-    .floating-buttons-homeblobs-par i {
-        font-size: 10px;
+    .floating-buttons-homeblobs-par img {
+      width: 80px;
     }
 
     .how-to-text-content p,
