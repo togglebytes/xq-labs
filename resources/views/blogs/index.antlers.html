@@ -26,12 +26,15 @@
                     {{ fields }}
                         <input class="inputFeild" type="{{input_type}}" name="{{handle}}" placeholder="Your email address" 
                         id="{{ handle }}">
-                        <!-- <p class="text-red-600" id="{{handle}}_error">{{ error }}</p> -->
+                        <button class="submitBtnFeild">Subscribe</button>
+                        <p class="text-red-600" id="{{handle}}_error">{{ error }}</p>
                     {{ /fields }}
+                    
                         {{ if success }}
-                        <p class="text-green-600">{{ success }}</p>
+                        <p class="text-green-900">{{ success }}</p>
                         {{ /if }}
-                    <button class="submitBtnFeild">Subscribe</button>
+                    <!-- <button class="submitBtnFeild">Subscribe</button> -->
+                    <!-- <p class="text-red-600" id="{{handle}}_error">{{ error }}</p> -->
                 </div>
                 {{ /form:subscribe_form }}
             </div>
