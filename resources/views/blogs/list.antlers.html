@@ -1,19 +1,21 @@
-<style>
-
-</style>
-
 <div class="container mx-auto bloglist ">
-    <div class="grid gap-2 ">
-        <div class="list-banner-image "
-            style=" background-image: url('https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/11/14/Pictures/_ded48fd4-25fd-11eb-8924-93a7f7a2e27c.jpg');">
-            <p class="categery-name">{{title}}</p>
-            <!-- <img height="100%" width="100%" src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/11/14/Pictures/_ded48fd4-25fd-11eb-8924-93a7f7a2e27c.jpg" alt=""> -->
+    {{ taxonomy from="categories" slug:is="{last_segment}"}}
+        {{if title !=''}}
+            <div class="grid gap-2">
+                <div class="list-banner-image"
+                    style=" background-image: url('https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/11/14/Pictures/_ded48fd4-25fd-11eb-8924-93a7f7a2e27c.jpg');">
+                    <p class="categery-name">{{title}}</p>
+                    <!-- <img height="100%" width="100%" src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/11/14/Pictures/_ded48fd4-25fd-11eb-8924-93a7f7a2e27c.jpg" alt=""> -->
+        
+                </div>
+                <div class="lg:px-14 md:px-10 px-2  mb-3">
+                    <p class=" cat-name1 ">{{title}}</p>
+                </div>
+            </div> 
 
-        </div>
-        <div class="lg:px-14 md:px-10 px-2  mb-3">
-            <p class=" cat-name1 ">{{{title}}}</p>
-        </div>
-    </div>
+        {{/if}}
+    {{ /taxonomy }}
+    
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  lg:px-14 md:px-10 px-2">
         {{ collection from="posts" limit="6" paginate="true" as="posts" category:is="{last_segment}" }}
         

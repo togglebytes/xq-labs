@@ -1,4 +1,4 @@
-<{{ has_link ? 'a' : 'div' }} {{ if link }} href="{{ link }}" aria-label="{{ label or title }}" {{ /if }} target="{{ target_blank ? '_blank' : '_self' }}">
+
 <div class="latest-posts-iteam">
     <div>
         <img height="100%" width="100%"
@@ -8,9 +8,8 @@
 
     <div>
         <p class="blog-title">{{title}}</p>
-        <p class="blog-date">12 MAR, 2023 11:25 Am</p>
-        <a href="#" class="read-button">Read Article</a>
+        <p class="blog-date">{{ updated_at | format('d M, Y') }}</p>
+        <a href="{{link}}" class="read-button">Read Article</a>
 
     </div>
 </div>
-</{{ has_link ? 'a' : 'div' }}>

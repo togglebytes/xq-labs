@@ -127,13 +127,6 @@ sections:
           validate:
             - required
       -
-        handle: date
-        field:
-          type: date
-          required: true
-          validate:
-            - required
-      -
         handle: author
         field:
           max_items: 1
@@ -166,6 +159,13 @@ sections:
           type: taggable
           icon: tags
           listable: hidden
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
   SEO:
     display: SEO
     fields:

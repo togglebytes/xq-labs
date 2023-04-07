@@ -10,8 +10,7 @@
 
         <div>
             <p class="blog-title">{{title}}</p>
-            {{ updated_at | format('Y-M-d') }}
-            <p class="blog-date">12 MAR, 2023 11:25 Am</p>
+            <p class="blog-date">{{ updated_at | format('d M, Y') }}</p>
             <a href="{{link}}" class="read-button">Read Article</a>
         </div>
     </div>

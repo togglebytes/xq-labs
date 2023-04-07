@@ -1,4 +1,4 @@
-{{ partial:posts/featured_image }}
+{{ partial:blogs/featured_image }}
 
 <div class="container py-10">
     {{ article }}
@@ -6,16 +6,16 @@
     {{ /article }}
 
     <div class="max-w-3xl mx-auto mt-8 overflow-hidden">
-        {{ partial:posts/post_details }}
+        {{ partial:blogs/post_details }}
 
         {{ if tags }}
-            {{ partial:posts/tags }}
+            {{ partial:blogs/tags }}
         {{ /if }}
 
-        {{ partial:posts/social_media_sharing }}
+        {{ partial:blogs/social_media_sharing }}
 
         {{ if author }}
-            {{ partial:posts/author }}
+            {{ partial:blogs/author }}
         {{ /if }}
     </div>
 </div>
