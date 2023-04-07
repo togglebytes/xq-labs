@@ -1596,7 +1596,7 @@ html {
 }
 .floating-buttons-homeblobs-par {
     position: absolute;
-    top: .2%;
+    top: 0.2%;
     right: 1%;
     gap: 0px;
 }
@@ -1609,7 +1609,7 @@ html {
 }
 
 .floating-buttons-homeblobs-par img {
-  width: 100px;
+    width: 100px;
 }
 
 .floating-buttons-homeblobs-par {
@@ -1880,10 +1880,9 @@ html {
 }
 
 @media screen and (max-width: 640px) {
-
     .floating-buttons-homeblobs-par {
         position: absolute;
-        top: .2%;
+        top: 0.2%;
         right: 1%;
         gap: 0px;
     }
@@ -1894,9 +1893,9 @@ html {
         /* font-size: 14px; */
         /* border-radius: 50%; */
     }
-    
+
     .floating-buttons-homeblobs-par img {
-      width: 80px;
+        width: 80px;
     }
 
     .how-to-text-content p,
@@ -2512,8 +2511,6 @@ html {
         font-size: 120px;
     }
 
-  
-
     .customers-section-small {
         display: block !important;
     }
@@ -2814,44 +2811,84 @@ html {
     font-weight: bold;
 }
 /* -----blog sections style----- */
-.blogs .blogbanner .subscribe-box-par {
+ .blogbanner .subscribe-box-par {
     background-color: none;
     width: 525px;
     padding: 10px;
     border-radius: 25px;
     position: absolute;
-    left: 68px;
-    bottom: 30px;
+    /* left: 68px;
+    bottom: 30px; */
+
+    left: 8rem;
+    bottom: 5rem;
 }
 
-.blogs .inputFeild {
+ .inputFeild {
     width: 100%;
     border: none;
-
 }
-
-.blogs .inputFeild:focus {
+ .inputFeild:focus {
     outline: 0 none !important;
-
 }
 
-.blogs .submitBtnFeild,
+ .submitBtnFeild,
 .inputFeild {
     height: 40px;
     border: none;
     border-radius: 25px;
 }
 
-.blogs .submitBtnFeild {
+ .submitBtnFeild {
     position: absolute;
     color: white;
-    background-color: #F553B7;
-    border: #F553B7 solid;
+    background-color: #f553b7;
+    border: #f553b7 solid;
     right: 10px;
     padding: 0 30px;
 }
 
-.blogs #arrow_back {
+/* j----------------------------------------------------------------------- */
+
+.banner .blogbanner .subscribe-box-par {
+    background-color: none;
+    width: 525px;
+    padding: 10px;
+    border-radius: 25px;
+    position: absolute;
+    /* left: 68px;
+    bottom: 30px; */
+}
+
+.banner  .inputFeild {
+    width: 100%;
+    border: none;
+}
+.banner  .inputFeild:focus {
+    outline: 0 none !important;
+}
+
+.banner  .submitBtnFeild,
+.inputFeild {
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+}
+
+.banner  .submitBtnFeild {
+    position: absolute;
+    color: white;
+    background-color: #f553b7;
+    border: #f553b7 solid;
+    right: 10px;
+    padding: 0 30px;
+}
+
+/* j----------------------------------------------------------------------- */
+
+
+
+ #arrow_back {
     position: absolute;
     top: 15px;
     left: 20px;
@@ -2908,7 +2945,6 @@ html {
 }
 
 .blogs .floating-art-int-title p {
-
     opacity: 1 !important;
     width: fit-content;
     padding: 20px;
@@ -2919,11 +2955,8 @@ html {
 }
 
 .blogs .floating-art-int-title span {
-
     font-size: 25px;
 }
-
-
 
 .blogs .latest-pop-par .lates-title {
     font-weight: 500;
@@ -2938,19 +2971,17 @@ html {
 
 .blogs .latest-posts-iteam {
     border-radius: 15px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     display: flex;
     flex-direction: column;
-
 }
 
-.blogs .latest-posts-iteam>div:first-child {
+.blogs .latest-posts-iteam > div:first-child {
     padding: 15px 15px 0 15px;
-
-
 }
 
-.blogs .latest-posts-iteam>div:nth-child(2) {
+.blogs .latest-posts-iteam > div:nth-child(2) {
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
@@ -2970,32 +3001,29 @@ html {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-
 }
 
 .blogs .blog-date {
-
     font-weight: 700;
     font-size: 9px;
     line-height: 12px;
     letter-spacing: 2px;
 
-    color: #6A6B7D;
+    color: #6a6b7d;
 }
 
 .blogs .read-button {
     font-weight: 500;
     color: white;
-    background: #793EF0;
+    background: #793ef0;
     border-radius: 10px;
     padding: 5px 15px;
     width: max-content;
-
 }
 
 .blogs .see-more-blogs {
     color: white;
-    background: #F553B7;
+    background: #f553b7;
     border-radius: 10px;
     padding: 10px 20px;
     width: max-content;
@@ -3008,13 +3036,11 @@ html {
 }
 
 @media screen and (max-width: 640px) {
-
     .blogs .floating-art-int-title {
         left: 44%;
         margin-left: auto;
         margin-right: auto;
         bottom: 18%;
-
     }
 
     .blogs .floating-art-int-title p {
@@ -3027,13 +3053,13 @@ html {
     }
 
     .blogs .blogbanner .subscribe-box-par {
-        background-color: #793EF0;
+        background-color: #793ef0;
         position: absolute;
         left: 0;
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        bottom: -63px;
+        bottom: -50px;
         width: 90%;
         padding: 8px;
     }
@@ -3048,7 +3074,6 @@ html {
         right: 8px;
     }
 
-
     .blogs .latest-posts-iteam img {
         height: 100%;
     }
@@ -3059,13 +3084,13 @@ html {
         gap: 2px;
     }
 
-    .blogs .latest-posts-iteam>div:first-child {
+    .blogs .latest-posts-iteam > div:first-child {
         padding: 5px;
 
         max-width: 35%;
     }
 
-    .blogs .latest-posts-iteam>div:nth-child(2) {
+    .blogs .latest-posts-iteam > div:nth-child(2) {
         /* padding: 10px; */
         padding: 7px;
         display: flex;
@@ -3073,53 +3098,45 @@ html {
         gap: 5px;
     }
 
-
     .blogs .blog-title {
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
         line-height: 19px;
-
     }
 
     .blogs .blog-date {
-
         font-weight: 700;
         font-size: 7px;
         line-height: 12px;
         letter-spacing: 1.5px;
-
     }
 
     .blogs .read-button {
         font-weight: 700;
         font-size: 10px;
         color: white;
-        background: #793EF0;
+        background: #793ef0;
         border-radius: 10px;
         padding: 5px 15px;
         width: max-content;
-
     }
-
 }
 
 /* blog list css */
 .bloglist .latest-posts-iteam {
     border-radius: 15px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     display: flex;
     flex-direction: column;
-
 }
 
-.bloglist .latest-posts-iteam>div:first-child {
+.bloglist .latest-posts-iteam > div:first-child {
     padding: 15px 15px 0 15px;
-
-
 }
 
-.bloglist .latest-posts-iteam>div:nth-child(2) {
+.bloglist .latest-posts-iteam > div:nth-child(2) {
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
@@ -3139,27 +3156,24 @@ html {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-
 }
 
 .bloglist .blog-date {
-
     font-weight: 700;
     font-size: 9px;
     line-height: 12px;
     letter-spacing: 2px;
 
-    color: #6A6B7D;
+    color: #6a6b7d;
 }
 
 .bloglist .read-button {
     font-weight: 500;
     color: white;
-    background: #793EF0;
+    background: #793ef0;
     border-radius: 10px;
     padding: 5px 15px;
     width: max-content;
-
 }
 
 .bloglist .list-banner-image {
@@ -3175,7 +3189,6 @@ html {
     font-weight: 700;
     font-size: 50px !important;
     color: white;
-
 }
 
 .bloglist .cat-name1 {
@@ -3185,17 +3198,24 @@ html {
     /* bottom: -28%; */
     /* left: 4rem; */
 }
-
+.commen-baner-blog {
+    display: block;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
 @media screen and (max-width: 640px) {
+    .commen-baner-blog {
+        height: 200px;
+    }
+
     .bloglist .cat-name1 {
         font-size: 20px !important;
         font-weight: 700;
         /* color: blue; */
     }
 
-
     .bloglist .list-banner-image {
-
         height: 40vh;
     }
 
@@ -3203,42 +3223,34 @@ html {
         height: 150px;
     }
 
-
-
     .bloglist .blog-title {
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
         line-height: 19px;
-
     }
 
     .bloglist .blog-date {
-
         font-weight: 700;
         font-size: 7px;
         line-height: 12px;
         letter-spacing: 1.5px;
-
     }
 
     .bloglist .read-button {
         font-weight: 700;
         font-size: 10px;
         color: white;
-        background: #793EF0;
+        background: #793ef0;
         border-radius: 10px;
         padding: 5px 15px;
         width: max-content;
-
     }
 
-    .bloglist .latest-posts-iteam>div:nth-child(2) {
+    .bloglist .latest-posts-iteam > div:nth-child(2) {
         padding: 10px 20px 15px 20px;
         gap: 5px;
     }
-
 }
-
 
 /* -----blog sections style end 0----- */
