@@ -311,11 +311,20 @@
                 {{/if}}
             {{ /collection:pages }}
             <div style="width: fit-content;" class="w-auto  p-2">
-
+                {{ form:subscribe_form id="subscribe_form"}}
                 <div class=" subscribe-box-par">
-                    <input class="inputFeild" type="text" placeholder="Your email address"> <button
-                        class="submitBtnFeild">Subscribe</button>
+                    
+                    {{ fields }}
+                        <input class="inputFeild" type="{{input_type}}" name="{{handle}}" placeholder="Your email address" 
+                        id="{{ handle }}">
+                        <!-- <p class="text-red-600" id="{{handle}}_error">{{ error }}</p> -->
+                    {{ /fields }}
+                        {{ if success }}
+                        <p class="text-green-600">{{ success }}</p>
+                        {{ /if }}
+                    <button class="submitBtnFeild">Subscribe</button>
                 </div>
+                {{ /form:subscribe_form }}
             </div>
         </div>
 
@@ -371,7 +380,7 @@
                 <p class="lates-title mb-4">Latest Posts</p>
 
                 <div class="latest-posts-box">
-                    {{ collection from="posts" limit="5" as="posts"}}
+                    {{ collection from="posts" limit="5" as="posts" sort="updated_at:desc"}}
                         
                         {{ posts }}
                             {{ partial:components.latest_blogs

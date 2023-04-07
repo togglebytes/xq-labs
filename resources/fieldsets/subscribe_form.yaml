@@ -1,0 +1,15 @@
+title: 'Subscribe Form'
+fields:
+  -
+    handle: form_field
+    field:
+      max_items: 1
+      display: 'Form Field'
+      type: form
+      icon: form
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      validate:
+        - required

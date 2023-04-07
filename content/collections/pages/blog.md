@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1680602740
+updated_at: 1680844464
 blocks:
   -
     id: lg23frjz
@@ -20,5 +20,10 @@ blocks:
     banner_img_mobile:
       - banner-img-small-1.png
     type: banner
+    enabled: true
+  -
+    id: lg63e2x7
+    form_field: subscribe_form
+    type: subscribe_form
     enabled: true
 ---

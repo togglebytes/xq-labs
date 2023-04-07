@@ -24,7 +24,7 @@ Route::statamic('blog', 'blogs.blog', ['title' => 'Blogs']);
 Route::statamic('blogslist', 'blogs.list', ['title' => 'Blogs']);
 
 Route::statamic('blogs1', 'blogs1.index', ['title' => 'Blogs']);
-Route::statamic('categories/{slug}', 'blogs1.list', ['title' => 'Blogs']);
+Route::statamic('categories/{slug}', 'blogs.list', ['title' => 'Blogs']);
 
 Route::statamic('site.webmanifest', 'partials._manifest', [
     'layout' => null,
