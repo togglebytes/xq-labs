@@ -1117,6 +1117,11 @@ fields:
                 instructions_position: above
                 visibility: visible
                 always_save: false
+        subscribe_form:
+          display: 'Subscribe Form'
+          fields:
+            -
+              import: subscribe_form
       display: Blocks
       type: replicator
       icon: replicator
