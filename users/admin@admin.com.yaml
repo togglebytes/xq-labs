@@ -19,7 +19,7 @@ preferences:
     subscribe_form:
       columns:
         - datestamp
-        - email_id
+        - email
   taxonomies:
     categories:
       columns:
