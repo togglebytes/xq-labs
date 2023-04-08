@@ -29,7 +29,7 @@
                 <img
                     {{ if cover }}
                         class="object-cover w-full h-full {{ class }}"
-                        style="object-position: {{ focus | background_position }}"
+                        style="object-position: '{{ focus | background_position }}'"
                     {{ else }}
                         class="{{ class }}"
                     {{ /if }}
