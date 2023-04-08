@@ -3257,11 +3257,27 @@ html {
 
 /* -----blog sections style end 0----- */
 .single-blog-page h2 {
-    font-size: 1.875rem;
-    font-weight: 700;
-    /* background-color: #000000; */
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+    padding: 0;
+    margin: 0;
+ 
+   
+}
+.single-blog-page h3 {
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+    padding: 0;
+    margin: 0;
 }
 .single-blog-page ul {
-    margin-left: 30px;
+    margin-left: 30px !important;
     list-style-type: disc !important;
+    text-align: left;
+}
+.single-blog-page ol {
+    margin-left: 30px !important;
+    list-style-type: decimal !important;
+    text-align: left;
 }
