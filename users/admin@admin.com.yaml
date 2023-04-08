@@ -25,3 +25,6 @@ preferences:
       columns:
         - title
         - slug
+  collections:
+    posts:
+      per_page: 25

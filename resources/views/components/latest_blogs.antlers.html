@@ -8,7 +8,7 @@
 
     <div>
         <p class="blog-title">{{title}}</p>
-        <p class="blog-date">{{ updated_at | format('d M, Y') }}</p>
+        <p class="blog-date">{{ updated_at | timezone('Asia/Kolkata') |format('d M, Y h:i:s a ') }}</p>
         <a href="{{link}}" class="read-button">Read Article</a>
 
     </div>

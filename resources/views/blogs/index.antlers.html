@@ -126,7 +126,7 @@
                 {{ /fields }}
 
                 {{ if success }}
-                <p class="text-green-900">{{ success }}</p>
+                <p class="text-green-900" id="successMessage">{{ success }}</p>
                 {{ /if }}
 
             </div>
@@ -139,7 +139,7 @@
     <div class="grid grid-cols-10 gap-4 mt-16 md:mt-1 px-0 md:px-4">
         <div class="flex flex-col gap-2 md:col-span-7 col-span-10">
 
-            <div class="academics-section  ">
+            <div class="academics-section ">
                 <div>
                     <p class="m-4 nest-cat-head">Academics</p>
                     <div class="flex flex-row gap-4 m-4">
@@ -156,7 +156,7 @@
                     </div>
                 </div>
             </div>
-            <div class="art-int-section ">
+            <div class="art-int-section">
                 <div class="m-4">
                     <p class=" mb-4  nest-cat-head">
                         Art-Integrated learning
@@ -218,6 +218,8 @@
     </div>
 </div>
 <script>
+    $('#successMessage').delay(3000).fadeOut('slow');
+    
     // let latest_post_tab = document.querySelector(".latest-post-tab")
     // let popular_post_tab = document.querySelector(".popular-post-tab")
     // latest_post_tab.style.display = "block"
