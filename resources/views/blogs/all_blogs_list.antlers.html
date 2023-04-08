@@ -1,36 +1,44 @@
-<div class="container mx-auto bloglist ">
+{{ collection:pages }}
+    {{if title == 'Blog'}}
+        {{ blocks }}
+            {{banner_img}}
+                <img class="commen-baner-blog" src="{{ url }}" alt="">
+            {{/banner_img}}
+        {{ /blocks }}
+    {{/if}}
+{{ /collection:pages }}
+<div class="container mx-auto bloglist">
+    
     <div class="grid gap-2">
-        <div class="list-banner-image"
-            style=" background-image: url('https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/11/14/Pictures/_ded48fd4-25fd-11eb-8924-93a7f7a2e27c.jpg');">
-            <p class="categery-name">Blogs</p>
-            <!-- <img height="100%" width="100%" src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/11/14/Pictures/_ded48fd4-25fd-11eb-8924-93a7f7a2e27c.jpg" alt=""> -->
-
-        </div>
         <div class="lg:px-14 md:px-10 px-2  mb-3">
             <p class=" cat-name1 ">Blogs</p>
         </div>
+    </div> 
+    
+    {{ collection from="posts" limit="9" paginate="true" as="posts" sort="updated_at:desc"}}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  lg:px-14 md:px-10 px-2">
+
+        {{ posts  }}
+
+        {{ partial:components.blog_list
+          
+        has_link="true"
+        link="{url}"
+        description="{date}"
+        }}
+        {{ /posts }}
+        <!-- pagination -->
+        
+        <!-- pagination  ends--> 
     </div>
-    <div class="container mx-auto bloglist ">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  lg:px-14 md:px-10 px-2">
-            {{ collection from="posts" limit="9" paginate="true" as="posts" sort="updated_at:desc"}}
-            
-                {{ posts }}
-                    {{ partial:components.blog_list
-                        has_link="true"
-                        link="{url}"
-                        description="{date}"
-                    }}
-                {{ /posts }}
-                {{ paginate }}
-                    {{ if prev_page or next_page }}
-                        <div class="py-10 mx-auto md:py-16">
-                            {{ partial:partials._pagination }}
-                        </div>
-                    {{ /if }}
-                {{ /paginate }}
-            
-            {{ /collection }}
-            
-        </div>
+    {{ paginate }}
+    {{ if prev_page or next_page }}
+    <div class="py-10 mx-auto md:py-16">
+        {{ partial:partials._pagination }}
     </div>
+    {{ /if }}
+    {{ /paginate }}
+    {{ /collection }}
+ 
+
 </div>
