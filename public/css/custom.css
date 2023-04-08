@@ -2811,7 +2811,7 @@ html {
     font-weight: bold;
 }
 /* -----blog sections style----- */
- .blogbanner .subscribe-box-par {
+.blogbanner .subscribe-box-par {
     background-color: none;
     width: 525px;
     padding: 10px;
@@ -2824,22 +2824,22 @@ html {
     bottom: 5rem;
 }
 
- .inputFeild {
+.inputFeild {
     width: 100%;
     border: none;
 }
- .inputFeild:focus {
+.inputFeild:focus {
     outline: 0 none !important;
 }
 
- .submitBtnFeild,
+.submitBtnFeild,
 .inputFeild {
     height: 40px;
     border: none;
     border-radius: 25px;
 }
 
- .submitBtnFeild {
+.submitBtnFeild {
     position: absolute;
     color: white;
     background-color: #f553b7;
@@ -2860,22 +2860,22 @@ html {
     bottom: 30px; */
 }
 
-.banner  .inputFeild {
+.banner .inputFeild {
     width: 100%;
     border: none;
 }
-.banner  .inputFeild:focus {
+.banner .inputFeild:focus {
     outline: 0 none !important;
 }
 
-.banner  .submitBtnFeild,
+.banner .submitBtnFeild,
 .inputFeild {
     height: 40px;
     border: none;
     border-radius: 25px;
 }
 
-.banner  .submitBtnFeild {
+.banner .submitBtnFeild {
     position: absolute;
     color: white;
     background-color: #f553b7;
@@ -2886,9 +2886,7 @@ html {
 
 /* j----------------------------------------------------------------------- */
 
-
-
- #arrow_back {
+#arrow_back {
     position: absolute;
     top: 15px;
     left: 20px;
@@ -3069,6 +3067,9 @@ html {
         height: 30px;
         border-radius: 20px;
     }
+    .blogs .floating-grade-title p {
+        padding: 12px;
+    }
 
     .blogs .submitBtnFeild {
         right: 8px;
@@ -3197,6 +3198,7 @@ html {
     font-size: 35px !important;
     /* bottom: -28%; */
     /* left: 4rem; */
+    margin-top: 1rem;
 }
 .commen-baner-blog {
     display: block;
