@@ -11,27 +11,30 @@
 
         {{/if}}
     {{ /taxonomy }}
+    {{ collection from="posts" limit="6" paginate="true" as="posts" category:is="{last_segment}" }}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  lg:px-14 md:px-10 px-2">
-        {{ collection from="posts" limit="6" paginate="true" as="posts" category:is="{last_segment}" }}
 
-        {{ posts }}
+        {{ posts  }}
 
         {{ partial:components.blog_list
+          
         has_link="true"
         link="{url}"
         description="{date}"
         }}
         {{ /posts }}
-        {{ paginate }}
-        {{ if prev_page or next_page }}
-        <div class="py-10 mx-auto md:py-16">
-            {{ partial:partials._pagination }}
-        </div>
-        {{ /if }}
-        {{ /paginate }}
-
-        {{ /collection }}
-
+        <!-- pagination -->
+        
+        <!-- pagination  ends--> 
     </div>
+    {{ paginate }}
+    {{ if prev_page or next_page }}
+    <div class="py-10 mx-auto md:py-16">
+        {{ partial:partials._pagination }}
+    </div>
+    {{ /if }}
+    {{ /paginate }}
+    {{ /collection }}
+ 
 
 </div>
