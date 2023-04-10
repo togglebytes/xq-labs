@@ -16,3 +16,15 @@ preferences:
         - datestamp
         - full_name
         - email
+    subscribe_form:
+      columns:
+        - datestamp
+        - email
+  taxonomies:
+    categories:
+      columns:
+        - title
+        - slug
+  collections:
+    posts:
+      per_page: 25

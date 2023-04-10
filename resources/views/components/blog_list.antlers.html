@@ -1,0 +1,17 @@
+<div>
+    <div class="latest-posts-iteam">
+        <div>
+            <img height="100%" width="100%"
+                src="{{image}}"
+                alt="blog thumb">
+
+
+        </div>
+
+        <div>
+            <p class="blog-title">{{title}}</p>
+            <p class="blog-date">{{ updated_at | timezone('Asia/Kolkata') |format('d M, Y h:i:s a ') }}</p>
+            <a href="{{link}}" class="read-button">Read Article</a>
+        </div>
+    </div>
+</div>

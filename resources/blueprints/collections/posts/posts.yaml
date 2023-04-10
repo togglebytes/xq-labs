@@ -4,13 +4,6 @@ sections:
     display: Main
     fields:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-      -
         handle: image
         field:
           mode: grid
@@ -116,6 +109,21 @@ sections:
           type: bard
           icon: bard
           listable: hidden
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          input_type: text
+          antlers: false
+          display: Title
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
   sidebar:
     display: Sidebar
     fields:
@@ -123,15 +131,7 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
-          validate:
-            - required
-      -
-        handle: date
-        field:
-          type: date
-          required: true
           validate:
             - required
       -
@@ -155,6 +155,11 @@ sections:
           type: terms
           icon: taxonomy
           listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
       -
         handle: tags
         field:
@@ -162,6 +167,13 @@ sections:
           type: taggable
           icon: tags
           listable: hidden
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
   SEO:
     display: SEO
     fields:

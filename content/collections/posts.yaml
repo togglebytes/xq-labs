@@ -2,11 +2,15 @@ title: Posts
 template: posts/show
 layout: layout
 revisions: false
-route: "posts/{slug}"
+route: 'blogs/{slug}'
 date: true
 sort_dir: asc
-inject:
-  view_model: App\ViewModels\OgImage
 date_behavior:
   past: public
   future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+inject:
+  view_model: App\ViewModels\OgImage

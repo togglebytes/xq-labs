@@ -1,11 +1,11 @@
 {{ partial:posts/featured_image }}
 
-<div class="container py-10">
+<div class="container py-10 px-3 md:px-4 lg:px-0 single-blog-page mx-auto">
     {{ article }}
         {{ partial src="sets/blog/{type}" }}
     {{ /article }}
 
-    <div class="max-w-3xl mx-auto mt-8 overflow-hidden">
+    <div class="max-w-5xl mx-auto mt-8 overflow-hidden">
         {{ partial:posts/post_details }}
 
         {{ if tags }}
