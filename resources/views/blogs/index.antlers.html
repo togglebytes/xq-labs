@@ -26,7 +26,7 @@
                 <input class="inputFeild" type="email" name="{{handle}}" placeholder="Your email address"
                     id="{{ handle }}">
                 <button class="submitBtnFeild">Subscribe</button>
-                <p class="text-white bg-red-600 rounded-full py-0 px-2 absolute -bottom-7" id="{{handle}}_error">{{ error }}</p>
+                <p class="text-white bg-red-600 rounded-full py-0 px-2 absolute -bottom-7 errorMessage" id="{{handle}}_error" >{{ error }}</p>
                 {{ /fields }}
 
                 {{ if success }}
@@ -86,13 +86,13 @@
                 <div class="latest-posts-box">
                     {{ collection from="posts" limit="5" as="posts" sort="updated_at:desc"}}
 
-                    {{ posts }}
-                    {{ partial:components.latest_blogs
-                    has_link="true"
-                    link="{url}"
-                    description="{date}"
-                    }}
-                    {{ /posts }}
+                        {{ posts }}
+                            {{ partial:components.latest_blogs
+                            has_link="true"
+                            link="{url}"
+                            description="{date}"
+                            }}
+                        {{ /posts }}
                     {{ /collection }}
 
                     <a href="{{ current_url }}/list" class="see-more-blogs"> Read More <span
@@ -124,6 +124,7 @@
 </div>
 <script>
     $('#successMessage').delay(5000).fadeOut('slow');
+    $('.errorMessage').delay(5000).fadeOut('slow');
     
     // let latest_post_tab = document.querySelector(".latest-post-tab")
     // let popular_post_tab = document.querySelector(".popular-post-tab")

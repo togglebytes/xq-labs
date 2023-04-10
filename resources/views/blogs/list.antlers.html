@@ -1,7 +1,7 @@
 {{ taxonomy from="categories" slug:is="{last_segment}"}}
-{{if image !=''}}
-<img class="commen-baner-blog" src="{{image}}" alt="{{title}}">
-{{/if}}
+    {{if image !=''}}
+        <img class="commen-baner-blog" src="{{image}}" alt="{{title}}">
+    {{/if}}
 {{ /taxonomy }}
 <div class="container mx-auto bloglist">
     {{ taxonomy from="categories" slug:is="{last_segment}"}}
