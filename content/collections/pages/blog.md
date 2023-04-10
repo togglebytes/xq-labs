@@ -11,13 +11,11 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1680949558
+updated_at: 1681106800
 blocks:
   -
     id: lg23frjz
     banner_img:
-      - classroom_children_reading_book_with_teacher-1024x681-1680785581.jpg
-    banner_img_mobile:
       - classroom_children_reading_book_with_teacher-1024x681-1680785581.jpg
     type: banner
     enabled: true

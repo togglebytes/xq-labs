@@ -18,7 +18,7 @@
     {{ collection from="posts" limit="9" paginate="true" as="posts" sort="updated_at:desc"}}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  lg:px-14 md:px-10 px-2">
 
-        {{ posts  }}
+        {{ posts }}
 
         {{ partial:components.blog_list
           

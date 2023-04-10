@@ -3,13 +3,13 @@
 
 <div class="relative  mb-10 banner">
     {{ collection:pages }}
-    {{if title == 'Blog'}}
-    {{ blocks }}
-    {{banner_img}}
-    <img class="commen-baner-blog z-0" height="100%" width="100%" src="{{ url }}" alt="baner image">
-    {{/banner_img}}
-    {{ /blocks }}
-    {{/if}}
+        {{if title == 'Blog'}}
+            {{ blocks }}
+                {{banner_img}}
+                    <img class="commen-baner-blog z-0" height="100%" width="100%" src="{{ url }}" alt="baner image">
+                {{/banner_img}}
+            {{ /blocks }}
+        {{/if}}
     {{ /collection:pages }}
 
 </div>
@@ -19,9 +19,10 @@
 
         <div class="relative blogbanner" style="object-fit: contain; height:100% ; width:100%;">
             {{ form:subscribe_form id="subscribe_form"}}
-            <div class=" subscribe-box-par">
+            <div class="subscribe-box-par">
 
                 {{ fields }}
+                <!-- {{field}} -->
                 <input class="inputFeild" type="email" name="{{handle}}" placeholder="Your email address"
                     id="{{ handle }}">
                 <button class="submitBtnFeild">Subscribe</button>
@@ -47,14 +48,14 @@
                     <p class="m-4 nest-cat-head">Academics</p>
                     <div class="flex flex-row gap-4 m-4">
                         {{ taxonomy from="categories" main_category:is="academics"}}
-                        {{if title !=''}}
+                            {{if title !=''}}
 
-                        {{ partial:components.academic_blogs
-                        has_link="true"
-                        link="{url}"
-                        description="{date}"
-                        }}
-                        {{/if}}
+                            {{ partial:components.academic_blogs
+                            has_link="true"
+                            link="{url}"
+                            description="{date}"
+                            }}
+                            {{/if}}
                         {{ /taxonomy }}
                     </div>
                 </div>

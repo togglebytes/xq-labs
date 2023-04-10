@@ -44,6 +44,92 @@ fields:
                 instructions_position: above
                 visibility: visible
                 always_save: false
+        about_us:
+          display: 'About us (Mobile + Web)'
+          fields:
+            -
+              handle: about_us_title
+              field:
+                placeholder: 'Enter Title'
+                input_type: text
+                antlers: false
+                display: 'Text Field'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: about_us_video
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 1
+                display: 'Video Field'
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: about_video_desc
+              field:
+                input_type: text
+                antlers: false
+                display: 'Video Desc'
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: about_us_desc
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: Description
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: youtube_link
+              field:
+                display: 'Video Field'
+                type: video
+                icon: video
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: markdown_field
+              field:
+                restrict: false
+                automatic_line_breaks: true
+                automatic_links: false
+                escape_markup: false
+                smartypants: false
+                antlers: false
+                display: 'Markdown Field'
+                type: markdown
+                icon: markdown
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
         how_works_it:
           display: 'How Works It (Web)'
           fields:
@@ -170,76 +256,6 @@ fields:
                 instructions_position: above
                 visibility: visible
                 always_save: false
-        about_us:
-          display: 'About us (Mobile + Web)'
-          fields:
-            -
-              handle: about_us_title
-              field:
-                placeholder: 'Enter Title'
-                input_type: text
-                antlers: false
-                display: 'Text Field'
-                type: text
-                icon: text
-                listable: hidden
-                instructions_position: above
-                visibility: visible
-                always_save: false
-            -
-              handle: about_us_video
-              field:
-                mode: list
-                container: assets
-                restrict: false
-                allow_uploads: true
-                show_filename: true
-                max_files: 1
-                display: 'Video Field'
-                type: assets
-                icon: assets
-                listable: hidden
-                instructions_position: above
-                visibility: visible
-                always_save: false
-            -
-              handle: about_video_desc
-              field:
-                input_type: text
-                antlers: false
-                display: 'Video Desc'
-                type: text
-                icon: text
-                listable: hidden
-                instructions_position: above
-                visibility: visible
-                always_save: false
-            -
-              handle: about_us_desc
-              field:
-                restrict: false
-                automatic_line_breaks: true
-                automatic_links: false
-                escape_markup: false
-                smartypants: false
-                antlers: false
-                display: Description
-                type: markdown
-                icon: markdown
-                listable: hidden
-                instructions_position: above
-                visibility: visible
-                always_save: false
-            -
-              handle: youtube_link
-              field:
-                display: 'Video Field'
-                type: video
-                icon: video
-                listable: hidden
-                instructions_position: above
-                visibility: visible
-                always_save: false
         customers:
           display: 'Customers (Mobile + Web)'
           fields:
@@ -271,6 +287,8 @@ fields:
                 instructions_position: above
                 visibility: visible
                 always_save: false
+                validate:
+                  - required
         review_section:
           display: 'Review Section (Mobile + Web)'
           fields:
@@ -668,6 +686,17 @@ fields:
               field:
                 max_items: 1
                 display: 'Form Field'
+                type: form
+                icon: form
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: test_form_field
+              field:
+                max_items: 1
+                display: 'test Form Field'
                 type: form
                 icon: form
                 listable: hidden
