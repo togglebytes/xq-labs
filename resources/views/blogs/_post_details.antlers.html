@@ -17,7 +17,7 @@
     
 </div>
 
-
+<!--  Method:1 Tag wise similar Blogs -->
 <!-- {{ if similar_blogs }}
 <br/>
     <ul>
@@ -28,6 +28,8 @@
     
 {{/if}} -->
 
-<!-- {{ collection:posts url:isnt="{ url }" :taxonomy:tags="tags" }}
+<!--  Method:2 Tag wise similar Blogs -->
+
+{{ collection:posts url:isnt="{ url }" :taxonomy:tags="tags" }}
     <p><a href="{{ url }}">{{ title wrap="strong" }}{{ sub_title ensure_left=" // " wrap="span" }}</a></p>
-{{ /collection:posts }} -->
+{{ /collection:posts }}

@@ -1,6 +1,7 @@
 <img class="commen-baner-blog" src="" alt="{{title}}">
 <div class="container mx-auto bloglist">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:px-14 md:px-10 px-2">
+    {{ q }}
     {{ search:results index="default" }}
         {{ if no_results }}
             <h2>No results found for {{ get:q }}.</h2>
