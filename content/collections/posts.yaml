@@ -1,6 +1,8 @@
 title: Posts
-template: posts/show
+template: blogs/show
 layout: layout
+taxonomies:
+  - tags
 revisions: false
 route: 'blogs/{slug}'
 date: true

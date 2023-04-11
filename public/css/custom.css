@@ -3003,7 +3003,7 @@ html {
 
 .blogs .blog-date {
     font-weight: 700;
-    font-size: 9px;
+    font-size: 12px;
     line-height: 12px;
     letter-spacing: 2px;
 
@@ -3108,7 +3108,7 @@ html {
 
     .blogs .blog-date {
         font-weight: 700;
-        font-size: 7px;
+        font-size: 10px;
         line-height: 12px;
         letter-spacing: 1.5px;
     }
@@ -3161,7 +3161,7 @@ html {
 
 .bloglist .blog-date {
     font-weight: 700;
-    font-size: 9px;
+    font-size:12px;
     line-height: 12px;
     letter-spacing: 2px;
 
@@ -3234,7 +3234,7 @@ html {
 
     .bloglist .blog-date {
         font-weight: 700;
-        font-size: 7px;
+        font-size: 10px;
         line-height: 12px;
         letter-spacing: 1.5px;
     }
@@ -3280,4 +3280,12 @@ html {
     margin-left: 30px !important;
     list-style-type: decimal !important;
     text-align: left;
+}
+.single-blog-page a{
+    color: #5a1dd4;
+    font-weight: bold;
+   
+}
+.single-blog-page a:hover{
+text-decoration: underline;
 }

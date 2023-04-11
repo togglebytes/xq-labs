@@ -4,6 +4,21 @@ sections:
     display: Main
     fields:
       -
+        handle: title
+        field:
+          type: text
+          required: true
+          input_type: text
+          antlers: false
+          display: Title
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
         handle: image
         field:
           mode: grid
@@ -110,20 +125,19 @@ sections:
           icon: bard
           listable: hidden
       -
-        handle: title
+        handle: similar_blogs
         field:
-          type: text
-          required: true
-          input_type: text
-          antlers: false
-          display: Title
-          icon: text
+          mode: default
+          create: true
+          collections:
+            - posts
+          display: 'Similar Blogs'
+          type: entries
+          icon: entries
           listable: hidden
           instructions_position: above
           visibility: visible
           always_save: false
-          validate:
-            - required
   sidebar:
     display: Sidebar
     fields:
@@ -163,10 +177,17 @@ sections:
       -
         handle: tags
         field:
+          type: terms
+          taxonomies:
+            - tags
           display: Tags
-          type: taggable
-          icon: tags
+          mode: select
+          create: true
+          icon: taxonomy
           listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
       -
         handle: date
         field:
