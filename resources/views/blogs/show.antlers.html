@@ -4,15 +4,12 @@
 
     {{ article }}
 
-    <div>
-        <!-- <p>jjjghjghjghjghjghjghjghjghjh</p> -->
-        <!-- {{ partial:components/heading size="h2" label="{title}" color="black" }} -->
-    </div>
+    
 
     {{ partial src="sets/blog/{type}" }}
     {{ /article }}
 
-    <div class="max-w-5xl mx-auto mt-8 overflow-hidden">
+    <div class="max-w-6xl mx-auto mt-8 overflow-hidden">
         {{ partial:blogs/post_details }}
 
         {{ if tags }}
