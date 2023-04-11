@@ -31,10 +31,13 @@ return [
             'fields' => ['title'],
         ],
 
-        // 'blog' => [
-        //     'driver' => 'local',
-        //     'searchables' => 'collection:blog',
-        // ],
+        'blog' => [
+            'driver' => 'local',
+            'searchables' => 'collection:posts',
+            'filter' => function ($item) {
+                return $item->status() === 'published' && $item->exclude_from_search;
+            }
+        ],
 
     ],
 

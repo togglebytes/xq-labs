@@ -3,25 +3,21 @@
 <div class="container py-10 px-3 md:px-4 lg:px-4 single-blog-page mx-auto">
 
     {{ article }}
-
-    <div>
-        {{ partial:components/heading size="h2" label="{title}" color="black" }}
-    </div>
-
-    {{ partial src="sets/blog/{type}" }}
+        {{ partial src="sets/blog/{type}" }}
     {{ /article }}
 
     <div class="max-w-5xl mx-auto mt-8 overflow-hidden">
         {{ partial:blogs/post_details }}
-
         {{ if tags }}
-        {{ partial:blogs/tags }}
+            {{ partial:blogs/tags }}
         {{ /if }}
 
         {{ partial:blogs/social_media_sharing }}
 
         {{ if author }}
-        {{ partial:blogs/author }}
+            {{ partial:blogs/author }}
         {{ /if }}
+        
     </div>
+    
 </div>
