@@ -1,57 +1,117 @@
-{{ taxonomy from="categories" slug:is="{last_segment}"}}
-    {{if image !=''}}
-        <img class="commen-baner-blog" src="{{image}}" alt="{{title}}">
-    {{/if}}
-{{ /taxonomy }}
+{{ taxonomy from="categories" slug:is="{last_segment}"}} {{if image !=''}}
+<img class="commen-baner-blog" src="{{image}}" alt="{{title}}" />
+{{/if}} {{ /taxonomy }}
 <div class="container mx-auto bloglist">
-    {{ taxonomy from="categories" slug:is="{last_segment}"}}
-        {{if title !=''}}
-            <div class="grid gap-2">
-                <div class="lg:px-14 md:px-10 px-2  mb-3">
-                    <p class="cat-name1 ">{{ main_category | title | replace('-', ' ')}} / <span class="cat_name">{{title}}</span></p>
-                </div>
-            </div> 
-        {{/if}}
-    {{ /taxonomy }}
-    {{ collection from="posts" limit="6" paginate="true" as="posts" category:is="{last_segment}" }}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:px-14 md:px-10 px-2">
-
-        {{ posts }}
-
-            {{ partial:components.blog_list
-            
-            has_link="true"
-            link="{url}"
-            description="{date}"
-            }}
-        {{ /posts }}
+    <div class="grid grid-cols-1 relative gap-4 mb-4">
+        <div
+            class="relative blogbanner"
+            style="object-fit: contain; height: 100%; width: 100%"
+        >
+            {{ form:subscribe_form id="subscribe_form"}}
+            <div class="subscribe-box-par">
+                {{ fields }}
+                <!-- {{field}} -->
+                <input
+                    class="inputFeild"
+                    type="email"
+                    name="{{handle}}"
+                    placeholder="Your email address"
+                    id="{{ handle }}"
+                />
+                <button class="submitBtnFeild">Subscribe</button>
+                <p
+                    class="text-white bg-red-600 rounded-full py-0 px-2 absolute -bottom-7 errorMessage"
+                    id="{{handle}}_error"
+                >
+                    {{ error }}
+                </p>
+                {{ /fields }} {{ if success }}
+                <p
+                    class="text-white absolute bg-green-500 rounded-full py-0 px-2 -bottom-7"
+                    id="successMessage"
+                >
+                    {{ success }}
+                </p>
+                {{ /if }}
+            </div>
+            {{ /form:subscribe_form }}
+        </div>
+    </div>
+    <form action="/search" class="ml-2 pl-2 search-blog">
+        <input
+            type="search"
+            class="inputFeild searchInput w-12"
+            name="q"
+            placeholder="Search Blogs..."
+        />
+        <button class="submitBtnFeild searchbtn w-40">Search</button>
+    </form>
+    {{ taxonomy from="categories" slug:is="{last_segment}"}} {{if title !=''}}
+    <div class="grid gap-2">
+        <div class="lg:px-14 md:px-10 px-2 mb-3">
+            <p class="cat-name1">{{title}}</p>
+        </div>
+    </div>
+    {{/if}} {{ /taxonomy }} {{ collection from="posts" limit="6" paginate="true"
+    as="posts" category:is="{last_segment}" }}
+    <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:px-14 md:px-10 px-2"
+    >
+        {{ posts }} {{ partial:components.blog_list has_link="true" link="{url}"
+        description="{date}" }} {{ /posts }}
         <!-- pagination -->
-        
-        <!-- pagination  ends--> 
+
+        <!-- pagination  ends-->
     </div>
-    {{ paginate }}
-        {{ if prev_page or next_page }}
-        <div class="py-10 mx-auto md:py-16">
-            {{ partial:partials._pagination }}
-        </div>
-        {{ /if }}
-    {{ /paginate }}
-    {{ /collection }}
+    {{ paginate }} {{ if prev_page or next_page }}
+    <div class="py-10 mx-auto md:py-16">{{ partial:partials._pagination }}</div>
+    {{ /if }} {{ /paginate }} {{ /collection }}
 </div>
-
-<!-- <div class="academics-section">
-    <div>
-        <div class="grid grid-cols-2 gap-4 m-4">
-            {{ taxonomy from="categories"}}
-                {{if title !=''}}
-
-                    {{ partial:components.academic_blogs
-                    has_link="true"
-                    link="{url}"
-                    description="{date}"
-                    }}
-                {{/if}}
-            {{ /taxonomy }}
+<div class="w-full mx-auto customers-section-big">
+    <div
+        class="grid grid-cols-1 md:grid-cols-1 gap-4"
+        style="padding: 20px 111px; text-align: center"
+    >
+        <div class="blogs p-4 mt-6">
+            <section class="customer-logos slider" style="width: 100%">
+                {{ taxonomy from="categories"}}
+                <div class="slide">
+                    {{if title !=''}} {{ partial:components.academic_blogs
+                    has_link="true" link="{url}" description="{date}" }} {{/if}}
+                </div>
+                {{ /taxonomy }}
+            </section>
         </div>
     </div>
-</div> -->
+</div>
+<script>
+    $(document).ready(function () {
+        $(".customer-logos").slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: true,
+            prevArrow: `<button class="slide-arrow prev-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid icon-color carouselArrow">
+                            chevron_left</span></button>`,
+            nextArrow: `<button class="slide-arrow next-arrow"><span class="material-symbols-outlined rounded-full p-0 border-solid  icon-color carouselArrow">
+                            chevron_right</span></button>`,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4,
+                    },
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 2,
+                    },
+                },
+            ],
+        });
+    });
+</script>
