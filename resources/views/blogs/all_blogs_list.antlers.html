@@ -15,7 +15,7 @@
         </div>
     </div> 
     
-    {{ collection from="posts" limit="{{ pagination:limit }}" paginate="true" as="posts" sort="updated_at:desc"}}
+    {{ collection from="posts" limit="{{ pagination:limit }}" paginate="true" as="posts" sort="date:desc"}}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  lg:px-14 md:px-10 px-2">
 
         {{ posts }}
@@ -148,7 +148,7 @@
 
             //Pinterest sgare
             url = `http://pinterest.com/pin/create/button/?url=${twitter_share}`;
-            $('#fb-share').attr('href',url);
+            $('#pinterest-share').attr('href',url);
 
             //Linkedin Share
             // url = `https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.ndtv.com%2Findia-news%2Fnitin-gadkari-pledges-rs-1-500-crore-to-revamp-delhi-roads-3942783`;

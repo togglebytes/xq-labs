@@ -69,13 +69,13 @@
     <form action="/search" class="ml-4 pl-4 search-blog">
         <input
             type="search"
-            class="border-1 h-10 w-96 left-24 top-32 rounded-full bg-gradient-to-r"
+            class="border-2"
             name="q"
             placeholder="Search Blogs..."
         />
         <button
             type="submit"
-            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
             Search
         </button>
@@ -109,7 +109,10 @@
         <div class="md:col-span-3 col-span-10">
             <div class="latest-pop-par m-4">
                 <p class="lates-title mb-4">Latest Posts</p>
-
+                <!-- <div class="flex flex-row justify-around">
+                    <p class="lates-title mb-4">Latest Posts</p>
+                    <p class="lates-title mb-4"><i class="fa-solid fa-sort-up"></i></p>
+                </div> -->
                 <div class="latest-posts-box">
                     {{ collection from="posts" limit="5" as="posts"
                     sort="updated_at:desc"}} {{ posts }} {{

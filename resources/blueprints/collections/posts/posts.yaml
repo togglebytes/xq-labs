@@ -124,20 +124,6 @@ sections:
           type: bard
           icon: bard
           listable: hidden
-      -
-        handle: similar_blogs
-        field:
-          mode: default
-          create: true
-          collections:
-            - posts
-          display: 'Similar Blogs'
-          type: entries
-          icon: entries
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
   sidebar:
     display: Sidebar
     fields:
@@ -148,15 +134,6 @@ sections:
           localizable: true
           validate:
             - required
-      -
-        handle: author
-        field:
-          max_items: 1
-          mode: select
-          display: Author
-          type: users
-          icon: users
-          listable: hidden
       -
         handle: category
         field:
@@ -195,6 +172,18 @@ sections:
           required: true
           validate:
             - required
+      -
+        handle: author_name
+        field:
+          input_type: text
+          antlers: false
+          display: Author
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
   SEO:
     display: SEO
     fields:

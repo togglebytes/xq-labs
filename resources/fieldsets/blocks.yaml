@@ -6,26 +6,10 @@ fields:
       collapse: accordion
       sets:
         banner:
-          display: 'Banner (Mobile + Web)'
+          display: Banner
           fields:
             -
               import: banner
-            -
-              handle: banner_img_mobile
-              field:
-                mode: list
-                container: assets
-                restrict: false
-                allow_uploads: true
-                show_filename: true
-                max_files: 10
-                display: 'Banner For Mobile View'
-                type: assets
-                icon: assets
-                listable: hidden
-                instructions_position: above
-                visibility: visible
-                always_save: false
         navbar:
           display: 'Navbar (Mobile + Web)'
           fields:

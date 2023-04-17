@@ -2,10 +2,9 @@
     <p class="px-6 text-gray-900">Posted on:
         {{ date }}
     </p>
-
-    {{ if author }}
+    {{ if author_name }}
         <p class="px-6 text-gray-900">By:
-            {{ author:name }}
+            {{ author_name }}
         </p>
     {{ /if }}
 
@@ -14,21 +13,7 @@
             {{ category:title }}
         </p>
     {{ /if }}
-    
 </div>
-
-<!--  Method:1 Tag wise similar Blogs -->
-<!-- {{ if similar_blogs }}
-<br/>
-    <ul>
-        {{ similar_blogs }}
-            <li>{{title}}</li>
-        {{ /similar_blogs }}
-    </ul>
-    
-{{/if}} -->
-
-<!--  Method:2 Tag wise similar Blogs -->
 
 {{ collection:posts url:isnt="{ url }" :taxonomy:tags="tags" }}
     <p><a href="{{ url }}">{{ title wrap="strong" }}{{ sub_title ensure_left=" // " wrap="span" }}</a></p>
