@@ -1587,8 +1587,7 @@ html {
     height: 30px;
     width: 30px;
 }
-.custom-button
-{
+.custom-button {
     background-color: #feed00;
     color: #793ef0;
     padding: 0.7rem !important;
@@ -3170,7 +3169,7 @@ html {
 
 .bloglist .blog-date {
     font-weight: 700;
-    font-size:12px;
+    font-size: 12px;
     line-height: 12px;
     letter-spacing: 2px;
 
@@ -3216,14 +3215,12 @@ html {
     object-fit: cover;
 }
 @media screen and (max-width: 640px) {
-    .search-blog
-    {
+    .search-blog {
         margin-top: 71px;
         padding: 0px;
         margin-left: 0px !important;
     }
-    .search-blog input
-    {
+    .search-blog input {
         width: 69%;
     }
     .commen-baner-blog {
@@ -3281,8 +3278,6 @@ html {
     text-align: left !important;
     padding: 0;
     margin: 0;
- 
-   
 }
 .single-blog-page h3 {
     font-size: 1.125rem !important;
@@ -3300,11 +3295,14 @@ html {
     list-style-type: decimal !important;
     text-align: left;
 }
-.single-blog-page a{
+.single-blog-page a {
     color: #5a1dd4;
     font-weight: bold;
-   
-} 
-.single-blog-page a:hover{
-text-decoration: underline;
+}
+.single-blog-page a:hover {
+    text-decoration: underline;
+}
+
+.font-cambay {
+    font-family: Cambay, sans-serif;
 }

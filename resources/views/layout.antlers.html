@@ -4,16 +4,34 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- <meta
+            http-equiv="content-security-policy"
+            content="default-src 'none'; script-src 'self';
+  connect-src 'self'; img-src 'self';
+  style-src 'self' 'sha256-7AEjzciwb/N4gJ7wO3ZZLqTSt+bIaE8eyW3MHCG6Ctk=';"
+        /> -->
 
+        <!-- <meta http-equiv="Permissions-Policy" content="interest-cohort=()" /> -->
+        <meta http-equiv="Content-Security-Policy" content="default-src *;" />
         {{# Favicon #}} {{ partial:partials/favicons }} {{# SEO Meta Tags #}} {{
         seotamic }}
-
-        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <!-- <link
+            href="https://unpkg.com/tailwindcss@^3/dist/tailwind.min.css"
+            integrity="sha256-7AEjzciwb/N4gJ7wO3ZZLqTSt+bIaE8eyW3MHCG6Ctk="
+            referrerpolicy="no-referrer"
+            crossorigin="anonymous"
+        /> -->
+        <script src="https://cdn.tailwindcss.com/"></script>
         <!-- <script src="https://cdnjs.com/libraries/tailwindcss"></script> -->
 
         <!-- <link rel="stylesheet" href="css/tailwind.css" /> -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+        />
         <!--<link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
     <script src="{{ mix src='/js/site.js' }}"></script> --->
+        <!-- <script src="../js/custom_tailwind.js"></script> -->
 
         <!-- Css -->
         <link
