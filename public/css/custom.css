@@ -3078,7 +3078,8 @@ html {
         border-radius: 20px;
     }
     .blogs .searchbtn {
-        background-color: #793ef0;
+        background-color: #793ef0 !important;
+        border: #793EF0 solid !important;
     }
     .blogs .floating-grade-title p {
         padding: 12px;
@@ -3222,6 +3223,8 @@ html {
     width: 100%;
     object-fit: cover;
 }
+
+
 @media only screen and (max-width: 786px) {
     .searchInput {
         width: 90% !important;
@@ -3230,6 +3233,8 @@ html {
     .searchbtn {
         width: 120px !important;
         margin-right: auto !important;
+        background-color: #793EF0 !important;
+        border: #793EF0 solid !important;
     }
 }
 
@@ -3242,11 +3247,16 @@ html {
     .searchbtn {
         width: 120px !important;
         margin-right: auto !important;
+        background-color: #793ef0 !important;
+        border: #793EF0 solid !important;
+        
     }
+    
 }
 @media only screen and (min-width: 1540px) {
     .searchbtn {
         margin: 0;
+        background-color: #793ef0 !important;
     }
 }
 @media screen and (max-width: 640px) {

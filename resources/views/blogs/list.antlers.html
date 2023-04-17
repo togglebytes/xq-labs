@@ -49,13 +49,13 @@
     {{ taxonomy from="categories" slug:is="{last_segment}"}} {{if title !=''}}
     <div class="grid gap-2">
         <div class="lg:px-14 md:px-10 px-2 mb-3">
-            <p class="cat-name1">{{title}}</p>
+            <p class="cat-name1">{{ main_category | title | replace('-', ' ') }} | <span class="cat_name">{{title}}</span></p>
         </div>
     </div>
     {{/if}} {{ /taxonomy }} {{ collection from="posts" limit="6" paginate="true"
     as="posts" category:is="{last_segment}" }}
     <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:px-14 md:px-10 px-2"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:px-14 md:px-10 px-2"
     >
         {{ posts }} {{ partial:components.blog_list has_link="true" link="{url}"
         description="{date}" }} {{ /posts }}
@@ -74,7 +74,8 @@
     >
         <div class="blogs p-4 mt-6">
             <section class="customer-logos slider" style="width: 100%">
-                {{ taxonomy from="categories"}}
+                {{ taxonomy from="categories" slug:isnt="{last_segment}"}}
+                
                 <div class="slide">
                     {{if title !=''}} {{ partial:components.academic_blogs
                     has_link="true" link="{url}" description="{date}" }} {{/if}}
