@@ -1,59 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {{# Favicon #}} {{ partial:partials/favicons }} {{# SEO Meta Tags #}} {{
+        seotamic }}
 
-    {{# Favicon #}}
-    {{ partial:partials/favicons }}
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <!-- <script src="https://cdnjs.com/libraries/tailwindcss"></script> -->
 
-    {{# SEO Meta Tags #}}
-    {{ seotamic }}
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- <link rel="stylesheet" href="css/tailwind.css"> -->
-    <!--<link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+        <!-- <link rel="stylesheet" href="css/tailwind.css" /> -->
+        <!--<link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
     <script src="{{ mix src='/js/site.js' }}"></script> --->
 
-    <!-- Css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.css"
-    integrity="sha512-rGqRjILjohR2l4/xWr7TvP42nLhZLBa0C5dCuvFXG6gIrbzElZe0+W7ItgNgJCch+3iVUk0WFMxCJR7jXn9Ylg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,1,0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Css -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.css"
+            integrity="sha512-rGqRjILjohR2l4/xWr7TvP42nLhZLBa0C5dCuvFXG6gIrbzElZe0+W7ItgNgJCch+3iVUk0WFMxCJR7jXn9Ylg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,1,0"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/regular.min.css" 
-    integrity="sha512-3YMBYASBKTrccbNMWlnn0ZoEOfRjVs9qo/dlNRea196pg78HaO0H/xPPO2n6MIqV6CgTYcWJ1ZB2EgWjeNP6XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/fonts/stylesheet.css">
-    <link rel="stylesheet" href="/css/custom.css" type="text/css">
-    <!-- JavaScripts -->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.js"
-    integrity="sha512-J7uKR69aZGGGVlt2wkk/bG6XKOsiRE35PE/vU+aau44g3f5bQqGoW7tKe4LKhVI57etFJOYwy/F/vCYTweELIw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-</head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/regular.min.css"
+            integrity="sha512-3YMBYASBKTrccbNMWlnn0ZoEOfRjVs9qo/dlNRea196pg78HaO0H/xPPO2n6MIqV6CgTYcWJ1ZB2EgWjeNP6XA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="/fonts/stylesheet.css" />
+        <link rel="stylesheet" href="/css/custom.css" type="text/css" />
+        <!-- JavaScripts -->
+        <script
+            src="https://code.jquery.com/jquery-2.2.0.min.js"
+            type="text/javascript"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.js"
+            integrity="sha512-J7uKR69aZGGGVlt2wkk/bG6XKOsiRE35PE/vU+aau44g3f5bQqGoW7tKe4LKhVI57etFJOYwy/F/vCYTweELIw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    </head>
 
-<body
-    class="flex flex-col justify-between min-h-screen font-sans antialiased {{ environment === 'local' ?= 'debug-screens' }}">
+    <body
+        class="flex flex-col justify-between min-h-screen font-sans antialiased {{ environment === 'local' ?= 'debug-screens' }}"
+    >
+        <div class="relative overflow-hidden">
+            {{# Navigation Partials #}}
+            <!-- Content -->
+            {{ template_content }}
+        </div>
 
-    <div class="relative overflow-hidden">
-        {{# Navigation Partials #}}
-        <!-- Content -->
-        {{ template_content }}
-    </div>
-    
-    {{# Footer Partials #}}
-</body>
-
+        {{# Footer Partials #}}
+    </body>
 </html>

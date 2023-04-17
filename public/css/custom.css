@@ -1605,8 +1605,8 @@ html {
 .floating-buttons-homeblobs-par {
     position: absolute;
     top: 0.2%;
-    /* right: 1%; */
-    left: 1%;
+    right: 1%;
+    /* left: 1%; */
     gap: 0px;
 }
 .floating-buttons-homeblobs-par a {
