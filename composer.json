@@ -10,6 +10,7 @@
     "type": "project",
     "require": {
         "php": "^7.4 || ^8.0",
+        "aerni/social-links": "^2.3",
         "cnj/seotamic": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",

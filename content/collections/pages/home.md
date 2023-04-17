@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1680256260
+updated_at: 1681106336
 blocks:
   -
     id: le2tryml
@@ -32,7 +32,7 @@ blocks:
   -
     id: le2d95d5
     about_us_title: 'What is the xQ Video Lab?'
-    about_us_video: main-app-(1).mp4
+    about_us_video: top-academicians-speak-on-the-benefits-of-video-creation-in-academic-learning_x264-1680697235.mp4
     about_video_desc: 'Catch our founder explain the idea of an xQ Video Lab'
     about_us_desc: |-
       The xQ Video Lab is a first-of-its-kind initiative, designed to partner schools in helping students to learn the art and science of video-making in a structured manner.
@@ -45,9 +45,13 @@ blocks:
     id: le2h0bwn
     how_work_main_title: How
     how_work_description: |-
-      The xQ Video Lab is an **ultra-flexible** and **cost-effective** offering, thoughtfully-designed by our team of seasoned academicians and creative professionals.
+      The xQ Video Lab is an end-to-end ecosystem which effortlessly blends in with the school's timetable and core curriculum.
 
-      As part of the offering, the xQ Video Lab comes with a **physical set up** within the school premise, a **self-learning platform**, and a **text book** with 50 art-integrated video projects.
+      **Book Model for Schools**
+      With the book model, each student gets an Art-Integration Book containing 50 art-integrated academic projects and a video-creation curriculum.
+
+      **Lab Model for Schools**
+      The Lab Model combines the Book model with a physical lab space where students get the benefit of hands-on, in-class learning for video-creation lessons with a dedicated faculty
     how_work_imgs:
       -
         type: set
@@ -268,7 +272,7 @@ blocks:
           values:
             type: logo_and_link
             logo: download-(2).jpg
-            logo_link: 'https://xqvideolab.com/blog/'
+            logo_link: 'https://xqvideolab.com/about-xq-video-lab/'
       -
         type: set
         attrs:
@@ -276,7 +280,7 @@ blocks:
           values:
             type: logo_and_link
             logo: download-(4).png
-            logo_link: 'https://xqvideolab.com/blog/'
+            logo_link: 'https://xqvideolab.com/about-xq-video-lab/'
       -
         type: set
         attrs:
@@ -290,6 +294,14 @@ blocks:
           values:
             type: logo_and_link
       -
+        type: set
+        attrs:
+          id: lg3nv2fl
+          values:
+            type: logo_and_link
+            logo: component_36.png
+            logo_link: 'https://xqvideolab.com/blog/'
+      -
         type: paragraph
   -
     id: le2ncmu2
@@ -299,6 +311,7 @@ blocks:
     contact_us_form: contact_form
     type: contact_us
     enabled: true
+    test_form_field: test_form
   -
     id: le2pmzav
     about_xq_main_title: 'About xQ'
@@ -556,7 +569,7 @@ blocks:
           values:
             type: link_and_logo
             link: 'https://www.youtube.com/'
-            social_media_logo: icon-youtube.svg
+            social_media_logo: facebook-logo-2019.svg
       -
         type: paragraph
     type: footer_section

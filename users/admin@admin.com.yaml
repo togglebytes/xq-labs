@@ -1,4 +1,4 @@
-name: admin@123
+name: admin
 super: true
 id: 49a762b8-3af8-4fac-aea2-ccd3373185c3
 password_hash: $2y$10$8FDi6NoX9sd84p5YDalrUOgabm1NRrIT2NNkkLGnd1LZn7rHEMxfe
@@ -16,3 +16,15 @@ preferences:
         - datestamp
         - full_name
         - email
+    subscribe_form:
+      columns:
+        - datestamp
+        - email
+  taxonomies:
+    categories:
+      columns:
+        - title
+        - slug
+  collections:
+    posts:
+      per_page: 25

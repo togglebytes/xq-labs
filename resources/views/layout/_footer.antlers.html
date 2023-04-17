@@ -32,7 +32,9 @@
             <div class="for-follow">Follow Us</div>
             <div class="flex gap-4">
                 {{social_media}}
+                    {{if social_media_logo != ''}}
                     <div><a href="{{link}}"><img class="for-icon-width" src="{{social_media_logo}}" alt=""></a></div>
+                    {{/if}}
                 {{/social_media}}
             </div>
         </div>
@@ -101,4 +103,6 @@
                 account_circle
             </span></div>
     </div>
+    
 </article>
+Ankit

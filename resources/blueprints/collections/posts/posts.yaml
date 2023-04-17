@@ -8,6 +8,14 @@ sections:
         field:
           type: text
           required: true
+          input_type: text
+          antlers: false
+          display: Title
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
           validate:
             - required
       -
@@ -116,6 +124,20 @@ sections:
           type: bard
           icon: bard
           listable: hidden
+      -
+        handle: similar_blogs
+        field:
+          mode: default
+          create: true
+          collections:
+            - posts
+          display: 'Similar Blogs'
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
   sidebar:
     display: Sidebar
     fields:
@@ -123,15 +145,7 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
-          validate:
-            - required
-      -
-        handle: date
-        field:
-          type: date
-          required: true
           validate:
             - required
       -
@@ -155,13 +169,32 @@ sections:
           type: terms
           icon: taxonomy
           listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
       -
         handle: tags
         field:
+          type: terms
+          taxonomies:
+            - tags
           display: Tags
-          type: taggable
-          icon: tags
+          mode: select
+          create: true
+          icon: taxonomy
           listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
   SEO:
     display: SEO
     fields:
