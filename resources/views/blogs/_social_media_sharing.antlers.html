@@ -1,0 +1,30 @@
+ <div class="mt-10">
+     <p class="text-sm font-extrabold tracking-wider text-gray-900 uppercase">
+         Share this on social media
+     </p>
+     <div class="flex flex-wrap pb-4 mt-4 -mx-3">
+         {{
+            partial:partials/social_link
+            name="Facebook"
+            url="https://www.facebook.com/sharer/sharer.php?u={{ permalink }}"
+        }}
+
+        {{
+            partial:partials/social_link
+            name="Twitter"
+            url="https://twitter.com/intent/tweet?text={{ permalink }}"
+        }}
+
+        {{
+            partial:partials/social_link
+            name="Pinterest"
+            url="http://pinterest.com/pin/create/button/?url={{ permalink }}"
+        }}
+
+        {{
+            partial:partials/social_link
+            name="Linkedin"
+            url="https://www.linkedin.com/shareArticle?mini=true&url={{ permalink }}"
+        }}
+    </div>
+</div>

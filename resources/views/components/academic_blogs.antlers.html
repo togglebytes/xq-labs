@@ -1,0 +1,11 @@
+<{{ has_link ? 'a' : 'div' }} {{ if link }} href="{{ link }}" aria-label="{{ label or title }}" {{ /if }} target="{{ target_blank ? '_blank' : '_self' }}">
+<div class="relative bg-gray-800 basis-1/2 rounded-cstm">
+
+    <img class="rounded-cstm" height="100%" width="100%"
+        src="{{image}}" alt="">
+    <div class="floating-grade-title">
+        <p>{{title}}</p>
+    </div>
+</div>
+</{{ has_link ? 'a' : 'div' }}>
+
