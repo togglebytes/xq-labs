@@ -1587,6 +1587,14 @@ html {
     height: 30px;
     width: 30px;
 }
+.custom-button
+{
+    background-color: #feed00;
+    color: #793ef0;
+    padding: 0.7rem !important;
+    font-size: 0.9rem;
+    border-radius: 50%;
+}
 
 .vid-btm-yello-strip-new {
     background-color: #ffff00;
@@ -1597,7 +1605,8 @@ html {
 .floating-buttons-homeblobs-par {
     position: absolute;
     top: 0.2%;
-    right: 1%;
+    /* right: 1%; */
+    left: 1%;
     gap: 0px;
 }
 .floating-buttons-homeblobs-par a {
@@ -3207,6 +3216,16 @@ html {
     object-fit: cover;
 }
 @media screen and (max-width: 640px) {
+    .search-blog
+    {
+        margin-top: 71px;
+        padding: 0px;
+        margin-left: 0px !important;
+    }
+    .search-blog input
+    {
+        width: 69%;
+    }
     .commen-baner-blog {
         height: 200px;
     }
