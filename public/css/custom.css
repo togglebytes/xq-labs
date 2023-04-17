@@ -1605,8 +1605,8 @@ html {
 .floating-buttons-homeblobs-par {
     position: absolute;
     top: 0.2%;
-    /* right: 1%; */
-    left: 1%;
+    right: 1%;
+    /* left: 1%; */
     gap: 0px;
 }
 .floating-buttons-homeblobs-par a {
@@ -2851,12 +2851,18 @@ html {
 .submitBtnFeild {
     position: absolute;
     color: white;
-    background-color: #f553b7;
-    border: #f553b7 solid;
+    background-color: #FF0066;
+    border: #FF0066 solid;
     right: 10px;
     padding: 0 30px;
 }
 
+.searchinputFeild {
+    width: 100%;
+    border: 1px solid;
+    height: 40px;
+    border-radius: 25px;
+}
 /* j----------------------------------------------------------------------- */
 
 .banner .blogbanner .subscribe-box-par {
@@ -3022,7 +3028,7 @@ html {
 .blogs .read-button {
     font-weight: 500;
     color: white;
-    background: #793ef0;
+    background: #793EF0;
     border-radius: 10px;
     padding: 5px 15px;
     width: max-content;
@@ -3030,7 +3036,7 @@ html {
 
 .blogs .see-more-blogs {
     color: white;
-    background: #f553b7;
+    background: #FF0066;
     border-radius: 10px;
     padding: 10px 20px;
     width: max-content;
