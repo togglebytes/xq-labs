@@ -337,8 +337,9 @@ h2 {
     padding: 0;
     margin-right: 10px;
 }
-.carouselArrow{
-    background-color:#793ef0;
+.carouselArrow {
+    font-size: 30px !important;
+    background-color: #793ef0;
 }
 @media screen and (max-width: 640px) {
     .slick-dots {
@@ -3225,8 +3226,11 @@ html {
         border: 1px solid gray;
     }
     .searchbtn {
+        height: auto;
         width: 120px !important;
         margin-right: auto !important;
+        background: #793ef0;
+        border: #793ef0 solid;
     }
 }
 
@@ -3239,6 +3243,8 @@ html {
     .searchbtn {
         width: 120px !important;
         margin-right: auto !important;
+        background: #793ef0;
+        border: none;
     }
 }
 @media only screen and (min-width: 1540px) {
