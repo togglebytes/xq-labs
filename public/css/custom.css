@@ -3210,10 +3210,13 @@ html {
 .bloglist .cat-name1 {
     /* position: absolute; */
     font-weight: 700;
-    font-size: 35px !important;
+    font-size: 20px !important;
     /* bottom: -28%; */
     /* left: 4rem; */
     margin-top: 1rem;
+}
+.cat_name{
+    color:#793ef0;
 }
 .commen-baner-blog {
     display: block;

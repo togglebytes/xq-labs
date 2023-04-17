@@ -8,13 +8,13 @@
         {{if title !=''}}
             <div class="grid gap-2">
                 <div class="lg:px-14 md:px-10 px-2  mb-3">
-                    <p class="cat-name1 ">{{ main_category | title | replace('-', ' ')}} / {{title}}</p>
+                    <p class="cat-name1 ">{{ main_category | title | replace('-', ' ')}} / <span class="cat_name">{{title}}</span></p>
                 </div>
             </div> 
         {{/if}}
     {{ /taxonomy }}
     {{ collection from="posts" limit="6" paginate="true" as="posts" category:is="{last_segment}" }}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  lg:px-14 md:px-10 px-2">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:px-14 md:px-10 px-2">
 
         {{ posts }}
 
@@ -38,3 +38,20 @@
     {{ /paginate }}
     {{ /collection }}
 </div>
+
+<!-- <div class="academics-section">
+    <div>
+        <div class="grid grid-cols-2 gap-4 m-4">
+            {{ taxonomy from="categories"}}
+                {{if title !=''}}
+
+                    {{ partial:components.academic_blogs
+                    has_link="true"
+                    link="{url}"
+                    description="{date}"
+                    }}
+                {{/if}}
+            {{ /taxonomy }}
+        </div>
+    </div>
+</div> -->
