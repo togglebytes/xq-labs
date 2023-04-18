@@ -3225,15 +3225,15 @@ html {
     margin-top: -7%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 640px) and (max-width: 768px) {
     .search-blog {
         margin-top: 71px;
         padding: 0px;
         margin-left: 0px !important;
     }
     .searchInput {
-        width: 25.5% !important;
-        margin-left: 71.2% !important;
+        width: 100% !important;
+        margin-left: 0;
         border: 1px solid gray;
     }
     .searchbtn {
@@ -3264,14 +3264,14 @@ html {
 }
 
 @media only screen and (max-width: 640px) {
-    /* .search-blog {
+    .search-blog {
         margin-top: 71px;
         padding: 0px;
         margin-left: 0px !important;
     }
     .search-blog input {
-        width: 69%;
-    } */
+        width: 90%;
+    }
     .commen-baner-blog {
         height: 200px;
     }
