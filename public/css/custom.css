@@ -2859,9 +2859,6 @@ html {
     right: 10px;
 }
 
-.blogSearchButton {
-}
-
 /* j----------------------------------------------------------------------- */
 
 .banner .blogbanner .subscribe-box-par {
@@ -3224,13 +3221,9 @@ html {
     object-fit: cover;
 }
 
-.academics-section {
-    margin-top: -7%;
-}
-
 @media only screen and (min-width: 640px) and (max-width: 768px) {
     .search-blog {
-        margin-top: 71px;
+        margin-top: 4.8%;
         padding: 0px;
         margin-left: 0px !important;
     }
@@ -3241,9 +3234,13 @@ html {
     }
     .searchbtn {
         width: 120px !important;
-        margin-right: 6% !important;
+        margin-right: 5% !important;
         background: #793ef0;
-        border: none;
+        border: 1 px #793ef0;
+    }
+
+    .academics-section {
+        margin-top: -7%;
     }
 }
 
