@@ -1,5 +1,15 @@
+@font-face {
+    font-family: "Cera Basic";
+    src: url("../fonts/Cera-Basic.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Cera Bold";
+    src: url("../fonts/Cera-Pro-Black.otf") format("opentype");
+}
+
 * {
-    font-family: "Cera Pro";
+    font-family: "Cera Basic";
 }
 
 .column {
@@ -2941,8 +2951,8 @@ html {
 }
 
 .blogs .nest-cat-head {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .blogs .floating-grade-title {
@@ -3002,9 +3012,10 @@ html {
 }
 
 .blogs .latest-pop-par .lates-title {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 20px;
-    border-bottom: 4px solid #793EF0;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #793ef0;
 }
 /* .latest-border{
     border-bottom: 4px solid #793EF0;
@@ -3262,8 +3273,8 @@ html {
     /* left: 4rem; */
     margin-top: 1rem;
 }
-.cat_name{
-    color:#793EF0
+.cat_name {
+    color: #793ef0;
 }
 .commen-baner-blog {
     display: block;
@@ -3306,7 +3317,7 @@ html {
     }
     .searchbtn {
         width: 120px !important;
-        margin-right: 2% !important;
+        margin-right: 4% !important;
         background: #793ef0;
         border: none;
     }
@@ -3339,9 +3350,14 @@ html {
         margin-right: 5.8% !important;
     }
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1200) {
     .searchbtn {
-        margin-right: 5%;
+        margin-right: 7%;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    .searchbtn {
+        margin-right: 10%;
     }
 }
 
