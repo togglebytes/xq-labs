@@ -2855,8 +2855,11 @@ html {
     color: white;
     background-color: #f553b7;
     border: #f553b7 solid;
-    right: 10px;
     padding: 0 30px;
+    right: 10px;
+}
+
+.blogSearchButton {
 }
 
 /* j----------------------------------------------------------------------- */
@@ -3232,7 +3235,7 @@ html {
         margin-left: 0px !important;
     }
     .searchInput {
-        width: 100% !important;
+        width: 90% !important;
         margin-left: 0;
         border: 1px solid gray;
     }
@@ -3252,14 +3255,14 @@ html {
     }
     .searchbtn {
         width: 120px !important;
-        margin-right: 6% !important;
+        margin-right: 2% !important;
         background: #793ef0;
         border: none;
     }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1366px) {
     .searchbtn {
-        margin: 0;
+        margin-right: 5%;
     }
 }
 
