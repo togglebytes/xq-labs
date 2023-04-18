@@ -3220,47 +3220,58 @@ html {
     width: 100%;
     object-fit: cover;
 }
-@media only screen and (max-width: 786px) {
-    .searchInput {
-        width: 90% !important;
-        border: 1px solid gray;
-    }
-    .searchbtn {
-        height: auto;
-        width: 120px !important;
-        margin-right: auto !important;
-        background: #793ef0;
-        border: #793ef0 solid;
-    }
+
+.academics-section {
+    margin-top: -7%;
 }
 
-@media only screen and (min-width: 786px) {
+@media only screen and (max-width: 768px) {
+    .search-blog {
+        margin-top: 71px;
+        padding: 0px;
+        margin-left: 0px !important;
+    }
     .searchInput {
-        width: 27% !important;
-        margin-left: 70% !important;
+        width: 25.5% !important;
+        margin-left: 71.2% !important;
         border: 1px solid gray;
     }
     .searchbtn {
         width: 120px !important;
-        margin-right: auto !important;
+        margin-right: 6% !important;
         background: #793ef0;
         border: none;
     }
 }
-@media only screen and (min-width: 1540px) {
+
+@media only screen and (min-width: 768px) {
+    .searchInput {
+        width: 25.5% !important;
+        margin-left: 71.2% !important;
+        border: 1px solid gray;
+    }
+    .searchbtn {
+        width: 120px !important;
+        margin-right: 6% !important;
+        background: #793ef0;
+        border: none;
+    }
+}
+@media only screen and (min-width: 1920px) {
     .searchbtn {
         margin: 0;
     }
 }
-@media screen and (max-width: 640px) {
-    .search-blog {
+
+@media only screen and (max-width: 640px) {
+    /* .search-blog {
         margin-top: 71px;
         padding: 0px;
         margin-left: 0px !important;
     }
     .search-blog input {
         width: 69%;
-    }
+    } */
     .commen-baner-blog {
         height: 200px;
     }
