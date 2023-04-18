@@ -1,6 +1,8 @@
-<img class="commen-baner-blog" src="https://tse1.mm.bing.net/th?id=OIP.KDaNo3vPbY2LAJzEa2zhlAHaCU&pid=Api&P=0" alt="{{title}}">
+{{ collection:pages }} {{if title == 'Blog'}} {{ blocks }} {{banner_img}}
+<img class="commen-baner-blog" src="{{url}}" alt="{{title}}">
+{{/banner_img}} {{ /blocks }} {{/if}} {{ /collection:pages }}
 <div class="container mx-auto bloglist">
-    <p class="m-3 ml-5 pl-5"><strong id="search">Search results for "{{get:q}}"</strong></p>
+    <p class="m-3 lg:px-14 md:px-10 px-2"><strong id="search">Search results for "{{get:q}}"</strong></p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:px-14 md:px-10 px-2">
     {{ search:results index="default" }}
         {{ if no_results }}

@@ -49,9 +49,11 @@
     {{ taxonomy from="categories" slug:is="{last_segment}"}} {{if title !=''}}
     <div class="grid gap-2">
         <div class="lg:px-14 md:px-10 px-2 mb-3">
-            <p class="cat-name1">{{ main_category | title | replace('-', ' ') }} | <span class="cat_name">{{title}}</span></p>
+            <p class="cat-name1">{{ main_category | title | replace('-', ' ') }} / <span class="cat_name">{{title}}</span></p>
         </div>
+        
     </div>
+    
     {{/if}} {{ /taxonomy }} {{ collection from="posts" limit="6" paginate="true"
     as="posts" category:is="{last_segment}" }}
     <div
@@ -67,28 +69,23 @@
     <div class="py-10 mx-auto md:py-16">{{ partial:partials._pagination }}</div>
     {{ /if }} {{ /paginate }} {{ /collection }}
     <div class="w-full mx-auto customers-section-big">
-        <div
-            class="grid grid-cols-1 md:grid-cols-1 gap-4"
-            style="padding: 20px 111px; text-align: center"
-        >
+        <div class="grid grid-cols-1 md:grid-cols-1" style="padding: 0px 16px; text-align: center">
             <div class="blogs p-4 mt-6">
                 <section class="customer-logos slider" style="width: 100%"> 
                     {{ taxonomy from="categories" }} 
                     
-                    <div class="slide">
-                        {{if title !=''}} 
-                        <div class="relative basis-1/2 rounded-cstm">
-    
-                            <img class="rounded-cstm cat-slider-img" 
-                                src="{{image}}" alt="">
-                            <div class="floating-grade-title">
-                                <p>{{title}}</p>
+                        <div class="slide">
+                            {{if title !=''}} 
+                            <div class="relative basis-1/2 rounded-cstm">
+        
+                                <img class="rounded-cstm cat-slider-img" 
+                                    src="{{image}}" alt="">
+                                <div class="floating-grade-title">
+                                    <p>{{title}}</p>
+                                </div>
                             </div>
+                            {{/if}}
                         </div>
-                        {{/if}}
-    
-    
-                    </div>
                     {{ /taxonomy }}
                 </section>
             </div>

@@ -1607,8 +1607,8 @@ html {
 .floating-buttons-homeblobs-par {
     position: absolute;
     top: 0.2%;
-    /* right: 1%; */
-    left: 1%;
+    right: 1%;
+    /* left: 1%; */
     gap: 0px;
 }
 .floating-buttons-homeblobs-par a {
@@ -2928,7 +2928,7 @@ html {
     margin-right: auto;
     bottom: 17%;
     cursor: pointer;
-    padding: 0px 25px 0px 25px;
+    padding: 0px 30px 0px 30px;
     font-size: 21px;
     font-weight: 550;
 }
@@ -3158,11 +3158,11 @@ html {
 }
 
 .bloglist .latest-posts-iteam > div:first-child {
-    padding: 15px 15px 0 15px;
+    padding: 10px 25px 0 25px;
 }
 
 .bloglist .latest-posts-iteam > div:nth-child(2) {
-    padding: 15px 20px;
+    padding: 10px 25px 20px 25px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -3184,21 +3184,22 @@ html {
 }
 
 .bloglist .blog-date {
-    font-weight: 700;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 10px;
     line-height: 12px;
-    letter-spacing: 2px;
-
+    /* letter-spacing: 2px; */
+    margin-bottom: 10px;
     color: #6a6b7d;
 }
 
 .bloglist .read-button {
-    font-weight: 500;
     color: white;
     background: #793ef0;
-    border-radius: 10px;
-    padding: 5px 15px;
-    width: max-content;
+    border-radius: 9px;
+    padding: 7px 18px;
+    width: 35%;
+    font-size: 10px;
+    text-align: center;
 }
 
 .bloglist .list-banner-image {
@@ -3219,10 +3220,13 @@ html {
 .bloglist .cat-name1 {
     /* position: absolute; */
     font-weight: 700;
-    font-size: 35px !important;
+    font-size: 27px !important;
     /* bottom: -28%; */
     /* left: 4rem; */
     margin-top: 1rem;
+}
+.cat_name{
+    color:#793EF0
 }
 .commen-baner-blog {
     display: block;

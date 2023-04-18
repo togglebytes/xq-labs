@@ -8,11 +8,12 @@
 
         <div>
             <p class="blog-title">{{title}}</p>
+            <p class="blog-date ml-auto">{{ date | timezone('Asia/Kolkata') |format('d M, Y') }}</p>
             <div class="flex justify-between">
-                <p class="blog-date">{{ date | timezone('Asia/Kolkata') |format('d M, Y') }}</p>
-                <a href="#" class="share-button" url="{{link}}" title="{{title}}">Share</a>
+                <p class="read-cat">{{ category:title }}</p>
+                <a href="{{link}}" class="read-button">Read Article</a>
+                <!-- <a href="#" class="share-button" url="{{link}}" title="{{title}}">Share</a> -->
             </div>
-            <a href="{{link}}" class="read-button">Read Article</a>
         </div>
     </div>
 </div>
