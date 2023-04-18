@@ -2855,8 +2855,8 @@ html {
     color: white;
     background-color: #f553b7;
     border: #f553b7 solid;
-    right: 10px;
     padding: 0 30px;
+    right: 10px;
 }
 
 /* j----------------------------------------------------------------------- */
@@ -3234,55 +3234,57 @@ html {
     width: 100%;
     object-fit: cover;
 }
-.cat-slider-img{
-    height: 300px;
-    width: 314px !important;
-}
-.read-cat{
-    color:#793EF0;
-    font-size: 14px;
-    font-weight: bold;
-}
-@media only screen and (max-width: 786px) {
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+    .search-blog {
+        margin-top: 4.8%;
+        padding: 0px;
+        margin-left: 0px !important;
+    }
     .searchInput {
         width: 90% !important;
+        margin-left: 0;
         border: 1px solid gray;
     }
     .searchbtn {
-        height: auto;
         width: 120px !important;
-        margin-right: auto !important;
+        margin-right: 5% !important;
         background: #793ef0;
-        border: #793ef0 solid;
+        border: 1 px #793ef0;
+    }
+
+    .academics-section {
+        margin-top: -7%;
     }
 }
 
-@media only screen and (min-width: 786px) {
+@media only screen and (min-width: 768px) {
     .searchInput {
-        width: 27% !important;
-        margin-left: 70% !important;
+        width: 25.5% !important;
+        margin-left: 71.2% !important;
         border: 1px solid gray;
     }
     .searchbtn {
         width: 120px !important;
-        margin-right: auto !important;
+        margin-right: 2% !important;
         background: #793ef0;
         border: none;
     }
 }
-@media only screen and (min-width: 1540px) {
+@media only screen and (min-width: 1366px) {
     .searchbtn {
-        margin: 0;
+        margin-right: 5%;
     }
 }
-@media screen and (max-width: 640px) {
+
+@media only screen and (max-width: 640px) {
     .search-blog {
         margin-top: 71px;
         padding: 0px;
         margin-left: 0px !important;
     }
     .search-blog input {
-        width: 69%;
+        width: 90%;
     }
     .commen-baner-blog {
         height: 200px;
