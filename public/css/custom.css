@@ -2927,6 +2927,9 @@ html {
     margin-right: auto;
     bottom: 17%;
     cursor: pointer;
+    padding: 0px 25px 0px 25px;
+    font-size: 21px;
+    font-weight: 550;
 }
 
 .blogs .floating-grade-title p {
@@ -2969,7 +2972,13 @@ html {
 .blogs .latest-pop-par .lates-title {
     font-weight: 500;
     font-size: 20px;
+    border-bottom: 4px solid #793EF0;
 }
+/* .latest-border{
+    border-bottom: 4px solid #793EF0;
+    border-collapse: separate;
+  border-spacing: 15px 50px;
+} */
 
 .blogs .latest-posts-box {
     display: flex;
@@ -2986,11 +2995,11 @@ html {
 }
 
 .blogs .latest-posts-iteam > div:first-child {
-    padding: 15px 15px 0 15px;
+    padding: 10px 25px 0 25px;
 }
 
 .blogs .latest-posts-iteam > div:nth-child(2) {
-    padding: 15px 20px;
+    padding: 10px 25px 20px 25px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -3012,21 +3021,22 @@ html {
 }
 
 .blogs .blog-date {
-    font-weight: 700;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 10px;
     line-height: 12px;
-    letter-spacing: 2px;
-
+    /* letter-spacing: 2px; */
+    margin-bottom: 10px;
     color: #6a6b7d;
 }
 
 .blogs .read-button {
-    font-weight: 500;
     color: white;
     background: #793ef0;
-    border-radius: 10px;
-    padding: 5px 15px;
-    width: max-content;
+    border-radius: 9px;
+    padding: 7px 18px;
+    width: 35%;
+    font-size: 10px;
+    text-align: center;
 }
 
 .blogs .see-more-blogs {
@@ -3223,8 +3233,15 @@ html {
     width: 100%;
     object-fit: cover;
 }
-
-
+.cat-slider-img{
+    height: 300px;
+    width: 314px !important;
+}
+.read-cat{
+    color:#793EF0;
+    font-size: 14px;
+    font-weight: bold;
+}
 @media only screen and (max-width: 786px) {
     .searchInput {
         width: 90% !important;

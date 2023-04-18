@@ -124,20 +124,6 @@ sections:
           type: bard
           icon: bard
           listable: hidden
-      -
-        handle: similar_blogs
-        field:
-          mode: default
-          create: true
-          collections:
-            - posts
-          display: 'Similar Blogs'
-          type: entries
-          icon: entries
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
   sidebar:
     display: Sidebar
     fields:
