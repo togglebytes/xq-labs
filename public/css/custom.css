@@ -304,6 +304,17 @@ h2 {
     height: 0;
 }
 
+.blog-prev-arrow {
+    left: -30px;
+    width: 0;
+    height: 0;
+}
+
+.blog-next-arrow {
+    right: 0px;
+    width: 0;
+    height: 0;
+}
 .slide12 {
     display: flex !important;
     justify-content: center !important;
@@ -348,9 +359,23 @@ h2 {
     margin-right: 10px;
 }
 .carouselArrow {
-    font-size: 30px !important;
+    font-size: 23px !important;
     background-color: #793ef0;
 }
+.read-cat{
+    color:#793EF0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.cat-slider-img{
+    height: 339px !important;
+}
+.other-cat-label{
+    margin-left: 62px;
+    font-weight: 700;
+    color: #6A6B7E;
+}
+
 @media screen and (max-width: 640px) {
     .slick-dots {
         display: flex;
@@ -942,6 +967,12 @@ html {
 .icon-color {
     color: #b2b3b3 !important;
     border-color: #b2b3b3;
+    font-size: 14px;
+    border-width: 1px;
+}
+.blog-icon-color {
+    color: #ffffff !important;
+    border-color: #ffffff;
     font-size: 14px;
     border-width: 1px;
 }
@@ -3067,6 +3098,12 @@ html {
 }
 
 @media screen and (max-width: 640px) {
+    .blogs .floating-grade-title {
+        
+        padding: 0px;
+        font-size: 12px;
+        font-weight: 550;
+    }
     .blogs .floating-art-int-title {
         left: 44%;
         margin-left: auto;
@@ -3258,6 +3295,7 @@ html {
         margin-left: 0;
         border: 1px solid gray;
     }
+    
     .searchbtn {
         width: 120px !important;
         margin-right: 5% !important;
@@ -3268,9 +3306,11 @@ html {
     .academics-section {
         margin-top: -7%;
     }
-}
 
-@media only screen and (min-width: 768px) {
+    
+
+}
+@media only screen and (max-width: 1080px) {
     .searchInput {
         width: 25.5% !important;
         margin-left: 71.2% !important;
@@ -3281,6 +3321,34 @@ html {
         margin-right: 4% !important;
         background: #793ef0;
         border: none;
+    }
+    .cat-search{
+        width: 70% !important;
+        margin-left: 3.8% !important;
+    }
+    .cat-searchbtn {
+        margin-right: 5.8% !important;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .searchInput {
+        width: 25.5% !important;
+        margin-left: 71.2% !important;
+        border: 1px solid gray;
+    }
+    .searchbtn {
+        width: 120px !important;
+        margin-right: 2% !important;
+        background: #793ef0;
+        border: none;
+    }
+    .cat-search{
+        width: 50% !important;
+        margin-left: 35% !important;
+    }
+    .cat-searchbtn {
+        margin-right: 5.8% !important;
     }
 }
 @media only screen and (min-width: 1200) {
@@ -3294,11 +3362,21 @@ html {
     }
 }
 
+
+
 @media only screen and (max-width: 640px) {
     .search-blog {
         margin-top: 71px;
         padding: 0px;
         margin-left: 0px !important;
+    }
+    .cat-search-blog{
+        margin: 0px 0px 20px 0px;
+    }
+    .cat-searchbtn{
+        height: auto;
+        background: #793ef0;
+        border:3.8px solid #793ef0;
     }
     .search-blog input {
         width: 90%;
