@@ -35,36 +35,7 @@
         <div
             class="relative blogbanner"
             style="object-fit: contain; height: 100%; width: 100%"
-        >
-            {{ form:subscribe_form id="subscribe_form"}}
-            <div class="subscribe-box-par">
-                {{ fields }}
-                <!-- {{field}} -->
-                <input
-                    class="inputFeild"
-                    type="email"
-                    name="{{handle}}"
-                    placeholder="Your email address"
-                    id="{{ handle }}"
-                />
-                <button class="submitBtnFeild">Subscribe</button>
-                <p
-                    class="text-white bg-red-600 rounded-full py-0 px-2 absolute -bottom-7 errorMessage"
-                    id="{{handle}}_error"
-                >
-                    {{ error }}
-                </p>
-                {{ /fields }} {{ if success }}
-                <p
-                    class="text-white absolute bg-green-500 rounded-full py-0 px-2 -bottom-7"
-                    id="successMessage"
-                >
-                    {{ success }}
-                </p>
-                {{ /if }}
-            </div>
-            {{ /form:subscribe_form }}
-        </div>
+        ></div>
     </div>
     <form action="/search" class="ml-2 pl-2 search-blog">
         <input
@@ -117,6 +88,34 @@
                             keyboard_tab
                         </span></a
                     >
+                    {{ form:subscribe_form id="subscribe_form"}}
+                    <div class="subscribe-box-par">
+                        {{ fields }}
+                        <!-- {{field}} -->
+                        <input
+                            class="inputFeild"
+                            type="email"
+                            name="{{handle}}"
+                            placeholder="Your email address"
+                            id="{{ handle }}"
+                        />
+                        <button class="submitBtnFeild">Subscribe</button>
+                        <p
+                            class="text-white bg-red-600 rounded-full py-0 px-2 absolute -bottom-7 errorMessage"
+                            id="{{handle}}_error"
+                        >
+                            {{ error }}
+                        </p>
+                        {{ /fields }} {{ if success }}
+                        <p
+                            class="text-white absolute bg-green-500 rounded-full py-0 px-2 -bottom-7"
+                            id="successMessage"
+                        >
+                            {{ success }}
+                        </p>
+                        {{ /if }}
+                    </div>
+                    {{ /form:subscribe_form }}
                 </div>
                 <!-- <div class="flex flex-row justify-around latest-pop-par-tab m-4">
                     <button class="latest-post-button">

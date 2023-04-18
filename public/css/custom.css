@@ -1,13 +1,11 @@
 @font-face {
     font-family: "Cera Basic";
     src: url("../fonts/Cera-Basic.otf") format("opentype");
-    font-weight: normal;
 }
 
 @font-face {
     font-family: "Cera Bold";
     src: url("../fonts/Cera-Pro-Black.otf") format("opentype");
-    font-weight: bold;
 }
 
 * {
@@ -2922,8 +2920,8 @@ html {
 }
 
 .blogs .nest-cat-head {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .blogs .floating-grade-title {
@@ -2983,7 +2981,7 @@ html {
 }
 
 .blogs .latest-pop-par .lates-title {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 20px;
     padding-bottom: 10px;
     border-bottom: 4px solid #793ef0;
