@@ -337,8 +337,9 @@ h2 {
     padding: 0;
     margin-right: 10px;
 }
-.carouselArrow{
-    background-color:#793ef0;
+.carouselArrow {
+    font-size: 30px !important;
+    background-color: #793ef0;
 }
 @media screen and (max-width: 640px) {
     .slick-dots {
@@ -1606,8 +1607,8 @@ html {
 .floating-buttons-homeblobs-par {
     position: absolute;
     top: 0.2%;
-    right: 1%;
-    /* left: 1%; */
+    /* right: 1%; */
+    left: 1%;
     gap: 0px;
 }
 .floating-buttons-homeblobs-par a {
@@ -2852,8 +2853,8 @@ html {
 .submitBtnFeild {
     position: absolute;
     color: white;
-    background-color: #FF0066;
-    border: #FF0066 solid;
+    background-color: #f553b7;
+    border: #f553b7 solid;
     right: 10px;
     padding: 0 30px;
 }
@@ -3041,7 +3042,7 @@ html {
 
 .blogs .see-more-blogs {
     color: white;
-    background: #FF0066;
+    background: #f553b7;
     border-radius: 10px;
     padding: 10px 20px;
     width: max-content;
@@ -3088,8 +3089,7 @@ html {
         border-radius: 20px;
     }
     .blogs .searchbtn {
-        background-color: #793ef0 !important;
-        border: #793EF0 solid !important;
+        background-color: #793ef0;
     }
     .blogs .floating-grade-title p {
         padding: 12px;
@@ -3219,13 +3219,10 @@ html {
 .bloglist .cat-name1 {
     /* position: absolute; */
     font-weight: 700;
-    font-size: 20px !important;
+    font-size: 35px !important;
     /* bottom: -28%; */
     /* left: 4rem; */
     margin-top: 1rem;
-}
-.cat_name{
-    color:#793ef0;
 }
 .commen-baner-blog {
     display: block;
@@ -3248,10 +3245,11 @@ html {
         border: 1px solid gray;
     }
     .searchbtn {
+        height: auto;
         width: 120px !important;
         margin-right: auto !important;
-        background-color: #793EF0 !important;
-        border: #793EF0 solid !important;
+        background: #793ef0;
+        border: #793ef0 solid;
     }
 }
 
@@ -3264,16 +3262,13 @@ html {
     .searchbtn {
         width: 120px !important;
         margin-right: auto !important;
-        background-color: #793ef0 !important;
-        border: #793EF0 solid !important;
-        
+        background: #793ef0;
+        border: none;
     }
-    
 }
 @media only screen and (min-width: 1540px) {
     .searchbtn {
         margin: 0;
-        background-color: #793ef0 !important;
     }
 }
 @media screen and (max-width: 640px) {
@@ -3358,7 +3353,7 @@ html {
     text-align: left;
 }
 .single-blog-page a {
-    color: #793EF0;
+    color: #5a1dd4;
     font-weight: bold;
 }
 .single-blog-page a:hover {
