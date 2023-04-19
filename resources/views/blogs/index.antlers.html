@@ -27,7 +27,7 @@
             style="object-fit: contain; height: 100%; width: 100%"
         >
             {{ form:subscribe_form id="subscribe_form"}}
-            <div class="subscribe-box-par">
+            <div class="subscribe-box-par subscribe-top">
                 {{ fields }}
                 <!-- {{field}} -->
                 <input
@@ -93,6 +93,34 @@
         </div>
         <div class="md:col-span-3 col-span-10">
             <div class="latest-pop-par m-4">
+                {{ form:subscribe_form id="subscribe_form"}}
+                <div class="subscribe-box-par subscribe-bottom">
+                    {{ fields }}
+                    <!-- {{field}} -->
+                    <input
+                        class="inputFeild"
+                        type="email"
+                        name="{{handle}}"
+                        placeholder="Your email address"
+                        id="{{ handle }}"
+                    />
+                    <button class="submitBtnFeild">Subscribe</button>
+                    <p
+                        class="text-white bg-red-600 rounded-full py-0 px-2 absolute -bottom-7 errorMessage"
+                        id="{{handle}}_error"
+                    >
+                        {{ error }}
+                    </p>
+                    {{ /fields }} {{ if success }}
+                    <p
+                        class="text-white absolute bg-green-500 rounded-full py-0 px-2 -bottom-7"
+                        id="successMessage"
+                    >
+                        {{ success }}
+                    </p>
+                    {{ /if }}
+                </div>
+                {{ /form:subscribe_form }}
                 <p class="lates-title mb-4">Latest Posts</p>
 
                 <div class="latest-posts-box">

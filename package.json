@@ -14,6 +14,7 @@
     },
     "dependencies": {
         "@fontsource/manrope": "^4.5.13",
+        "@fortawesome/fontawesome-free": "^6.4.0",
         "@tailwindcss/typography": "^0.5.9",
         "alpinejs": "^3.11.1",
         "autoprefixer": "^10.4.13",

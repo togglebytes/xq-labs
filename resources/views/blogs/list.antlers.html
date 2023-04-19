@@ -47,29 +47,33 @@
         <button class="submitBtnFeild searchbtn w-40">Search</button>
     </form> -->
 
-    {{ taxonomy from="categories" slug:is="{last_segment}"}} 
-        {{if title !=''}}
-        <div class="grid lg:gap-2 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2">
-            <div class="lg:px-14 md:px-10 px-2 mb-3">
-                <p class="cat-name1">{{ main_category | title | replace('-', ' ') }} / <span class="cat_name">{{title}}</span></p>
-            </div>
-            
-            <form action="/search" class="ml-2 pl-2 cat-search-blog search-blog self-center">
-                <input
-                    type="search"
-                    class="inputFeild cat-search searchInput w-12"
-                    name="q"
-                    placeholder="Search here"
-                />
-                <button class="submitBtnFeild searchbtn cat-searchbtn w-40">Search</button>
-            </form>
+    {{ taxonomy from="categories" slug:is="{last_segment}"}} {{if title !=''}}
+    <div class="grid lg:gap-2 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2">
+        <div class="lg:px-14 md:px-10 px-2 mb-3">
+            <p class="cat-name1">
+                {{ main_category | title | replace('-', ' ') }} /
+                <span class="cat_name">{{title}}</span>
+            </p>
         </div>
-        
-        {{/if}} 
 
-    {{ /taxonomy }}
+        <form
+            action="/search"
+            class="ml-2 pl-2 cat-search-blog search-blog self-center"
+        >
+            <input
+                type="search"
+                class="inputFeild cat-search searchInput w-12"
+                name="q"
+                placeholder="Search here"
+            />
+            <button class="submitBtnFeild searchbtn cat-searchbtn w-40">
+                Search
+            </button>
+        </form>
+    </div>
 
-    {{ collection from="posts" limit="6" paginate="true" as="posts" category:is="{last_segment}" }}
+    {{/if}} {{ /taxonomy }} {{ collection from="posts" limit="6" paginate="true"
+    as="posts" category:is="{last_segment}" }}
     <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:px-14 md:px-10 px-2"
     >
@@ -82,10 +86,13 @@
     {{ paginate }} {{ if prev_page or next_page }}
     <div class="py-10 mx-auto">{{ partial:partials._pagination }}</div>
     {{ /if }} {{ /paginate }} {{ /collection }}
-    
+
     <div class="w-full mx-auto catregory-section">
         <span class="other-cat-label">Other Categories</span>
-        <div class="grid grid-cols-1 md:grid-cols-1" style="padding: 0px 16px; text-align: center">
+        <div
+            class="grid grid-cols-1 md:grid-cols-1"
+            style="padding: 0px 16px; text-align: center"
+        >
             <div class="blogs p-4 mt-6">
                 <section class="customer-logos slider" style="width: 100%"> 
                     {{ taxonomy from="categories" slug:isnt="{last_segment}"}} 
@@ -100,8 +107,9 @@
                                     <p>{{title}}</p>
                                 </div>
                             </div>
-                            {{/if}}
                         </div>
+                        {{/if}}
+                    </div>
                     {{ /taxonomy }}
                 </section>
             </div>

@@ -24,6 +24,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: "Manrope",
+                fontawesome: ["Font Awesome 5 Free"],
             },
             colors: {
                 black: "#0B0D17",
@@ -95,5 +96,6 @@ module.exports = {
         require("@tailwindcss/typography"),
         // eslint-disable-next-line no-undef
         require("tailwindcss-debug-screens"),
+        require("@fortawesome/fontawesome-free"),
     ],
 };
