@@ -1,129 +1,15 @@
-<div class="container mx-auto blogs">
-    <!-- <div class="grid grid-cols-1 relative gap-4 mb-4">
-        <div
-            class="relative blogbanner"
-            style="object-fit: contain; height: 100%; width: 100%"
-        >
-            afsafasasfasfsa
-        </div>
-    </div> -->
 
-    <div class="grid grid-cols-10 gap-4 mt-16 md:mt-1 px-0 md:px-4">
-        <div class="flex flex-col gap-0 md:gap-2 md:col-span-7 col-span-10">
-            <div class="art-int-section">
-                <div class="m-4">
-                    <p class="mb-4 nest-cat-head">
-                        How to use video technique in school?
-                    </p>
-                    <img
-                        class="mt-8 mb-8 mb rounded-cstm"
-                        height="100%"
-                        width="100%"
-                        src="https://www.shutterstock.com/shutterstock/photos/1830025547/display_1500/stock-photo-portrait-of-indian-lady-teacher-in-saree-stands-against-green-white-or-blackboard-conducting-1830025547.jpg"
-                        alt="details image"
-                    />
-                    <p class="mb-4 nest-cat-head detail-para-heading">
-                        What is Lorem Ipsum?
-                    </p>
-                    <p class="mb-8 nest-cat-head detail-para">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into
-                        electronic typesetting, remaining essentially unchanged.
-                        It was popularised in the 1960s with the release of
-                        Letraset sheets containing Lorem Ipsum passages, and
-                        more recently with desktop publishing software like
-                        Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                    <p class="mb-4 nest-cat-head detail-para-heading">
-                        What is Lorem Ipsum?
-                    </p>
-                    <p class="mb-8 nest-cat-head detail-para">
-                        Contrary to popular belief, Lorem Ipsum is not simply
-                        random text. It has roots in a piece of classical Latin
-                        literature from 45 BC, making it over 2000 years old.
-                        Richard McClintock, a Latin professor at Hampden-Sydney
-                        College in Virginia, looked up one of the more obscure
-                        Latin words, consectetur, from a Lorem Ipsum passage,
-                        and going through the cites of the word in classical
-                        literature, discovered the undoubtable source. Lorem
-                        Ipsum comes from sections 1.10.32 and 1.10.33 of "de
-                        Finibus Bonorum et Malorum" (The Extremes of Good and
-                        Evil) by Cicero, written in 45 BC. This book is a
-                        treatise on the theory of ethics, very popular during
-                        the Renaissance. The first line of Lorem Ipsum, "Lorem
-                        ipsum dolor sit amet..", comes from a line in section
-                        1.10.32.
-                    </p>
-
-                    <p style="color: #53637D;">Tags</p>
-                    <div class="flex space-x-4 mt-4 mb-12">
-                        <span class="detail-tags">lorem ipsum</span>
-                        <span class="detail-tags">text generator</span>
-                        <span class="detail-tags">favourite</span>
-                    </div>
-                    <div class="flex mb-4 detail-post-info">
-                        <!-- {{ if author_name }}
-                            <p>Written by {{ author_name }}</p>
-                            {{ /if}}  -->
-                        <p>Written by Kartik Talwar</p>
-                        <p>{{date}}</p>
-                    </div>
-                    <hr style="border: 1px solid #793ef0;"/>
-                    <p class="mt-8 mb-2" style="color: #53637d">Share</p>
-                    <div class="flex items-center space-x-2">
-                        <a href="#" class="social-btn bg-pinterest"
-                            ><i class="fa-brands fa-pinterest-p" style="color: #ffffff;"></i></i
-                        ></a>
-                        <a href="#" class="social-btn bg-twitter"
-                            ><i
-                                class="fab fa-twitter"
-                                style="color: #ffffff"
-                            ></i
-                        ></a>
-                        <a href="#" class="social-btn bg-facebook"
-                            ><i
-                                class="fa-brands fa-square-facebook"
-                                style="color: #ffffff"
-                            ></i
-                        ></a>
-                        <a href="#" class="social-btn bg-gmail"
-                            ><i class="fa-solid fa-envelope" style="color: #777777;"></i></a>
-                        <a href="#" class="social-btn bg-tumblr" style="color: #ffffff;"
-                            ><i class="fab fa-tumblr"></i
-                        ></a>
-                        <a href="#" class="social-btn bg-google-plus"
-                            ><i class="fa-brands fa-google-plus-g" style="color: #ffffff;"></i></a>
-                        <a href="#" class="social-btn bg-linkedin"
-                            ><i
-                                class="fab fa-linkedin"
-                                style="color: #ffffff"
-                            ></i
-                        ></a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="md:col-span-3 col-span-10">
-            <div class="latest-pop-par m-4">
-                <p class="lates-title mb-4">Categories</p>
-                <div class="grid grid-cols-1 gap-4 m-4">
-                    {{ taxonomy from="categories" main_category:is="academics"}}
-                    {{if title !=''}} {{ partial:components.academic_blogs
-                    has_link="true" link="{url}" description="{date}" }} {{/if}}
-                    {{ /taxonomy }}
-                </div>
-            </div>
-        </div>
-        
-    </div>
+<div class="flex mb-4 detail-post-info">
+    {{ if author_name }}
+        <p>Written by {{ author_name }}</p>
+    {{ else}} 
+        <p></p>
+    {{/if}}
+    <p>{{date}}</p>
     
 </div>
+<hr style="border: 1px solid #793ef0;"/>
+
 <!-- 
 <div class="flex flex-wrap pt-6 -mx-6 border-gray-300 divide-x divide-gray-300">
     <p class="px-6 text-gray-900">Posted on: {{ date }}</p>

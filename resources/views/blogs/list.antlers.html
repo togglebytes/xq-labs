@@ -87,15 +87,15 @@
     <div class="py-10 mx-auto">{{ partial:partials._pagination }}</div>
     {{ /if }} {{ /paginate }} {{ /collection }}
 
-    <div class="w-full mx-auto catregory-section">
+    <div class="w-full mx-auto my-8 catregory-section">
         <span class="other-cat-label">Other Categories</span>
         <div
             class="grid grid-cols-1 md:grid-cols-1"
             style="padding: 0px 16px; text-align: center"
         >
             <div class="blogs p-4 mt-6">
-                <section class="customer-logos slider" style="width: 100%">
-                    {{ taxonomy from="categories" }}
+                <section class="customer-logos slider">
+                    {{ taxonomy from="categories" slug:isnt="{ last_segment }"}}
 
                     <div class="slide">
                         {{if title !=''}}
@@ -134,17 +134,18 @@
             pauseOnHover: false,
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: 786,
                     settings: {
-                        slidesToShow: 4,
+                        slidesToShow: 2,
                     },
                 },
                 {
                     breakpoint: 640,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                     },
                 },
+                
             ],
         });
     });

@@ -1,4 +1,39 @@
-<div class="mt-10">
+<p class="mt-8 mb-2" style="color: #53637d">Share</p>
+<div class="flex items-center space-x-2">
+    <a href="http://pinterest.com/pin/create/button/?url={{ permalink }}" target="blank_" class="social-btn bg-pinterest"
+        ><i class="fa-brands fa-pinterest-p" style="color: #ffffff;"></i></i
+    ></a>
+    <a href="https://twitter.com/intent/tweet?text={{ permalink }}" target="blank_" class="social-btn bg-twitter"
+        ><i
+            class="fab fa-twitter"
+            style="color: #ffffff"
+        ></i
+    ></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ permalink }}" target="blank_" class="social-btn bg-facebook"
+        ><i
+            class="fa-brands fa-square-facebook"
+            style="color: #ffffff"
+        ></i
+    ></a>
+    <a href="mailto:{{ permalink
+    }}" target="blank_" class="social-btn bg-gmail"
+        ><i class="fa-solid fa-envelope" style="color: #777777;"></i></a>
+    <a href="http://www.tumblr.com/share/link?url={{ permalink | urlencode }}" target="blank_" class="social-btn bg-tumblr" style="color: #ffffff;"
+        ><i class="fab fa-tumblr"></i
+    ></a>
+    <!-- <a href="#" class="social-btn bg-google-plus"
+        ><i class="fa-brands fa-google-plus-g" style="color: #ffffff;"></i></a> -->
+    <!-- working url https://www.linkedin.com/sharing/share-offsite/?url=https://example.com -->
+        
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ permalink }}" target="blank_" class="social-btn bg-linkedin"
+        ><i
+            class="fab fa-linkedin"
+            style="color: #ffffff"
+        ></i
+    ></a>
+</div>
+
+<!-- <div class="mt-10">
     <p class="text-sm font-extrabold tracking-wider text-gray-900 uppercase">
         Share this on social media
     </p>
@@ -13,4 +48,4 @@
         url="https://www.linkedin.com/shareArticle?mini=true&url={{ permalink
         }}" }}
     </div>
-</div>
+</div> -->
