@@ -8,6 +8,11 @@
     src: url("../fonts/Cera-Pro-Black.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Cera Italic";
+    src: url("../fonts/Cera-Compact-Pro-Medium-Italic.otf") format("opentype");
+}
+
 * {
     font-family: "Cera Basic";
 }
@@ -2879,6 +2884,7 @@ html {
 .inputFeild {
     width: 100%;
     border: none;
+    font-family: "Cera Italic";
 }
 .inputFeild:focus {
     outline: 0 none !important;
@@ -3455,7 +3461,7 @@ html {
     text-decoration: underline;
 }
 
-/* Details page  */
+/* Blog Details page  */
 .detail-para-heading {
     font-family: "Cera Basic";
     font-weight: 700;
@@ -3492,10 +3498,6 @@ html {
     justify-content: space-between;
 }
 
-hr {
-    border: 1px solid #793ef0;
-}
-
 .social-btn {
     display: flex;
     align-items: center;
@@ -3511,37 +3513,78 @@ hr {
     margin: 0;
 }
 
-/* Pinterest */
 .bg-pinterest {
     background-color: #e60023;
 }
 
-/* Twitter */
 .bg-twitter {
     background-color: #1da1f2;
 }
 
-/* Facebook */
 .bg-facebook {
     background-color: #3b5998;
 }
 
-/* Gmail */
 .bg-gmail {
     background-color: #e9e9e9;
 }
 
-/* Tumblr */
 .bg-tumblr {
     background-color: #34526f;
 }
 
-/* Google Plus */
 .bg-google-plus {
     background-color: #db4a39;
 }
 
-/* LinkedIn */
 .bg-linkedin {
     background-color: #0072b1;
 }
+
+/* Media queries for blog page subscribe and search */
+@media only screen and (max-width: 640px) {
+    .subscribe-top {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .subscribe-bottom {
+        display: none !important;
+    }
+}
+/* 
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+    .search-blog {
+        margin-top: 4.8%;
+        padding: 0px;
+        margin-left: 0px !important;
+    }
+    .searchInput {
+        width: 90% !important;
+        margin-left: 0;
+        border: 1px solid gray;
+    }
+
+    .searchbtn {
+        width: 120px !important;
+        margin-right: 5% !important;
+        background: #793ef0;
+        border: 1 px #793ef0;
+    }
+} */
+
+@media screen and (max-width: 640px) {
+}
+/* 
+ .blog-searchInput {
+        width: 25.5% !important;
+        margin-left: 71.2% !important;
+        border: 1px solid gray;
+    } */
+/* .blog-searchbtn {
+        width: 120px !important;
+        margin-right: 4% !important;
+        background: #793ef0;
+        border: none;
+    } */
