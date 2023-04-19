@@ -374,6 +374,7 @@ h2 {
 }
 .cat-slider-img {
     height: 339px !important;
+    object-fit: cover;
 }
 .other-cat-label {
     margin-left: 62px;
@@ -382,6 +383,10 @@ h2 {
 }
 
 @media screen and (max-width: 640px) {
+    .cat-slider-img {
+        height: 200px !important;
+       
+    }
     .slick-dots {
         display: flex;
         justify-content: center;
@@ -584,6 +589,21 @@ html {
 
 .sub-title {
     font-size: x-large;
+}
+
+.content-text>h3{
+    font-family: "Cera Basic";
+    font-weight: 700;
+    color: #7457ba;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.content-text>p{
+    font-family: "Cera Basic";
+    font-weight: 300;
+    color: #1f1f1f;
+    margin-bottom:8px;
 }
 
 /*--------------- Navbar css starts here --------------------*/
@@ -3518,7 +3538,7 @@ html {
     width: 138px;
     height: 36px;
     border-radius: 10px;
-    background: #d9d9d9;
+    /* background: #d9d9d9; */
 
     font-family: Cera Basic;
     font-size: 16px;
