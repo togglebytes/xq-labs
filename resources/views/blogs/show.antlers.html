@@ -89,17 +89,17 @@
                     style="padding: 0px 16px; text-align: center"
                 >
                     <div class="blogs p-4 mt-6">
-                        <section class="customer-logos slider">
+                        <section class="customer-logos slider sim-blogs-slider" >
                             
                             {{ collection:posts url:isnt="{ url }" :taxonomy:tags="tags" }}
         
                             <div class="slide">
                                 <div>
-                                    <div class="latest-posts-iteam">
+                                    <div class="latest-posts-iteam sim-blog-item" style="height:290px;">
                                         <div>
                                             <img height="100%" width="100%"
                                                 src="{{image}}"
-                                                alt="blog thumb">
+                                                alt="blog thumb" class="similar-slide-img">
                                         </div>
                                 
                                         <div>

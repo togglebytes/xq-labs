@@ -381,6 +381,13 @@ h2 {
     font-weight: 700;
     color: #6a6b7e;
 }
+.similar-slide-img {
+    height: 150px;
+}
+.sim-blogs-slider .slick-track {
+    height: 300px;
+    padding-block: 5px;
+}
 
 @media screen and (max-width: 640px) {
     .cat-slider-img {
@@ -591,20 +598,7 @@ html {
     font-size: x-large;
 }
 
-.content-text>h3{
-    font-family: "Cera Basic";
-    font-weight: 700;
-    color: #7457ba;
-    font-size: 20px;
-    margin-bottom: 4px;
-}
 
-.content-text>p{
-    font-family: "Cera Basic";
-    font-weight: 300;
-    color: #1f1f1f;
-    margin-bottom:8px;
-}
 
 /*--------------- Navbar css starts here --------------------*/
 
@@ -3191,13 +3185,19 @@ html {
         flex-direction: row;
         gap: 2px;
     }
-
+    .sim-blog-item {
+        flex-direction: column !important;
+    }
+    
     .blogs .latest-posts-iteam > div:first-child {
         padding: 5px;
 
         max-width: 35%;
     }
-
+    .blogs .sim-blog-item > div:first-child {
+        padding: 5px;
+        max-width: 100%;
+    }
     .blogs .latest-posts-iteam > div:nth-child(2) {
         /* padding: 10px; */
         padding: 7px;
@@ -3205,6 +3205,8 @@ html {
         flex-direction: co;
         gap: 5px;
     }
+
+
 
     .blogs .blog-title {
         font-style: normal;
@@ -3489,14 +3491,18 @@ html {
     font-size: 1.5rem !important;
     font-weight: 700 !important;
     text-align: left !important;
+    font-family: "Cera Basic";
+    color: #793ef0;
     padding: 0;
-    margin: 0;
+    margin-bottom: 10px;
 }
 .single-blog-page h3 {
     font-size: 1.125rem !important;
     font-weight: 700 !important;
+    font-family: "Cera Basic";
+    color: #793ef0;
     padding: 0;
-    margin: 0;
+    margin-bottom: 10px;
 }
 .single-blog-page ul {
     margin-left: 30px !important;
@@ -3509,11 +3515,35 @@ html {
     text-align: left;
 }
 .single-blog-page a {
-    color: #5a1dd4;
-    font-weight: bold;
+    color: #793ef0;
+    /* font-weight: bold; */
 }
 .single-blog-page a:hover {
     text-decoration: underline;
+}
+/* shivaji */
+/* .content-text>h3{
+    font-family: "Cera Basic";
+    font-weight: 700;
+    color: #793ef0;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content-text>h2{
+    font-family: "Cera Basic";
+    font-weight: 700;
+    color: #7457ba;
+    font-size: 24px;
+    margin-bottom: 10px;
+} */
+
+.content-text>p{
+    font-family: "Cera Basic";
+    font-weight: 400;
+    color: #1f1f1f;
+    margin-bottom:20px;
+    font-size: 20px;
 }
 
 /* Blog Details page  */
