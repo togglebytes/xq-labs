@@ -125,7 +125,7 @@
 
                 <div class="latest-posts-box">
                     {{ collection from="posts" limit="5" as="posts"
-                    sort="updated_at:desc"}} {{ posts }} {{
+                    sort="date:desc"}} {{ posts }} {{
                     partial:components.latest_blogs has_link="true" link="{url}"
                     description="{date}" }} {{ /posts }} {{ /collection }}
 

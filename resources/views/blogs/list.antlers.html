@@ -95,7 +95,7 @@
         >
             <div class="blogs p-4 mt-6">
                 <section class="customer-logos slider">
-                    {{ taxonomy from="categories" }}
+                    {{ taxonomy from="categories" slug:isnt="{ last_segment }"}}
 
                     <div class="slide">
                         {{if title !=''}}
