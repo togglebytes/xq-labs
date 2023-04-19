@@ -94,18 +94,19 @@
             style="padding: 0px 16px; text-align: center"
         >
             <div class="blogs p-4 mt-6">
-                <section class="customer-logos slider" style="width: 100%"> 
-                    {{ taxonomy from="categories" slug:isnt="{last_segment}"}} 
-                    
-                        <div class="slide">
-                            {{if title !=''}} 
-                            <div class="relative basis-1/2 rounded-cstm">
-        
-                                <img class="rounded-cstm cat-slider-img" 
-                                    src="{{image}}" alt="">
-                                <div class="floating-grade-title">
-                                    <p>{{title}}</p>
-                                </div>
+                <section class="customer-logos slider" style="width: 100%">
+                    {{ taxonomy from="categories" }}
+
+                    <div class="slide">
+                        {{if title !=''}}
+                        <div class="relative basis-1/2 rounded-cstm">
+                            <img
+                                class="rounded-cstm cat-slider-img"
+                                src="{{image}}"
+                                alt=""
+                            />
+                            <div class="floating-grade-title">
+                                <p>{{title}}</p>
                             </div>
                         </div>
                         {{/if}}
