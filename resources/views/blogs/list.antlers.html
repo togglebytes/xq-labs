@@ -88,7 +88,7 @@
         <div class="grid grid-cols-1 md:grid-cols-1" style="padding: 0px 16px; text-align: center">
             <div class="blogs p-4 mt-6">
                 <section class="customer-logos slider" style="width: 100%"> 
-                    {{ taxonomy from="categories" }} 
+                    {{ taxonomy from="categories" slug:isnt="{last_segment}"}} 
                     
                         <div class="slide">
                             {{if title !=''}} 
