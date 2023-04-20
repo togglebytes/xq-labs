@@ -3062,12 +3062,12 @@ html {
 
 .blogs .latest-posts-iteam > div:first-child {
     /* padding: 10px 25px 0 25px; */
-    padding: 5%;
+    padding: 4% 7% 4% 7%;
 }
 
 .blogs .latest-posts-iteam > div:nth-child(2) {
     /* padding: 10px 25px 20px 25px; */
-    padding: 0 5% 5%;
+    padding: 0 7% 4%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -3190,7 +3190,9 @@ html {
     }
 
     .blogs .latest-posts-iteam img {
-        height: 100%;
+        /* height: 100%; */
+        height: 142px !important;
+        width: 300px;
     }
 
     .blogs .latest-posts-iteam {
@@ -3215,10 +3217,12 @@ html {
         /* padding: 10px; */
         padding: 7px;
         display: flex;
-        flex-direction: co;
+        flex-direction: column;
+        flex-grow: 1;
         gap: 5px;
     }
 
+    /* TODO: Check if this is needed.  */
     .blogs .blog-title {
         font-size: 15px;
     }
@@ -3255,11 +3259,13 @@ html {
 }
 
 .bloglist .latest-posts-iteam > div:first-child {
-    padding: 10px 25px 0 25px;
+    /* padding: 10px 25px 0 25px; */
+    padding: 4% 7% 4% 7%;
 }
 
 .bloglist .latest-posts-iteam > div:nth-child(2) {
-    padding: 10px 25px 20px 25px;
+    /* padding: 10px 25px 20px 25px; */
+    padding: 0 7% 4%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -3270,7 +3276,7 @@ html {
     width: 100%; */
     object-fit: cover;
     height: 172px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .bloglist .blog-title {
@@ -3337,13 +3343,13 @@ html {
         margin-top: 5%;
     } */
     .blogs .blog-title {
-        font-size: 14px;
+        /* font-size: 14px; */
         line-height: 17px;
     }
     .blogs .blog-date {
         font-weight: 500;
         font-size: 10px;
-        line-height: 0px;
+        /* line-height: 0px; */
         letter-spacing: 1px;
         /* margin-bottom: 10px; */
         color: #6a6b7d;
@@ -3487,7 +3493,8 @@ html {
     }
 
     .bloglist .latest-posts-iteam > div:nth-child(2) {
-        padding: 10px 20px 15px 20px;
+        /* padding: 10px 20px 15px 20px; */
+        padding: 0 7% 4%;
         gap: 5px;
     }
 }
@@ -3652,7 +3659,6 @@ html {
     font-family: "Cera Italic";
     margin-bottom: 5%;
 }
-
 .blog-searchbtn {
     position: absolute;
     right: 0px;
@@ -3663,7 +3669,7 @@ html {
     color: white;
 }
 
-.top-search-bar {
+.big-search-bar {
     margin-bottom: 100px;
 }
 
@@ -3683,26 +3689,21 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
-    .top-search-bar {
+    .big-search-bar {
         display: none;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    .bottom-search-bar {
+    .small-search-bar {
         display: none;
     }
-    .top-search-bar {
+    .big-search-bar {
         margin: 0 2% 5% 2%;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .read-cat {
-        /* font-size: 14px; */
-        /* line-height: 12px; */
-        /* line-height: 100%; */
-    }
     .blogs .latest-posts-iteam img {
         /* border-radius: 15px; */
         object-fit: cover;
@@ -3715,7 +3716,62 @@ html {
         width: 100%;
     }
 
-    .blogs .blog-date {
+    /* .blogs .blog-date {
         margin-bottom: 2%;
+    } */
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1064px) {
+    .blogs .blog-date {
+        line-height: 5%;
     }
 }
+
+/* CSS for Blog List */
+.list-small-search-bar {
+    margin-bottom: 5%;
+    margin-top: 4%;
+}
+
+.list-small-search-btn {
+    margin-bottom: 5%;
+    margin-top: 4%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .list-small-search-bar {
+        /* margin-bottom: 5%; */
+        margin-top: 6%;
+    }
+
+    .list-small-search-btn {
+        /* margin-bottom: 5%; */
+        margin-top: 6%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .list-small-search-bar {
+        /* margin-bottom: 5.5%; */
+        margin-top: 5%;
+    }
+    .list-small-search-btn {
+        /* margin-bottom: 5%; */
+        margin-top: 5%;
+    }
+    .bloglist .read-button {
+        width: max-content;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1366px) {
+    .bloglist .read-button {
+        width: max-content;
+    }
+}
+/* 
+@media only screen and (max-width: 767px) {
+    .list-small-search-bar {
+        display: flex;
+    }
+} */

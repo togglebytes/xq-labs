@@ -2,23 +2,23 @@
 <img class="commen-baner-blog" src="{{ url }}" alt="" />
 {{/banner_img}} {{ /blocks }} {{/if}} {{ /collection:pages }}
 <div class="container mx-auto bloglist">
-    <div class="grid gap-2">
+    <!-- <div class="grid gap-2">
         <div class="lg:px-14 md:px-10 px-2 mb-3">
             <p class="cat-name1">Blogs</p>
         </div>
-    </div>
+    </div> -->
 
     {{ collection from="posts" limit="{{ pagination:limit }}" paginate="true"
     as="posts" sort="date:desc"}}
-    <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:px-14 md:px-10 px-2"
     >
+        <p class="cat-name1">Blogs</p>
         {{ posts }} {{ partial:components.blog_list has_link="true" link="{url}"
         description="{date}" }} {{ /posts }}
         <!-- pagination -->
 
         <!-- pagination  ends-->
-    </div>
+    </divgrid>
     {{ paginate }} {{ if prev_page or next_page }}
     <div class="py-10 mx-auto md:py-16">{{ partial:partials._pagination }}</div>
     {{ /if }} {{ /paginate }} {{ /collection }}
@@ -290,5 +290,3 @@
         });
     });
 </script>
-
-
