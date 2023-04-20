@@ -8,7 +8,7 @@
             style="object-fit: contain; height: 100%; width: 100%"
         >
             {{ form:subscribe_form id="subscribe_form"}}
-            <div class="subscribe-box-par">
+            <div class="subscribe-box-par subscribe-top">
                 {{ fields }}
                 <!-- {{field}} -->
                 <input
@@ -36,20 +36,22 @@
             </div>
             {{ /form:subscribe_form }}
         </div>
-    </div>
-
-
-    {{ taxonomy from="categories" slug:is="{last_segment}"}} {{if title !=''}}
-    <div class="grid lg:gap-2 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2">
-        <div class="lg:px-14 md:px-10 px-2 mb-3">
-            <p class="cat-name1">
-                {{ main_category | title | replace('-', ' ') }} /
-                <span class="cat_name">{{title}}</span>
-            </p>
-        </div>
-        <div class="lg:px-14 md:px-10 px-2 mb-3 style="align-items:center">
-            <form class="" style="margin-top:1rem; padding-bottom:0" action="/search">
-                    <div class="custom-search">
+        {{ taxonomy from="categories" slug:is="{last_segment}"}} {{if title
+        !=''}}
+        <div class="grid lg:gap-2 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2">
+            <div class="lg:px-14 md:px-10 px-2 mb-3">
+                <p class="cat-name1">
+                    {{ main_category | title | replace('-', ' ') }} /
+                    <span class="cat_name">{{title}}</span>
+                </p>
+            </div>
+            <div class="lg:px-14 md:px-10 px-2 mb-3 style="align-items:center">
+            <form
+                class=""
+                style="margin-top: 1rem; padding-bottom: 0"
+                action="/search"
+            >
+                <div class="custom-search">
                     <input
                         type="search"
                         class="blog-searchInput w-100"
@@ -64,42 +66,6 @@
 
     {{/if}} {{ /taxonomy }} {{ collection from="posts" limit="6" paginate="true"
     as="posts" category:is="{last_segment}" }}
-<div class="lg:px-14 md:px-10 px-2 mb-3">
-<div>{{ form:subscribe_form id="subscribe_form"}}
-                <div class="subscribe-bottom custom-search">
-                    {{ fields }}
-                    <!-- {{field}} -->
-                    <input
-                        class="blog-searchInput w-100"
-                        type="email"
-                        name="{{handle}}"
-                        placeholder="Your email address"
-                        id="{{ handle }}"
-                    />
-                    <button
-                        class="blog-searchbtn"
-                        style="background-color: #f553b7"
-                    >
-                        Subscribe
-                    </button>
-                    <p
-                        class="text-white bg-red-600 rounded-full py-0 px-2 absolute -bottom-7 errorMessage"
-                        id="{{handle}}_error"
-                    >
-                        {{ error }}
-                    </p>
-                    {{ /fields }} {{ if success }}
-                    <p
-                        class="text-white absolute bg-green-500 rounded-full py-0 px-2 -bottom-7"
-                        id="successMessage"
-                    >
-                        {{ success }}
-                    </p>
-                    {{ /if }}
-                </div>
-                {{ /form:subscribe_form }}</div>
-</div>
-    
 
     <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:px-14 md:px-10 px-2"
@@ -110,9 +76,43 @@
 
         <!-- pagination  ends-->
     </div>
+
     {{ paginate }} {{ if prev_page or next_page }}
     <div class="py-10 mx-auto">{{ partial:partials._pagination }}</div>
     {{ /if }} {{ /paginate }} {{ /collection }}
+
+    <div class="lg:px-14 md:px-10 px-2 mb-3">
+        {{ form:subscribe_form id="subscribe_form"}}
+        <div class="subscribe-bottom custom-search">
+            {{ fields }}
+            <!-- {{field}} -->
+            <input
+                class="blog-searchInput w-100"
+                type="email"
+                name="{{handle}}"
+                placeholder="Your email address"
+                id="{{ handle }}"
+            />
+            <button class="blog-searchbtn" style="background-color: #f553b7">
+                Subscribe
+            </button>
+            <p
+                class="text-white bg-red-600 rounded-full py-0 px-2 absolute -bottom-7 errorMessage"
+                id="{{handle}}_error"
+            >
+                {{ error }}
+            </p>
+            {{ /fields }} {{ if success }}
+            <p
+                class="text-white absolute bg-green-500 rounded-full py-0 px-2 -bottom-7"
+                id="successMessage"
+            >
+                {{ success }}
+            </p>
+            {{ /if }}
+        </div>
+        {{ /form:subscribe_form }}
+    </div>
 
     <div class="w-full mx-auto my-8 catregory-section">
         <span class="other-cat-label">Other Categories</span>
@@ -123,7 +123,7 @@
             <div class="blogs p-4 mt-6">
                 <section class="customer-logos slider">
                     <!-- slug:isnt="{ last_segment }" (to add below) -->
-                    {{ taxonomy from="categories" }} 
+                    {{ taxonomy from="categories" }}
 
                     <div class="slide">
                         {{if title !=''}}
