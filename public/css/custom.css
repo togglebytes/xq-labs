@@ -3286,8 +3286,8 @@ html {
     font-size: 16px;
     line-height: 19px;
     /* TODO: Change to percentage later */
-    /* height: 40%;  */
-    height: 35px;
+    height: 40%;
+    /* height: 35px; */
 
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -3798,6 +3798,9 @@ html {
         left: 0.5%;
         bottom: 5rem;
     }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
     .submitBtnFeild {
         width: 37%;
     }
@@ -3805,6 +3808,15 @@ html {
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .blogbanner .subscribe-box-par {
-        width: 66%;
+        width: 67%;
+    }
+}
+
+/* CSS for search page */
+
+@media only screen and (min-width: 768px) {
+    .search-page-search-bar {
+        margin: 2% 0 0 2.5%;
+        display: block;
     }
 }
