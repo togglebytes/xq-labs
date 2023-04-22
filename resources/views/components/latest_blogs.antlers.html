@@ -12,7 +12,6 @@
         <p class="blog-date ml-auto">
             {{ date | timezone('Asia/Kolkata') |format('d M, Y') }}
         </p>
-
         <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-2 md:gap-1">
             <p class="read-cat">{{ category:title }}</p>
             <a href="{{link}}" class="read-button">Read Article</a>

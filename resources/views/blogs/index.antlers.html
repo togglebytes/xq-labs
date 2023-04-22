@@ -30,14 +30,14 @@
     {{/banner_img}} {{ /blocks }} {{/if}} {{ /collection:pages }}
 </div>
 
-<div class="container mx-auto blogs">
+<div class="container pl-4 pr-4 mx-auto blogs">
     <div class="grid grid-cols-1 relative gap-4 mb-4">
         <div
             class="relative blogbanner"
             style="object-fit: contain; height: 100%; width: 100%"
         >
             {{ form:subscribe_form id="subscribe_form"}}
-            <div class="subscribe-box-par subscribe-top">
+            <div class="subscribe-box-par subscribe-top subscribe-top-responsive">
                 {{ fields }}
                 <!-- {{field}} -->
                 <input
