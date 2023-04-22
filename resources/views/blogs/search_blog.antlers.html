@@ -79,14 +79,13 @@
                 style="padding: 0px 16px; text-align: center"
             >
                 <div class="blogs p-4 mt-6">
-                    <section class="customer-logos slider sim-blogs-slider">
+                    <section class="customer-logos slider">
                         {{ collection:posts sort="date:desc" }}
 
                         <div class="slide">
                             <div>
                                 <div
-                                    class="latest-posts-iteam sim-blog-item"
-                                    style="height: 290px"
+                                    class="latest-posts-iteam searchpage-slider"
                                 >
                                     <div>
                                         <img
@@ -99,7 +98,15 @@
                                     </div>
 
                                     <div>
-                                        <p class="blog-title">{{title}}</p>
+                                        <p
+                                            class="blog-title"
+                                            style="
+                                                height: 32px;
+                                                text-align: left;
+                                            "
+                                        >
+                                            {{title}}
+                                        </p>
                                         <p class="blog-date ml-auto">
                                             {{ date | timezone('Asia/Kolkata')
                                             |format('d M, Y') }}
@@ -125,6 +132,7 @@
             </div>
         </div>
     </div>
+
     <!-- Talwend css modal  -->
     <div
         class="relative z-10 hidden"

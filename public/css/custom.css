@@ -213,6 +213,8 @@ h2 {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    /* height: 314px; */
+    /* TODO: CHECK */
 }
 
 .slick-list:focus {
@@ -3286,8 +3288,8 @@ html {
     font-size: 16px;
     line-height: 19px;
     /* TODO: Change to percentage later */
-    height: 40%;
-    /* height: 35px; */
+    /* height: 40%; */
+    height: 35px;
 
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -3820,3 +3822,7 @@ html {
         display: block;
     }
 }
+
+@media only screen and (min-width: 1064px) {
+}
+/* slick-list draggable */
