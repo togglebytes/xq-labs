@@ -213,7 +213,7 @@ h2 {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    /* height: 314px; */
+    height: 314px;
     /* TODO: CHECK */
 }
 
@@ -3823,6 +3823,14 @@ html {
     }
 }
 
-@media only screen and (min-width: 1064px) {
+@media only screen and (min-width: 640px) {
 }
 /* slick-list draggable */
+
+.searchpage-slide .read-button {
+    width: max-content;
+    align-self: right;
+}
+.searchpage-slide .read-cat {
+    text-align: left;
+}
