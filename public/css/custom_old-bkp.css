@@ -213,7 +213,8 @@ h2 {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    /* height: 314px; */
+    height: 314px;
+    /* TODO: CHECK */
 }
 
 .slick-list:focus {
@@ -376,18 +377,8 @@ h2 {
 }
 .cat-slider-img {
     height: 339px !important;
-    /* height: 100% !important; */
     object-fit: cover;
 }
-
-@media only screen and (640px < width < 1000px) {
-    .cat-slider-img {
-        height: 200px !important;
-        /* height: 100% !important; */
-        object-fit: cover;
-    }
-}
-
 .other-cat-label {
     margin-left: 62px;
     font-weight: 700;
@@ -397,18 +388,8 @@ h2 {
     height: 150px;
 }
 .sim-blogs-slider .slick-track {
-    /* height: 300px; */
+    height: 300px;
     padding-block: 5px;
-}
-
-.sim-blogs-slider .slick-dots {
-    margin-top: 60px;
-    /* color: #793ef0; */
-}
-
-.sim-blogs-slider .slick-dots li.slick-active button {
-    background-color: #793ef0;
-    border-color: #793ef0;
 }
 
 @media screen and (max-width: 640px) {
@@ -2179,7 +2160,7 @@ html {
 
     .revfor-small {
         display: block;
-        /* margin-top: 25px; */
+        margin-top: 25px;
     }
 
     .revfor-big {
@@ -3619,7 +3600,7 @@ html {
 
     font-family: Cera Basic;
     font-size: 16px;
-    color: #FFFF00;
+    color: #3b338a;
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0em;
@@ -3673,9 +3654,6 @@ html {
     background-color: #0072b1;
 }
 
-.bg-instagram {
-    background-color: #e9e9e9;
-}
 .custom-search {
     position: relative;
     width: 100%;
@@ -3758,18 +3736,13 @@ html {
     .blogs .latest-posts-iteam img {
         /* border-radius: 15px; */
         object-fit: cover;
-        /* height: 102px; */
+        height: 102px;
         /* max-height: 160px; */
         /* border-radius: 15px; */
         border-radius: 10px;
-        /* max-height: 102px; */
-        /* min-height: 102px; */
+        max-height: 102px;
+        min-height: 102px;
         width: 100%;
-    }
-
-    .sim-blog-item img {
-        height: 500px;
-        max-height: 250px;
     }
 
     /* .blogs .blog-date {
@@ -3878,5 +3851,3 @@ html {
 .searchpage-slide .read-cat {
     text-align: left;
 }
-
-/* Slider new CSS */
