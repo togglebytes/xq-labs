@@ -26,14 +26,14 @@
     {{/banner_img}} {{ /blocks }} {{/if}} {{ /collection:pages }}
 </div>
 
-<div class="container mx-auto blogs">
+<div class="container pl-4 pr-4 mx-auto blogs">
     <div class="grid grid-cols-1 relative gap-4 mb-4">
         <div
             class="relative blogbanner"
             style="object-fit: contain; height: 100%; width: 100%"
         >
             {{ form:subscribe_form id="subscribe_form"}}
-            <div class="subscribe-box-par subscribe-top">
+            <div class="subscribe-box-par subscribe-top subscribe-top-responsive ">
                 {{ fields }}
                 <!-- {{field}} -->
                 <input
@@ -65,7 +65,7 @@
 
     <div class="grid grid-cols-10 gap-4 mt-4 md:mt-1 px-0 md:px-4">
         <div class="flex flex-col gap-0 md:gap-2 md:col-span-7 col-span-10">
-            <form class="top-search-bar" action="/search">
+            <form class="big-search-bar" action="/search">
                 <div class="custom-search">
                     <input
                         type="search"
@@ -139,7 +139,7 @@
                 </div>
                 {{ /form:subscribe_form }}
 
-                <form class="bottom-search-bar" action="/search">
+                <form class="small-search-bar" action="/search">
                     <div class="custom-search">
                         <input
                             type="search"

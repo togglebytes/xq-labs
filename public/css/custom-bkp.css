@@ -83,9 +83,8 @@ p {
     justify-content: center;
     align-items: center;
     align-content: center;
-      padding-top: 36px;
+    padding-top: 36px;
     width: 100%;
-    
 }
 .contact-us {
     display: flex;
@@ -611,7 +610,7 @@ input::placeholder {
         margin-bottom: 3px;
     }
     .contactus-subtitle {
-             display: block !important;
+        display: block !important;
         font-family: "Cera Pro";
         font-style: normal;
         font-weight: 700;
@@ -1495,7 +1494,6 @@ input::placeholder {
     display: block;
     /* margin-top: 36px; */
     padding: 35px 85px 9px 85px;
-
 }
 
 .students-Section-small {

@@ -213,6 +213,8 @@ h2 {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    height: 314px;
+    /* TODO: CHECK */
 }
 
 .slick-list:focus {
@@ -2889,7 +2891,8 @@ html {
     /* left: 68px;
     bottom: 30px; */
 
-    left: 8rem;
+    /* left: 8rem; */
+    left: 2%;
     bottom: 5rem;
 }
 
@@ -3062,12 +3065,12 @@ html {
 
 .blogs .latest-posts-iteam > div:first-child {
     /* padding: 10px 25px 0 25px; */
-    padding: 5%;
+    padding: 4% 7% 4% 7%;
 }
 
 .blogs .latest-posts-iteam > div:nth-child(2) {
     /* padding: 10px 25px 20px 25px; */
-    padding: 0 5% 5%;
+    padding: 0 7% 4%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -3190,7 +3193,9 @@ html {
     }
 
     .blogs .latest-posts-iteam img {
-        height: 100%;
+        /* height: 100%; */
+        height: 142px !important;
+        width: 300px;
     }
 
     .blogs .latest-posts-iteam {
@@ -3215,10 +3220,12 @@ html {
         /* padding: 10px; */
         padding: 7px;
         display: flex;
-        flex-direction: co;
+        flex-direction: column;
+        flex-grow: 1;
         gap: 5px;
     }
 
+    /* TODO: Check if this is needed.  */
     .blogs .blog-title {
         font-size: 15px;
     }
@@ -3255,11 +3262,13 @@ html {
 }
 
 .bloglist .latest-posts-iteam > div:first-child {
-    padding: 10px 25px 0 25px;
+    /* padding: 10px 25px 0 25px; */
+    padding: 4% 7% 4% 7%;
 }
 
 .bloglist .latest-posts-iteam > div:nth-child(2) {
-    padding: 10px 25px 20px 25px;
+    /* padding: 10px 25px 20px 25px; */
+    padding: 0 7% 4%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -3270,7 +3279,7 @@ html {
     width: 100%; */
     object-fit: cover;
     height: 172px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .bloglist .blog-title {
@@ -3278,7 +3287,15 @@ html {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    height: 33px;
+    /* TODO: Change to percentage later */
+    /* height: 40%; */
+    height: 35px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .bloglist .blog-date {
@@ -3337,13 +3354,13 @@ html {
         margin-top: 5%;
     } */
     .blogs .blog-title {
-        font-size: 14px;
+        /* font-size: 14px; */
         line-height: 17px;
     }
     .blogs .blog-date {
         font-weight: 500;
         font-size: 10px;
-        line-height: 0px;
+        /* line-height: 0px; */
         letter-spacing: 1px;
         /* margin-bottom: 10px; */
         color: #6a6b7d;
@@ -3483,11 +3500,13 @@ html {
         background: #793ef0;
         border-radius: 10px;
         padding: 5px 15px;
-        width: max-content;
+        /* width: max-content; */
+        width: 35%;
     }
 
     .bloglist .latest-posts-iteam > div:nth-child(2) {
-        padding: 10px 20px 15px 20px;
+        /* padding: 10px 20px 15px 20px; */
+        padding: 0 7% 4%;
         gap: 5px;
     }
 }
@@ -3555,7 +3574,7 @@ html {
     font-size: 20px;
 }
 
-/* Blog Details page  */
+/* CSS for Blog Details page  */
 .detail-para-heading {
     font-family: "Cera Basic";
     font-weight: 700;
@@ -3641,6 +3660,23 @@ html {
     width: 100%;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* .category-floating-title {
+        font-size: 18px !important;
+        padding: 5px 25px 5px 25px !important;
+    } */
+    .details-fg-title p {
+        font-size: 18px !important;
+        padding: 5px 25px 5px 25px !important;
+    }
+}
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+    .details-fg-title p {
+        font-size: 21px !important;
+        padding: 7px 27px 7px 27px !important;
+    }
+}
+
 /* CSS for Blog Home Page */
 .blog-searchInput {
     width: 100%;
@@ -3653,7 +3689,6 @@ html {
     font-family: "Cera Italic";
     margin-bottom: 5%;
 }
-
 .blog-searchbtn {
     position: absolute;
     right: 0px;
@@ -3664,7 +3699,7 @@ html {
     color: white;
 }
 
-.top-search-bar {
+.big-search-bar {
     margin-bottom: 100px;
 }
 
@@ -3684,26 +3719,21 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
-    .top-search-bar {
+    .big-search-bar {
         display: none;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    .bottom-search-bar {
+    .small-search-bar {
         display: none;
     }
-    .top-search-bar {
+    .big-search-bar {
         margin: 0 2% 5% 2%;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .read-cat {
-        /* font-size: 14px; */
-        /* line-height: 12px; */
-        /* line-height: 100%; */
-    }
     .blogs .latest-posts-iteam img {
         /* border-radius: 15px; */
         object-fit: cover;
@@ -3716,7 +3746,109 @@ html {
         width: 100%;
     }
 
-    .blogs .blog-date {
+    /* .blogs .blog-date {
         margin-bottom: 2%;
+    } */
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1064px) {
+    .blogs .blog-date {
+        line-height: 5%;
     }
+}
+
+/* CSS for Blog List */
+.list-small-search-bar {
+    margin-bottom: 5%;
+    margin-top: 4%;
+}
+
+.list-small-search-btn {
+    margin-bottom: 5%;
+    margin-top: 4%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .list-small-search-bar {
+        /* margin-bottom: 5%; */
+        margin-top: 6%;
+    }
+
+    .list-small-search-btn {
+        /* margin-bottom: 5%; */
+        margin-top: 6%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .list-small-search-bar {
+        /* margin-bottom: 5.5%; */
+        margin-top: 5%;
+    }
+    .list-small-search-btn {
+        /* margin-bottom: 5%; */
+        margin-top: 5%;
+    }
+    .bloglist .read-button {
+        width: max-content;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1366px) {
+    .bloglist .read-button {
+        width: max-content;
+    }
+}
+
+/* Additional media query for subscribe bar fix */
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    /* .subscribe-top-responsive {
+        width: 98%;
+        /* right: 51.5%; */
+    /* left: 0.5%; */
+    /* padding: 13px; */
+    /* } */
+    .blogbanner .subscribe-box-par {
+        background-color: none;
+        width: 98%;
+        padding: 10px;
+        border-radius: 25px;
+        position: absolute;
+        /* left: 8rem; */
+        left: 0.5%;
+        bottom: 5rem;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+    .submitBtnFeild {
+        width: 37%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .blogbanner .subscribe-box-par {
+        width: 67%;
+    }
+}
+
+/* CSS for search page */
+
+@media only screen and (min-width: 768px) {
+    .search-page-search-bar {
+        margin: 2% 0 0 2.5%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+}
+/* slick-list draggable */
+
+.searchpage-slide .read-button {
+    width: max-content;
+    align-self: right;
+}
+.searchpage-slide .read-cat {
+    text-align: left;
 }
