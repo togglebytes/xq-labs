@@ -37,7 +37,6 @@
             </div>
             {{ /form:subscribe_form }}
         </div>
-        <!-- TODO: SEARCH BAR HERE -->
         <div class="grid grid-cols-10 gap-4 mt-4 md:mt-1 px-0 md:px-4">
             <div
                 class="flex flex-col gap-0 md:gap-2 md:col-span-7 col-span-10"
@@ -49,25 +48,21 @@
                     action="/search"
                 >
                     <div class="custom-search">
-                        <input
-                            type="search"
-                            class="blog-searchInput w-100"
-                            name="q"
-                            placeholder="Search here"
+                        <input type="search" class="blog-searchInput w-100"
+                        name="q" placeholder="Search here" value="{{ get:q }}""
                         />
                         <button class="blog-searchbtn">Search</button>
                     </div>
                 </form>
             </div>
         </div>
-        <!-- TODO: SEARCH BAR ABOVE -->
         <p class="mt-5 lg:px-14 md:px-10 px-2">
             <strong id="search">Search results for "{{get:q}}"</strong>
         </p>
         <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:px-14 md:px-10 px-2"
         >
-            {{ search:results index="default" }} {{ if no_results }}
+            {{ search:results index="blog" }} {{ if no_results }}
             <h2>No results found for {{ get:q }}.</h2>
             {{ else }} {{ partial:components.blog_list has_link="true"
             link="{url}" description="{date}" }} {{ /if }} {{ /search:results }}
