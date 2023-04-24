@@ -31,7 +31,9 @@
             style="color: #ffffff"
         ></i
     ></a>
-    
+    <button class="social-btn bg-gmail" onclick="copyToClipboard()" id="copy-btn" url={{permalink}} b-title="{{title}}" title="copy link">
+        <i class="fa fa-copy" style="color: #777777;"></i>
+    </button>
     
 </div>
 
@@ -51,3 +53,19 @@
         }}" }}
     </div>
 </div> -->
+<script>
+    function copyToClipboard() {
+    // now prepare data for sharing blogs
+    let blog_url = $("#copy-btn").attr("url");
+    let blog_title = $("#copy-btn").attr("b-title");
+    
+    //share link
+    let copy_link = `${blog_title} ${blog_url}`;
+    console.log(copy_link)
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(copy_link).select();
+    document.execCommand("copy");
+    $temp.remove();
+    }
+</script>

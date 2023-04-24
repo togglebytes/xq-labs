@@ -279,6 +279,8 @@
             </div>
         </div>
         <script>
+            $("#successMessage").delay(5000).fadeOut("slow");
+            $(".errorMessage").delay(5000).fadeOut("slow");
             $(document).ready(function () {
                 // Open modal
                 $(".share-button").on("click", function () {
