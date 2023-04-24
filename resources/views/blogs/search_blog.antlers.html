@@ -67,7 +67,7 @@
         <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:px-14 md:px-10 px-2"
         >
-            {{ search:results index="default" }} {{ if no_results }}
+            {{ search:results index="blog" }} {{ if no_results }}
             <h2>No results found for {{ get:q }}.</h2>
             {{ else }} {{ partial:components.blog_list has_link="true"
             link="{url}" description="{date}" }} {{ /if }} {{ /search:results }}
