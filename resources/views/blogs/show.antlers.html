@@ -56,7 +56,7 @@
                                 <div>
                                     <div
                                         class="latest-posts-iteam sim-blog-item"
-                                        style="height: 290px"
+                                        style="height: 330px"
                                     >
                                         <div>
                                             <img
@@ -71,7 +71,15 @@
                                         <div>
                                             <p
                                                 class="blog-title"
-                                                style="text-align: left"
+                                                style="
+                                                    text-align: left;
+                                                    height: 35px;
+                                                    display: -webkit-box;
+                                                    -webkit-line-clamp: 2;
+                                                    -webkit-box-orient: vertical;
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                "
                                             >
                                                 {{title}}
                                             </p>
@@ -118,13 +126,13 @@
             pauseOnHover: false,
             responsive: [
                 {
-                    breakpoint: 786,
+                    breakpoint: 1200,
                     settings: {
                         slidesToShow: 2,
                     },
                 },
                 {
-                    breakpoint: 640,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
                     },
