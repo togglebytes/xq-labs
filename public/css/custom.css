@@ -3531,6 +3531,15 @@ html {
 }
 
 /* -----blog sections style end 0----- */
+.single-blog-page h1 {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+    font-family: "Cera Basic";
+    color: #793ef0;
+    padding: 0;
+    margin-bottom: 10px;
+}
 .single-blog-page h2 {
     font-size: 1.5rem !important;
     font-weight: 700 !important;
@@ -3541,7 +3550,31 @@ html {
     margin-bottom: 10px;
 }
 .single-blog-page h3 {
-    font-size: 1.125rem !important;
+    font-size: 1.17rem !important;
+    font-weight: 700 !important;
+    font-family: "Cera Basic";
+    color: #793ef0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.single-blog-page h4 {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    font-family: "Cera Basic";
+    color: #793ef0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.single-blog-page h5 {
+    font-size:  0.83rem !important;
+    font-weight: 700 !important;
+    font-family: "Cera Basic";
+    color: #793ef0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.single-blog-page h6 {
+    font-size: 0.67rem !important;
     font-weight: 700 !important;
     font-family: "Cera Basic";
     color: #793ef0;

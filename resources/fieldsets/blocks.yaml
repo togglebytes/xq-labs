@@ -10,6 +10,21 @@ fields:
           fields:
             -
               import: banner
+            -
+              handle: banner_img_mobile
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: 'Banner For Mobile View'
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
         navbar:
           display: 'Navbar (Mobile + Web)'
           fields:

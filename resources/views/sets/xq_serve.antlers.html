@@ -75,13 +75,16 @@
         <div id="successDivG" style="display: none;">
             <p class="my-heads text-center md:text-left">YAY!</p>
             <p class="my-heads-bk text-center md:text-left py-0 md:pr-48">
-                Your Free guide has been emailed to you.</p>
+                Your Free guide is available for download.</p>
             <div class="relative" style="
             top: -100px;
         ">
+           
                 <img class="letterbox-img" src="/assets/leterboxImg.png" alt="">
             </div>
+            <button class="btn btn-info" onclick="downloadFile()">Download</button>
         </div>
+        
     </div>
     <img class="floating-mail-icon1" src="/assets/maillogo.png" alt="">
     <img class="floating-mail-icon2" src="/assets/maillogo.png" alt="">
@@ -160,3 +163,32 @@
         });
     });
 </script>
+<script>
+    const FILE_URL = "http://127.0.0.1:8000/api/get-file";
+    console.log(FILE_URL);
+    const File_Name = FILE_URL.split('/').slice(-1)[0];
+    console.log(File_Name);
+    function downloadFile() {
+        
+      const xhr = new XMLHttpRequest();
+      
+      xhr.open("GET", FILE_URL, true);
+      xhr.responseType = "blob";
+      console.log(xhr);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          const blob = new Blob([xhr.response], { type: "text/plain" });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.setAttribute("href", url);
+          link.setAttribute("download", "example.pdf");
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+        }
+      };
+
+      xhr.send();
+    }
+  </script>

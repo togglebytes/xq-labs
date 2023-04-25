@@ -100,10 +100,16 @@ sections:
                     instructions: 'Youtube or Vimeo Link'
                     listable: hidden
           buttons:
+            - h1
             - h2
             - h3
+            - h4
+            - h5
+            - h6
             - bold
             - italic
+            - underline
+            - small
             - unorderedlist
             - orderedlist
             - removeformat
@@ -124,6 +130,13 @@ sections:
           type: bard
           icon: bard
           listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          collapse: false
+          previews: true
+          antlers: false
+          remove_empty_nodes: false
   sidebar:
     display: Sidebar
     fields:
