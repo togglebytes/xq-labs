@@ -8,7 +8,8 @@ use File;
 class FileController extends Controller
 {
     public function getFile(){
-        $path = public_path().'/assets/pexels-photo-4709848.jpeg';
+        $path = public_path().'\assets\download\free-guide\free-guide.pdf';
+        echo $path;
         if (file_exists($path)) {
             return response()->file($path);
         } else {

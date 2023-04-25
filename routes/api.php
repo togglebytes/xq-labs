@@ -17,4 +17,4 @@ use App\Http\Controllers\FileController;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::get('get-file',[FileController::class,'getFile']);
+Route::get('get-free-guide',[FileController::class,'getFile']);
