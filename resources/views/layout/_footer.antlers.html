@@ -1,26 +1,29 @@
 <!-- footer section   -->
 <article class="mx-auto bg-white w-full footparrent footer-text">
-    <div class="grid grid-cols-2 md:px-4 gap-2 md:gap-4 lg:gap-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 py-5">
+    <div
+        class="grid grid-cols-2 md:px-4 gap-2 md:gap-4 lg:gap-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 py-5"
+    >
+        <!-- Grid item 1 -->
         <div class="footlogodiv px-4">
-            {{company_logo}}<img src="{{url}}" alt="">{{/company_logo}}
+            {{company_logo}}<img src="{{url}}" alt="" />{{/company_logo}}
         </div>
+        <!-- Grid Item 2 -->
         <div class="text-start px-2 md:text-sm">
             <div class="footer-title">Get in Touch</div>
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col lg:flex-row gap-4">
-                    <div class="flex gap-4"><span class="material-symbols-outlined">
-                            call
-                        </span>
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined"> call </span>
                         <a href="tel:{{contact_no}}">{{contact_no}}</a>
                     </div>
-                    <div class="flex gap-4"><span class="material-symbols-outlined">
-                            mail
-                        </span>
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined"> mail </span>
                         <a href="mailto:{{company_email}}">{{company_email}}</a>
                     </div>
                 </div>
                 <div class="">
-                    <div class="flex gap-4" style="max-width: 450px;"><span class="material-symbols-outlined">
+                    <div class="flex gap-4" style="max-width: 450px">
+                        <span class="material-symbols-outlined">
                             location_on
                         </span>
                         {{company_address}}
@@ -28,15 +31,32 @@
                 </div>
             </div>
         </div>
+        <!-- Grid Item 3 -->
         <div class="forsocailpadding">
             <div class="for-follow">Follow Us</div>
             <div class="flex gap-4">
-                {{social_media}}
-                    {{if social_media_logo != ''}}
-                    <div><a href="{{link}}"><img class="for-icon-width" src="{{social_media_logo}}" alt=""></a></div>
-                    {{/if}}
-                {{/social_media}}
+                {{social_media}} {{if social_media_logo != ''}}
+                <div>
+                    <a href="{{link}}"
+                        ><img
+                            class="for-icon-width"
+                            src="{{social_media_logo}}"
+                            alt=""
+                    /></a>
+                </div>
+                {{/if}} {{/social_media}}
             </div>
+        </div>
+        <!-- Grid Item 4 -->
+        <div class="download-apps">
+            <div class="for-follow">Download Apps</div>
+
+            <img
+                src="https://tse1.mm.bing.net/th?id=OIP.Ro739XbObP73gjGTg0mrCwHaCM&pid=Api&P=0"
+            />
+            <img
+                src="https://pluspng.com/img-png/download-on-app-store-png-how-to-download-the-app-1945.png"
+            />
         </div>
     </div>
 </article>
@@ -44,7 +64,10 @@
 <article class="footer-section-small-par">
     <div class="footer-section-small">
         <div>
-            {{company_logo}}<img src="{{url}}" alt="footlogo">{{/company_logo}}
+            {{company_logo}}<img
+                src="{{url}}"
+                alt="footlogo"
+            />{{/company_logo}}
             <!-- <img src="https://xqvideolab.com/img/white-logo.svg" alt="footlogo"> -->
         </div>
         <div>
@@ -52,19 +75,18 @@
                 <p class="footer-title">Get in Touch</p>
 
                 <div class="flex flex-col lg:flex-row gap-4 footer-small-text">
-                    <div class="flex gap-2 md:gap-4 lg:gap-4"><span class="material-symbols-outlined">
-                            call
-                        </span>
+                    <div class="flex gap-2 md:gap-4 lg:gap-4">
+                        <span class="material-symbols-outlined"> call </span>
                         <a href="tel:{{contact_no}}">{{contact_no}}</a>
                     </div>
-                    <div class="flex gap-4"><span class="material-symbols-outlined">
-                            mail
-                        </span>
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined"> mail </span>
                         <a href="mailto:{{company_email}}">{{company_email}}</a>
                     </div>
                 </div>
                 <div class="footer-small-text">
-                    <div class="flex gap-4" style="max-width: 450px;"><span class="material-symbols-outlined">
+                    <div class="flex gap-4" style="max-width: 450px">
+                        <span class="material-symbols-outlined">
                             location_on
                         </span>
                         {{company_address}}
@@ -74,7 +96,14 @@
                     <div class="for-follow">Follow Us</div>
                     <div class="flex gap-4">
                         {{social_media}}
-                            <div><a href="{{link}}"><img class="for-icon-width" src="{{social_media_logo}}" alt=""></a></div>
+                        <div>
+                            <a href="{{link}}"
+                                ><img
+                                    class="for-icon-width"
+                                    src="{{social_media_logo}}"
+                                    alt=""
+                            /></a>
+                        </div>
                         {{/social_media}}
                     </div>
                 </div>
@@ -86,22 +115,14 @@
 <!-- bootomBar -->
 <article class="mx-auto footbar-par">
     <div class="footbar">
-
-        <div><span class="material-symbols-rounded">
-                home
-            </span></div>
-        <div><span class="material-symbols-rounded">
-                event
-            </span></div>
-        <div class="big-add"><span class="material-symbols-rounded ">
-                add
-            </span></div>
-        <div><span class="material-symbols-rounded">
-                subscriptions
-            </span></div>
-        <div><span class="material-symbols-rounded">
-                account_circle
-            </span></div>
+        <div><span class="material-symbols-rounded"> home </span></div>
+        <div><span class="material-symbols-rounded"> event </span></div>
+        <div class="big-add">
+            <span class="material-symbols-rounded"> add </span>
+        </div>
+        <div><span class="material-symbols-rounded"> subscriptions </span></div>
+        <div>
+            <span class="material-symbols-rounded"> account_circle </span>
+        </div>
     </div>
-    
 </article>

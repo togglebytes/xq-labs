@@ -3931,4 +3931,8 @@ html {
     text-align: left;
 }
 
-/* Slider new CSS */
+/* Footer new css */
+.download-apps img {
+    width: 150px;
+    margin-bottom: 10px;
+}
