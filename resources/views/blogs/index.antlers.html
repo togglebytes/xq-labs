@@ -388,6 +388,17 @@
         </div>
     </div>
 </div>
+{{ collection:pages }}
+    {{if title != 'Blog'}} 
+        {{ blocks }}
+        {{if type == 'footer_section'}}
+            
+            {{ partial src="layout/_footer" }}
+        {{ /if }}
+        {{ /blocks }}
+    {{ /if }}
+{{ /collection:pages}}
+
 <script>
     $("#successMessage").delay(5000).fadeOut("slow");
     $(".errorMessage").delay(5000).fadeOut("slow");

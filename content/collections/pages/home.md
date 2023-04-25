@@ -1,7 +1,7 @@
 ---
 id: 66a11842-28e6-46d8-9175-1725973b8f25
 blueprint: pages
-title: Home
+title: xqlabs
 seotamic_title: title
 seotamic_title_prepend: true
 seotamic_title_append: true
@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1681106336
+updated_at: 1682419134
 blocks:
   -
     id: le2tryml
