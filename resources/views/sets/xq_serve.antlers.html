@@ -77,7 +77,7 @@
         </div>
         {{ /form:create }}
         <!-- </div> -->
-        <div id="successDivG" style="display: none">
+        <div class="free-guide-modal" id="successDivG" style="display: none">
             <p class="my-heads text-center md:text-left">YAY!</p>
             <p class="my-heads-bk text-center md:text-left py-0 md:pr-48">
                 Your Free guide is available for download.
@@ -89,9 +89,9 @@
                     alt=""
                 />
             </div>
-            <button class="btn btn-info" onclick="downloadFile()">
-                Download
-            </button>
+            <div class="relative flex">
+                <button onclick="downloadFile()">Download</button>
+            </div>
         </div>
     </div>
     <img class="floating-mail-icon1" src="/assets/maillogo.png" alt="" />
