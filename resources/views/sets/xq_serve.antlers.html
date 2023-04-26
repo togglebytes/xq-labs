@@ -1,12 +1,11 @@
 <!--stats/ promo-section  small-->
 <div class="mx-auto promo-section">
     <div class="promo-child">
-        {{services}}
-        {{if service_icon != ''}}
+        {{services}} {{if service_icon != ''}}
         <div>
             <div class="promo-icon-par">
                 {{service_icon}}
-                <img class="promo-icons" src="{{url}}" alt="promoicon">
+                <img class="promo-icons" src="{{url}}" alt="promoicon" />
                 {{/service_icon}}
             </div>
             <div class="pr-desc-div">
@@ -14,8 +13,7 @@
                 <p class="pr-txt">{{serve_title}}</p>
             </div>
         </div>
-        {{/if}}
-        {{/services}}
+        {{/if}} {{/services}}
     </div>
     <div class="div-lkflt">
         <!-- <span>Get a <span> Free Guide</span> on 10 easy ways to make your school Video savvy</span> -->
@@ -26,12 +24,11 @@
 <!-- stats stats/ promo-section big -->
 <div class="btml-float relative">
     <div class="btml-float-containt">
-        {{services}}
-        {{if service_icon != ''}}
+        {{services}} {{if service_icon != ''}}
         <div class="promo-small-child">
             <div>
                 {{service_icon}}
-                <img class="promo-icons-sm" src="{{url}}" alt="">
+                <img class="promo-icons-sm" src="{{url}}" alt="" />
                 {{/service_icon}}
             </div>
             <div class="pr-desc-div-small">
@@ -39,8 +36,7 @@
                 <p class="pr-txt-sm">{{serve_title}}</p>
             </div>
         </div>
-        {{ /if}}
-        {{/services}}
+        {{ /if}} {{/services}}
     </div>
 
     <div class="div-lkflt-sm">
@@ -49,14 +45,19 @@
     </div>
 </div>
 
-<div id="popup" style="display:none;">
+<div id="popup" style="display: none">
     <span onclick="hidePopup()" class="pop-up-close-btn">&#10005;</span>
     <div class="pop-up-content-form">
-        <p class="my-heads get-head-title text-center px-0 md:px-4 lg:px-0" id="get-it-heading" style="display: block;">
-            Where should we email your free guide?</p>
+        <p
+            class="my-heads get-head-title text-center px-0 md:px-4 lg:px-0"
+            id="get-it-heading"
+            style="display: block"
+        >
+            Where should we email your free guide?
+        </p>
 
-        {{ form:create in="ebook_form" class="get-it-form" id="FormDiv"}}
-        {{ fields }}
+        {{ form:create in="ebook_form" class="get-it-form" id="FormDiv"}} {{
+        fields }}
         <div class="form-field">
             <div class="form-row">
                 <label for="fullName">{{ display }}</label>
@@ -67,27 +68,34 @@
         {{ /fields }}
 
         <div class="form-row2">
-            <input type="text" class="hidden " name="{{ honeypot ?? 'honeypot' }}">
+            <input
+                type="text"
+                class="hidden"
+                name="{{ honeypot ?? 'honeypot' }}"
+            />
             <button type="submit" class="submit-button">Submit</button>
         </div>
         {{ /form:create }}
         <!-- </div> -->
-        <div id="successDivG" style="display: none;">
+        <div class="free-guide-modal" id="successDivG" style="display: none">
             <p class="my-heads text-center md:text-left">YAY!</p>
             <p class="my-heads-bk text-center md:text-left py-0 md:pr-48">
-                Your Free guide is available for download.</p>
-            <div class="relative" style="
-            top: -100px;
-        ">
-           
-                <img class="letterbox-img" src="/assets/leterboxImg.png" alt="">
+                Your Free guide is available for download.
+            </p>
+            <div class="relative" style="top: -100px">
+                <img
+                    class="letterbox-img"
+                    src="/assets/leterboxImg.png"
+                    alt=""
+                />
             </div>
-            <button class="btn btn-info" onclick="downloadFile()">Download</button>
+            <div class="relative flex">
+                <button onclick="downloadFile()">Download</button>
+            </div>
         </div>
-        
     </div>
-    <img class="floating-mail-icon1" src="/assets/maillogo.png" alt="">
-    <img class="floating-mail-icon2" src="/assets/maillogo.png" alt="">
+    <img class="floating-mail-icon1" src="/assets/maillogo.png" alt="" />
+    <img class="floating-mail-icon2" src="/assets/maillogo.png" alt="" />
 </div>
 
 <script>
@@ -95,46 +103,47 @@
     let get_it_form = $("#FormDiv").serializeArray();
 
     $.each(get_it_form, function (i, value) {
-        get_it_fields.push(value.name)
+        get_it_fields.push(value.name);
     });
 
-    var form = document.getElementById('form');
+    var form = document.getElementById("form");
     var popup = document.getElementById("popup");
     var cont_popup = document.getElementById("cont-popup");
     function hidePopup() {
-        document.getElementById("FormDiv").style.display = 'block'
-        document.getElementById("FormDiv").classList.add("get-it-form")
-        document.getElementById('get-it-heading').style.display = 'block'
-        document.getElementById('successDivG').style.display = 'none'
+        document.getElementById("FormDiv").style.display = "block";
+        document.getElementById("FormDiv").classList.add("get-it-form");
+        document.getElementById("get-it-heading").style.display = "block";
+        document.getElementById("successDivG").style.display = "none";
         popup.style.display = "none";
     }
     function showPopup() {
         popup.style.display = "block";
-        popup.classList.add("for-get-pop-up")
-        popup.style.top = `${document.body.clientHeight} - 400px`
+        popup.classList.add("for-get-pop-up");
+        popup.style.top = `${document.body.clientHeight} - 400px`;
         get_it_fields.forEach(function (name) {
-            $('#' + name + '_err').html('');
-        })
+            $("#" + name + "_err").html("");
+        });
     }
-    var form = document.getElementById('FormDiv');
+    var form = document.getElementById("FormDiv");
     $(".get-it-form").submit(function (event) {
-        event.preventDefault()
+        event.preventDefault();
         var form_data = $(this).serialize();
 
         var fd = new FormData();
         $.ajax({
-            url: $("#FormDiv").attr('action'),
-            type: 'POST',
+            url: $("#FormDiv").attr("action"),
+            type: "POST",
             data: form_data,
-        }).done(function (response) {
-            $('#FormDiv').trigger("reset");
-            $('#failed').css('display', 'none');
-            $('#FormDiv').css('display', 'none')
-            $('#get-it-heading').css('display', 'none')
-            $('#successDivG').css('display', 'flex')
-        }).fail(function (data) {
-
-            /* var errors = [data.responseJSON.errors]
+        })
+            .done(function (response) {
+                $("#FormDiv").trigger("reset");
+                $("#failed").css("display", "none");
+                $("#FormDiv").css("display", "none");
+                $("#get-it-heading").css("display", "none");
+                $("#successDivG").css("display", "flex");
+            })
+            .fail(function (data) {
+                /* var errors = [data.responseJSON.errors]
             var str = ""
 
            errors.forEach(function (error) {
@@ -143,49 +152,48 @@
             }) 
             str = str.replace(/\,/g, "<br>") 
             $('#failed').html(str); */
-            var error = [data.responseJSON.error]
-            $.each(error, function (key, value) {
-                $.each(value, function (index, value1) {
-                    console.log(index)
-                    console.log(value1)
-                    if ($.inArray(index, get_it_fields) >= 0) {
-                        $('#' + index + '_err').html(value1);
-                    } else {
-                        console.log(11)
-                        $('#' + index + '_err').html('');
-                    }
+                var error = [data.responseJSON.error];
+                $.each(error, function (key, value) {
+                    $.each(value, function (index, value1) {
+                        console.log(index);
+                        console.log(value1);
+                        if ($.inArray(index, get_it_fields) >= 0) {
+                            $("#" + index + "_err").html(value1);
+                        } else {
+                            console.log(11);
+                            $("#" + index + "_err").html("");
+                        }
+                    });
                 });
-            });
 
-            $('#FormDiv').css('display', 'block')
-            $('#get-it-heading').css('display', 'block')
-            $('#successDivG').css('display', 'none')
-        });
+                $("#FormDiv").css("display", "block");
+                $("#get-it-heading").css("display", "block");
+                $("#successDivG").css("display", "none");
+            });
     });
 </script>
 <script>
-    const FILE_URL = "http://127.0.0.1:8000/api/get-file";
-    function downloadFile() {
-        
-      const xhr = new XMLHttpRequest();
-      
-      xhr.open("GET", FILE_URL, true);
-      xhr.responseType = "blob";
-      console.log(xhr);
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          const blob = new Blob([xhr.response], { type: "text/plain" });
-          const url = URL.createObjectURL(blob);
-          const link = document.createElement("a");
-          link.setAttribute("href", url);
-          link.setAttribute("download", "sample-download.pdf");
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-          URL.revokeObjectURL(url);
-        }
-      };
+    const FILE_URL = "http://127.0.0.1:8000/api/get-free-guide";
 
-      xhr.send();
+    function downloadFile() {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", FILE_URL, true);
+        xhr.responseType = "blob";
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const blob = new Blob([xhr.response], { type: "text/plain" });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.setAttribute("href", url);
+                link.setAttribute("download", "free-guide.pdf");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+            }
+        };
+
+        xhr.send();
     }
-  </script>
+</script>
