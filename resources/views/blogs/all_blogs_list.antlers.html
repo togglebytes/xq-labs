@@ -278,74 +278,8 @@
                 </div>
             </div>
         </div>
-        <script>
-            $("#successMessage").delay(5000).fadeOut("slow");
-            $(".errorMessage").delay(5000).fadeOut("slow");
-            $(document).ready(function () {
-                // Open modal
-                $(".share-button").on("click", function () {
-                    // now prepare data for sharing blogs
-                    let blog_url = $(this).attr("url");
-                    let blog_title = $(this).attr("title");
-
-                    //Twitter share
-                    let twitter_share = `${blog_title} ${window.location.origin.replace(
-                        "#",
-                        ""
-                    )}${blog_url}`;
-                    let url = `https://twitter.com/intent/tweet?text=${twitter_share}`;
-                    $("#twitter-share").attr("href", url);
-
-                    // Facebook share
-                    url = `https://www.facebook.com/sharer/sharer.php?u=${twitter_share}`;
-                    $("#fb-share").attr("href", url);
-
-                    //Pinterest sgare
-                    url = `http://pinterest.com/pin/create/button/?url=${twitter_share}`;
-                    $("#pinterest-share").attr("href", url);
-
-                    //Linkedin Share
-                    // url = `https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.ndtv.com%2Findia-news%2Fnitin-gadkari-pledges-rs-1-500-crore-to-revamp-delhi-roads-3942783`;
-                    url = `https://www.linkedin.com/sharing/share-offsite/?url=${window.location.origin.replace(
-                        "#",
-                        ""
-                    )}${blog_url}`;
-                    $("#linkedin-share").attr("href", url);
-
-                    //Set Blog data as a copy text
-                    $("#copy-share").attr("data", twitter_share);
-
-                    $("#share-modal").removeClass("hidden");
-                });
-
-                // close modal
-                $("#cancel").on("click", function () {
-                    $("#copy-share span").html("Copy Link");
-                    $("#share-modal").addClass("hidden");
-                });
-
-                // copy button functionality
-                $("#copy-share").click(function () {
-                    // Get the text to copy from the data-copy-text attribute of the button
-                    var copyText = $(this).attr("data");
-
-                    // Create a temporary textarea element to hold the text to copy
-                    var tempTextarea = $("<textarea>");
-                    tempTextarea.val(copyText);
-                    $("body").append(tempTextarea);
-
-                    // Select the text in the temporary textarea
-                    tempTextarea.select();
-
-                    // Copy the selected text to the clipboard
-                    document.execCommand("copy");
-
-                    // Remove the temporary textarea from the DOM
-                    tempTextarea.remove();
-                    $("#copy-share span").html("Copied");
-                });
-            });
-        </script>
+        
+        
     </div>
     {{ collection from="posts" limit="{{ pagination:limit }}" paginate="true"
     as="posts" sort="date:desc"}}
@@ -396,3 +330,81 @@
         {{ /form:subscribe_form }}
     </div>
 </div>
+{{ collection:pages }}
+    {{if title != 'Blog'}} 
+        {{ blocks }}
+        {{if type == 'footer_section'}}
+            
+            {{ partial src="layout/_blog-footer" }}
+        {{ /if }}
+        {{ /blocks }}
+    {{ /if }}
+{{ /collection:pages}}
+<script>
+    $("#successMessage").delay(5000).fadeOut("slow");
+    $(".errorMessage").delay(5000).fadeOut("slow");
+    $(document).ready(function () {
+        // Open modal
+        $(".share-button").on("click", function () {
+            // now prepare data for sharing blogs
+            let blog_url = $(this).attr("url");
+            let blog_title = $(this).attr("title");
+
+            //Twitter share
+            let twitter_share = `${blog_title} ${window.location.origin.replace(
+                "#",
+                ""
+            )}${blog_url}`;
+            let url = `https://twitter.com/intent/tweet?text=${twitter_share}`;
+            $("#twitter-share").attr("href", url);
+
+            // Facebook share
+            url = `https://www.facebook.com/sharer/sharer.php?u=${twitter_share}`;
+            $("#fb-share").attr("href", url);
+
+            //Pinterest sgare
+            url = `http://pinterest.com/pin/create/button/?url=${twitter_share}`;
+            $("#pinterest-share").attr("href", url);
+
+            //Linkedin Share
+            // url = `https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.ndtv.com%2Findia-news%2Fnitin-gadkari-pledges-rs-1-500-crore-to-revamp-delhi-roads-3942783`;
+            url = `https://www.linkedin.com/sharing/share-offsite/?url=${window.location.origin.replace(
+                "#",
+                ""
+            )}${blog_url}`;
+            $("#linkedin-share").attr("href", url);
+
+            //Set Blog data as a copy text
+            $("#copy-share").attr("data", twitter_share);
+
+            $("#share-modal").removeClass("hidden");
+        });
+
+        // close modal
+        $("#cancel").on("click", function () {
+            $("#copy-share span").html("Copy Link");
+            $("#share-modal").addClass("hidden");
+        });
+
+        // copy button functionality
+        $("#copy-share").click(function () {
+            // Get the text to copy from the data-copy-text attribute of the button
+            var copyText = $(this).attr("data");
+
+            // Create a temporary textarea element to hold the text to copy
+            var tempTextarea = $("<textarea>");
+            tempTextarea.val(copyText);
+            $("body").append(tempTextarea);
+
+            // Select the text in the temporary textarea
+            tempTextarea.select();
+
+            // Copy the selected text to the clipboard
+            document.execCommand("copy");
+
+            // Remove the temporary textarea from the DOM
+            tempTextarea.remove();
+            $("#copy-share span").html("Copied");
+        });
+    });
+</script>

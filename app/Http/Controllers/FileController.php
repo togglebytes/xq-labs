@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use File;
+
 
 class FileController extends Controller
 {
-    public function getFile(){
-        $path = public_path().'\assets\download\free-guide\free-guide.pdf';
-        echo $path;
+    public function gePdfFile(){
+        $path = public_path().'\assets\download\Free_Guide_on_10_easy_ways_to_make_your_school_Video_Savvy.pdf';
+        
         if (file_exists($path)) {
             return response()->file($path);
         } else {

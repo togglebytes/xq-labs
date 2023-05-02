@@ -90,6 +90,7 @@
                 />
             </div>
             <div class="relative flex">
+                <!-- <button onclick="downloadFile()">Download</button> -->
                 <a href="{{pdf_file}}" target="_blank" download>Download</a>
             </div>
         </div>
@@ -178,4 +179,29 @@
                 .attr('download', '')
                 .attr('target', '_blank'); 
         });
+    const Host_Name = window.location.origin
+    const FILE_URL = Host_Name+"/api/get-free-guide";
+    
+    function downloadFile() {
+        console.log();
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", FILE_URL, true);
+        xhr.responseType = "blob";
+        console.log(xhr);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const blob = new Blob([xhr.response], { type: "text/plain" });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.setAttribute("href", url);
+                link.setAttribute("download", "Free_Guide_on_10_easy_ways_to_make_your_school_Video_Savvy.pdf");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+            }
+        };
+
+        xhr.send();
+    }
 </script>

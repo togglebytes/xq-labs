@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 49a762b8-3af8-4fac-aea2-ccd3373185c3
-updated_at: 1682419134
+updated_at: 1682501554
 blocks:
   -
     id: le2tryml
@@ -530,6 +530,7 @@ blocks:
     type: xq_serve
     enabled: true
     ebook: ebook_form
+    pdf_file: free_guide_on_10_easy_ways_to_make_your_school_video_savvy-(11).pdf
   -
     id: le2sveoj
     company_email: info@learnwithxq.com

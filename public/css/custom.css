@@ -991,6 +991,7 @@ html {
     font-weight: bold;
 }
 
+
 .for-follow {
     color: #793ef0;
     font-size: 20px;
@@ -1625,6 +1626,23 @@ html {
     border-radius: 23px;
     margin-top: 15%;
 }
+.free-guide-modal a {
+    /* width: 40%; */
+    width: max-content;
+    font-family: "Cera Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #793ef0;
+    padding: 10px 31px;
+    border-radius: 23px;
+    margin-top: 15%;
+}
 
 .letterbox-img {
     position: absolute;
@@ -2124,6 +2142,10 @@ html {
         color: #793ef0;
     }
 
+    .blog-footer-section-small-par{
+        padding: 0px 30px 100px 30px !important;
+    }
+
     .footer-section-small {
         display: flex;
         flex-direction: row;
@@ -2153,7 +2175,7 @@ html {
     }
 
     .footer-section-small > div:last-child {
-        width: 77%;
+        width: 100%;
 
         font-weight: 400px;
         line-height: 16px;
